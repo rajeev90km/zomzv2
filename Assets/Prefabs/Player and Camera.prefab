@@ -3105,7 +3105,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Hit any key to continue...
+  m_Text: Hit spacebar to continue...
 --- !u!114 &114276727595113758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3604,6 +3604,7 @@ MonoBehaviour:
   _objectiveSideText: {fileID: 114975378614110270}
   _hurtFX: {fileID: 100000, guid: f7261c1b6aae14ad3bb8800b75e3436b, type: 2}
   endClimbWait: 0
+  _levelInitWaitTime: 5
 --- !u!114 &114975378614110270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7653,7 +7654,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277047050844736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000060731483}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00012146297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224625659798350484}
@@ -7661,7 +7662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -60}
+  m_AnchoredPosition: {x: 65, y: -35}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224890967706116626

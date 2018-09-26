@@ -175,6 +175,9 @@ public class CharacterControls : Being
     ColorGrading colorGradingLayer = null;
     Vignette vignetteLayer = null;
 
+    [SerializeField]
+    private float _levelInitWaitTime = 5f;
+
 
     void Start()
     {
@@ -204,15 +207,19 @@ public class CharacterControls : Being
 
         ResetDirectionVectors();
 
+        _gameData.IsPaused = true;
+
         StartCoroutine(RemoveObjectiveCanvasAndPlaceObjectiveOnSide());
     }
 
     public IEnumerator RemoveObjectiveCanvasAndPlaceObjectiveOnSide()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(_levelInitWaitTime);
         _objectiveCanvas.SetActive(false);
 
         _objectiveSideText.gameObject.SetActive(true);
+
+        _gameData.IsPaused = false;
     }
 
     public void ResetDirectionVectors()
@@ -527,7 +534,7 @@ public class CharacterControls : Being
         {
             Time.timeScale = 0.5f;
 
-            if(Input.anyKeyDown)
+            if(Input.GetKeyDown(KeyCode.Space))
             {
                 HidePrompt();
                 return;
