@@ -134,7 +134,19 @@ public class CharacterControls : Being
 
     [Header("Interactable Canvas Settings")]
     [SerializeField]
-    private GameObject _interactCanvas;
+    private GameObject _interactBg;
+
+    [SerializeField]
+    private GameObject _interactText;
+
+    [SerializeField]
+    private GameObject _interactWarningIcon;
+
+    [SerializeField]
+    private Text _interactWarningText;
+
+    [SerializeField]
+    private float _showWarningTime = 2f;
 
     [Header("Objectives")]
     [SerializeField]
@@ -146,6 +158,10 @@ public class CharacterControls : Being
     [Header("FX")]
     [SerializeField]
     private GameObject _hurtFX;
+
+    [Header("Warning Texts")]
+    [SerializeField]
+    private string HEALTH_FULL_WARNING = "Health already full!";
 
     GameObject currentPushable = null;
     Vector3 pushableOffset;
@@ -170,6 +186,8 @@ public class CharacterControls : Being
     public float endClimbWait = 3.5f;
 
     GateSwitch currentGateSwitch;
+    InventoryItem currentHealthPack;
+    InventoryItem currentWeapon;
 
     PostProcessVolume _postProcessVolume;
     ColorGrading colorGradingLayer = null;
@@ -439,24 +457,36 @@ public class CharacterControls : Being
         //IF SWITCH
         if(other.CompareTag("SwitchPanel"))
         {
-            _interactCanvas.SetActive(true);
+            _interactBg.SetActive(true);
+            _interactText.SetActive(true);
 
             currentGateSwitch = other.GetComponent<GateSwitch>();
 
             if (currentGateSwitch.IsActivated)
             {
                 currentGateSwitch = null;
-                _interactCanvas.SetActive(false);
+                _interactBg.SetActive(false);
+                _interactText.SetActive(false);
             }
+        }
+
+        //IF HEALTH PACK
+        if (other.CompareTag("HealthPack"))
+        {
+            _interactBg.SetActive(true);
+            _interactText.SetActive(true);
+
+            currentHealthPack = other.GetComponent<InventoryItem>();
         }
 
 	}
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("SwitchPanel"))
+        if (other.CompareTag("SwitchPanel") || other.CompareTag("HealthPack"))
         {
-            _interactCanvas.SetActive(false);
+            _interactBg.SetActive(false);
+            _interactText.SetActive(false);
         }
     }
 
@@ -526,6 +556,25 @@ public class CharacterControls : Being
 
     }
 
+    void ShowInteractWarning(string pWarning)
+    {
+        _interactWarningIcon.SetActive(true);
+        _interactWarningText.gameObject.SetActive(true);
+
+        _interactWarningText.text = pWarning;
+
+        StartCoroutine(CloseWarning());
+    }
+
+    IEnumerator CloseWarning()
+    {
+        yield return new WaitForSeconds(_showWarningTime);
+
+        _interactWarningIcon.SetActive(false);
+        _interactWarningText.gameObject.SetActive(false);
+
+    }
+
 	void Update () 
 	{
         if (!_gameData.IsPaused)
@@ -548,14 +597,38 @@ public class CharacterControls : Being
                 //INTERACT
                 if(Input.GetKeyDown(KeyCode.E))
                 {
+                    //GATE OPEN
                     if(currentGateSwitch!=null)
                     {
                         _animator.SetTrigger("pulllever");
                         transform.LookAt(currentGateSwitch.transform);
-                        _interactCanvas.SetActive(false);
+                        _interactBg.SetActive(false);
+                        _interactText.SetActive(false);
                         currentGateSwitch.Activate();
                         currentGateSwitch = null;
                     }
+
+
+                    //HEALTH PACK
+                    if(currentHealthPack!=null && currentHealthPack.InventoryType == InventoryType.HEALTH_PACK && _currentHealth < 100)
+                    {
+                        //TODO - VFX
+                        _interactBg.SetActive(false);
+                        _interactText.SetActive(false);
+
+                        _currentHealth += currentHealthPack.HealthPack.Health;
+
+                        if (_currentHealth > 100)
+                            _currentHealth = 100;
+
+                        Destroy(currentHealthPack.gameObject);
+                        currentHealthPack = null;
+                    }
+                    else if(currentHealthPack != null && currentHealthPack.InventoryType == InventoryType.HEALTH_PACK && _currentHealth >= 100)
+                    {
+                        ShowInteractWarning(HEALTH_FULL_WARNING);
+                    }
+
 
                 }
 
