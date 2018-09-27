@@ -3460,7 +3460,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197932262364050}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -3686,6 +3686,7 @@ MonoBehaviour:
   GroundedLayerMask:
     serializedVersion: 2
     m_Bits: 4294965247
+  _rightHand: {fileID: 1470265753782544}
   _normalSaturation: 5
   _promptSaturation: -55
   _normalVignette: 0.3
@@ -3702,8 +3703,9 @@ MonoBehaviour:
   _objectiveSideText: {fileID: 114975378614110270}
   _hurtFX: {fileID: 100000, guid: f7261c1b6aae14ad3bb8800b75e3436b, type: 2}
   HEALTH_FULL_WARNING: Health already full!
+  ALREADY_HOLDING_WEAPON_WARNING: Already holding a weapon!
   endClimbWait: 0
-  _levelInitWaitTime: 3
+  _levelInitWaitTime: 1
 --- !u!114 &114975378614110270
 MonoBehaviour:
   m_ObjectHideFlags: 1

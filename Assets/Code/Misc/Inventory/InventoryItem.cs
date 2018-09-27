@@ -7,6 +7,12 @@ public enum InventoryType {
     WEAPON = 1
 }
 
+public enum WeaponType
+{
+    MACHETE = 0,
+    AXE = 1
+}
+
 public class InventoryItem : MonoBehaviour {
     
     [SerializeField]
@@ -33,10 +39,22 @@ public class InventoryItem : MonoBehaviour {
 
     [DrawIf("_inventoryType", InventoryType.WEAPON)]
     [SerializeField]
+    public WeaponType WeaponType;
+
+    [DrawIf("_inventoryType", InventoryType.WEAPON)]
+    [SerializeField]
     private int _currentDurability;
     public int CurrentDurability {
         get { return _currentDurability; }
         set { _currentDurability = value; }
     }
+
+    public bool IsWeaponPicked = false;
+
+	private void Start()
+	{
+        if (_inventoryType == InventoryType.WEAPON)
+            _currentDurability = _weapon.Durability;
+	}
 
 }

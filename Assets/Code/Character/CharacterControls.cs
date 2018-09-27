@@ -110,6 +110,10 @@ public class CharacterControls : Being
         set { _isCrouching = value; }
     }
 
+    [SerializeField]
+    private GameObject _rightHand;
+
+
     [Header("Prompt Settings")]
     [SerializeField]
     private float _normalSaturation = 5f;
@@ -163,6 +167,9 @@ public class CharacterControls : Being
     [SerializeField]
     private string HEALTH_FULL_WARNING = "Health already full!";
 
+    [SerializeField]
+    private string ALREADY_HOLDING_WEAPON_WARNING = "Already holding a weapon!";
+
     GameObject currentPushable = null;
     Vector3 pushableOffset;
 
@@ -187,7 +194,7 @@ public class CharacterControls : Being
 
     GateSwitch currentGateSwitch;
     InventoryItem currentHealthPack;
-    InventoryItem currentWeapon;
+    InventoryItem currentInventoryWeapon;
 
     PostProcessVolume _postProcessVolume;
     ColorGrading colorGradingLayer = null;
@@ -196,6 +203,12 @@ public class CharacterControls : Being
     [SerializeField]
     private float _levelInitWaitTime = 5f;
 
+
+    private Vector3 _machetePosition = new Vector3(-0.377f,0.105f,0.046f);
+    private Vector3 _macheteRotation = new Vector3(0, 0, 180);
+
+    private Vector3 _axePosition = new Vector3(-0.186f, 0.069f, 0.016f);
+    private Vector3 _axeRotation = new Vector3(0, 0, 90);
 
     void Start()
     {
@@ -328,7 +341,7 @@ public class CharacterControls : Being
                 _currentWeapon.CurrentDurability -= 1;
             else
             {
-                _inventory._weapons.Remove(_currentWeapon);
+                Destroy(_currentWeapon.gameObject);
                 _currentWeapon = null;
                 _attackModifier = 0;
             }
@@ -479,15 +492,48 @@ public class CharacterControls : Being
             currentHealthPack = other.GetComponent<InventoryItem>();
         }
 
+        //IF HEALTH PACK
+        if (other.CompareTag("HealthPack"))
+        {
+            _interactBg.SetActive(true);
+            _interactText.SetActive(true);
+
+            currentHealthPack = other.GetComponent<InventoryItem>();
+        }
+
+        //IF WEAPON
+        if (other.CompareTag("Weapon"))
+        {
+            _interactBg.SetActive(true);
+            _interactText.SetActive(true);
+
+            currentInventoryWeapon = other.GetComponent<InventoryItem>();
+
+            if(currentInventoryWeapon.IsWeaponPicked)
+            {
+                currentInventoryWeapon = null;
+            }
+        }
+
 	}
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("SwitchPanel") || other.CompareTag("HealthPack"))
+        if (other.CompareTag("SwitchPanel"))
         {
-            _interactBg.SetActive(false);
-            _interactText.SetActive(false);
+            currentGateSwitch = null;
         }
+        else if(other.CompareTag("HealthPack"))
+        {
+            currentHealthPack = null;
+        }
+        else if (other.CompareTag("Weapon"))
+        {
+            currentInventoryWeapon = null;
+        }
+
+        _interactBg.SetActive(false);
+        _interactText.SetActive(false);
     }
 
     public IEnumerator ShowPrompt(PromptTriggerZone pTriggerZone)
@@ -629,6 +675,33 @@ public class CharacterControls : Being
                         ShowInteractWarning(HEALTH_FULL_WARNING);
                     }
 
+                    //WEAPON
+                    if(currentInventoryWeapon!=null && _currentWeapon == null)
+                    {
+                        _currentWeapon = currentInventoryWeapon;
+                        _currentWeapon.GetComponent<Collider>().enabled = false;
+                        _currentWeapon.gameObject.transform.parent = _rightHand.transform;
+
+                        if (_currentWeapon.WeaponType == WeaponType.MACHETE)
+                        {
+                            _currentWeapon.gameObject.transform.localPosition = _machetePosition;
+                            _currentWeapon.gameObject.transform.localEulerAngles = _macheteRotation;
+                        }
+                        else if (_currentWeapon.WeaponType == WeaponType.AXE)
+                        {
+                            _currentWeapon.gameObject.transform.localPosition = _axePosition;
+                            _currentWeapon.gameObject.transform.localEulerAngles = _axeRotation;
+                        }
+
+                        _attackModifier = _currentWeapon.Weapon.AttackStrength;
+
+                        _interactBg.SetActive(false);
+                        _interactText.SetActive(false);
+                    }
+                    else if (currentInventoryWeapon != null && _currentWeapon != null)
+                    {
+                        ShowInteractWarning(ALREADY_HOLDING_WEAPON_WARNING);
+                    }
 
                 }
 
