@@ -3,25 +3,1038 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{8A2C5F6C-55E2-43EF-8629-D879D90BD0FE}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="hit" ID="{556B1488-643B-4306-9758-379F91CAE857}" ShortID="710663119">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Abe" ID="{3DABC9EC-F1FD-4EB3-A502-03BE1200F138}" ShortID="859878010">
 					<ChildrenList>
-						<AudioFileSource Name="hit" ID="{7FD5A43F-0528-4896-81EF-AA1A91B0A6C2}" ShortID="687094787">
-							<Language>SFX</Language>
-							<AudioFile>hit.wav</AudioFile>
-						</AudioFileSource>
+						<Folder Name="Abe_Attack" ID="{9222692B-EE43-4C4A-A41D-05D013E11F57}" ShortID="660314619">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Abe_Grunts" ID="{F7CB8520-C4B1-4779-8A74-F6874CB666CD}" ShortID="593820197">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-130</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_AbeAttack_01" ID="{8748F9B5-32F0-46C1-B17D-5306A5C34C93}" ShortID="937400391">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-130</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeAttack_01" ID="{59D027E9-4034-467C-9FBC-5D8D416BD45A}" ShortID="809116727">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeAttack_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeAttack_01" ID="{59D027E9-4034-467C-9FBC-5D8D416BD45A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeAttack_02" ID="{A0F83289-5C01-41FD-8C93-AACC193EF3FA}" ShortID="116144232">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-130</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeAttack_02" ID="{674FBD91-46CC-47F8-8AB9-30BC830ED73C}" ShortID="530538110">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeAttack_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeAttack_02" ID="{674FBD91-46CC-47F8-8AB9-30BC830ED73C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeAttack_03" ID="{99E32B19-7A3C-4E5A-B7BE-CBEA9E342AD1}" ShortID="405511703">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeAttack_03" ID="{CD2F8E5A-5D1A-4630-8805-E01066CE6173}" ShortID="269457825">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeAttack_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeAttack_03" ID="{CD2F8E5A-5D1A-4630-8805-E01066CE6173}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeAttack_04" ID="{A67145B4-35D6-4581-ACB0-6BE4C166A176}" ShortID="240198461">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-130</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeAttack_04" ID="{2AE15C25-4EDA-4AF2-8E08-7775CB0E82B8}" ShortID="820850791">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeAttack_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeAttack_04" ID="{2AE15C25-4EDA-4AF2-8E08-7775CB0E82B8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Abe_Hurt" ID="{E9600994-0E7D-418F-B728-8F39F98CE09D}" ShortID="1000183364">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Abe_Hurt" ID="{30159819-9760-4DD4-9E7F-C848C18ADFE1}" ShortID="571264777">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_AbeHurt_03" ID="{97A2A555-E8CC-415E-B3A2-72A57F4354CD}" ShortID="1012979413">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeHurt_03" ID="{00104BCB-8E8B-4E6C-9674-C2BC896CCF2E}" ShortID="668120136">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeHurt_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeHurt_03" ID="{00104BCB-8E8B-4E6C-9674-C2BC896CCF2E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeHurt_01" ID="{E03CDA12-5631-49D1-A118-A3723D2AB44D}" ShortID="435930383">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeHurt_01" ID="{A5E3E0D5-2C2C-4B92-A4E3-9E3B47874347}" ShortID="44495175">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeHurt_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeHurt_01" ID="{A5E3E0D5-2C2C-4B92-A4E3-9E3B47874347}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeHurt_04" ID="{C8734CEE-1286-4C35-9A15-8DB4B1015AB8}" ShortID="850780369">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeHurt_04" ID="{9292F6A3-AA04-4D21-9A00-29344A611D4C}" ShortID="282239213">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeHurt_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeHurt_04" ID="{9292F6A3-AA04-4D21-9A00-29344A611D4C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeHurt_02" ID="{6C7949F0-43F6-4F93-BDE7-5FE54ABD69F6}" ShortID="101754225">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeHurt_02" ID="{4D0545BE-7CE3-4C59-BC0E-AFC479CB038A}" ShortID="344191544">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeHurt_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeHurt_02" ID="{4D0545BE-7CE3-4C59-BC0E-AFC479CB038A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Abe_Death" ID="{E026CB0C-E844-4E6A-96B0-02459D90B2E2}" ShortID="387764016">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Abe_Death" ID="{3FC5CFBE-DE5D-40CB-9DD9-F9F2AE10CE8A}" ShortID="334834518">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_AbeDeath_01" ID="{55DAD3A8-79A4-426F-ABCB-58BEA3C36391}" ShortID="751907555">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeDeath_01" ID="{818BFA69-F103-48F8-A34A-FE4E1BB9E67E}" ShortID="423454772">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeDeath_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeDeath_01" ID="{818BFA69-F103-48F8-A34A-FE4E1BB9E67E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_AbeDeath_02" ID="{72BD51C1-2796-4615-A83E-9452599859AB}" ShortID="211353963">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_AbeDeath_02" ID="{0494DB8E-F085-4DEE-933C-FE673C76AC09}" ShortID="743832998">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_AbeDeath_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_AbeDeath_02" ID="{0494DB8E-F085-4DEE-933C-FE673C76AC09}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="hit" ID="{7FD5A43F-0528-4896-81EF-AA1A91B0A6C2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
+				<Folder Name="Zom_Regular" ID="{6659749C-B01E-4C60-8B6E-7E9C9C057DD3}" ShortID="666140442">
+					<ChildrenList>
+						<Folder Name="Reg_Attack" ID="{F78B35C7-63D2-4526-B62C-7C517FFD56F6}" ShortID="1041298434">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Reg_Attack" ID="{E63271AA-950A-4149-BE17-1FD4265FBAF4}" ShortID="280170150">
+									<PropertyList>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzRegAttack_01" ID="{D8D8DFDD-48E9-46AF-BB8A-BF86134E41A4}" ShortID="492643233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegAttack_01" ID="{CEFDD483-3BD4-4D6B-98CC-1A4F136CDF9F}" ShortID="361897516">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegAttack_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegAttack_01" ID="{CEFDD483-3BD4-4D6B-98CC-1A4F136CDF9F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegAttack_02" ID="{AD25DCCE-3458-4B53-B073-CAC79F4BB835}" ShortID="467511761">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegAttack_02" ID="{136D18AC-87B7-49CE-8F36-20CDD9248111}" ShortID="994621262">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegAttack_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegAttack_02" ID="{136D18AC-87B7-49CE-8F36-20CDD9248111}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegAttack_03" ID="{83C620F5-A81A-41C4-AF66-302FC1C002E4}" ShortID="428684937">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegAttack_03" ID="{DFDC7F14-D87B-427E-81FD-358021393763}" ShortID="1023979796">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegAttack_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegAttack_03" ID="{DFDC7F14-D87B-427E-81FD-358021393763}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegAttack_04" ID="{C59F18CF-7161-42BC-BFFE-7C44347514EB}" ShortID="180152488">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegAttack_04" ID="{59D2287E-BA5C-4DB2-A96A-BF1A1ADED429}" ShortID="204762503">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegAttack_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegAttack_04" ID="{59D2287E-BA5C-4DB2-A96A-BF1A1ADED429}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Reg_Hurt" ID="{63EA25CF-D610-47DD-B61A-1DCFD7CBB2FB}" ShortID="448682428">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Reg_Hurt" ID="{7F06F3C3-ABF3-4BF6-880E-CB072C0C4643}" ShortID="151408456">
+									<PropertyList>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzRegHurt_01" ID="{DFBE7239-9F4E-41C2-A177-2243FE28CA3C}" ShortID="376490607">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegHurt_01" ID="{7400B496-F4AE-471A-8B09-27D5E202CE4A}" ShortID="379332826">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegHurt_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegHurt_01" ID="{7400B496-F4AE-471A-8B09-27D5E202CE4A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegHurt_02" ID="{E8E8FEFC-6340-4476-BAD3-A83DF91E57B5}" ShortID="328652412">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegHurt_02" ID="{41888634-91F8-4020-BE08-C4891C8526BF}" ShortID="798798055">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegHurt_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegHurt_02" ID="{41888634-91F8-4020-BE08-C4891C8526BF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegHurt_03" ID="{B1BF66BA-B933-4DD1-9259-E43EF87C7B98}" ShortID="134144662">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegHurt_03" ID="{AAE244B0-7320-4545-8FB0-79A6AC31E700}" ShortID="917311816">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegHurt_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegHurt_03" ID="{AAE244B0-7320-4545-8FB0-79A6AC31E700}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegHurt_04" ID="{ED6FBBAA-92D4-426A-AAC6-F96B1F416592}" ShortID="211645065">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegHurt_04" ID="{8A8A5686-3FEF-4EE1-B157-E0D0B98C40B6}" ShortID="453615116">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegHurt_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegHurt_04" ID="{8A8A5686-3FEF-4EE1-B157-E0D0B98C40B6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Reg_Roam" ID="{E2BE0A75-17D4-49BC-9623-69DBF29EBE2A}" ShortID="705568240">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Reg_Roam" ID="{B6847A2E-9417-446A-AACD-039846FFB912}" ShortID="894860967">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzRegRoam_01" ID="{6FDBD7B5-94FE-42E0-942A-A7535C1C7646}" ShortID="816151325">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegRoam_01" ID="{D25C9C8C-791F-4602-B801-96751C288589}" ShortID="241228860">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegRoam_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegRoam_01" ID="{D25C9C8C-791F-4602-B801-96751C288589}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzRegRoam_02" ID="{CC2C6DBD-AEC3-4FE7-A494-4A3595BD4862}" ShortID="946300447">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegRoam_02" ID="{B26AA646-0892-4788-BBEC-15516F7E45BE}" ShortID="910194522">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegRoam_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegRoam_02" ID="{B26AA646-0892-4788-BBEC-15516F7E45BE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Reg_Dying" ID="{7A4B65C6-1C39-44CB-AF78-5D6EA971A895}" ShortID="580877035">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Reg_Dying" ID="{C7314C92-3E83-419A-AB4A-51429001AB04}" ShortID="309278857">
+									<PropertyList>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzRegDie_01" ID="{705B6852-B864-401B-B615-C3389D09DE7B}" ShortID="843332727">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegDie_01" ID="{DEB5E98C-70E2-4E85-B282-02824BC900ED}" ShortID="979985408">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegDie_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegDie_01" ID="{DEB5E98C-70E2-4E85-B282-02824BC900ED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Reg_SeesYou" ID="{31FF1397-17ED-431F-BAAD-BA886B5332D8}" ShortID="670497813">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Reg_SeesYou" ID="{BE6185D7-5A88-459B-AC54-66F08E38EE9E}" ShortID="865590944">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzRegFound_01" ID="{B4FB3DA8-DAB3-4E24-A225-62E6187E60C0}" ShortID="680176437">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzRegFound_01" ID="{C4D78A81-EA97-4103-A3CF-ACBE023E05B4}" ShortID="307963381">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzRegFound_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzRegFound_01" ID="{C4D78A81-EA97-4103-A3CF-ACBE023E05B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Zom_Exploder" ID="{D2B553B9-01F3-4401-82E8-5B0821793EB2}" ShortID="81809340">
+					<ChildrenList>
+						<Folder Name="Exp_Attack" ID="{43961A86-D24D-49B4-A5FC-DCC8E777B30B}" ShortID="594718055">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Exp_Attack" ID="{588BDDB5-5881-4653-879B-104D73FB27A0}" ShortID="158382883">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_ZOMZ_exploderBoom" ID="{1087021C-73D2-4AF3-B506-9FA07739DD11}" ShortID="886917588">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_ZOMZ_exploderBoom" ID="{92BAD133-D6D1-43A4-BD18-12D7600A985F}" ShortID="949624666">
+													<Language>SFX</Language>
+													<AudioFile>sfx_ZOMZ_exploderBoom.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_ZOMZ_exploderBoom" ID="{92BAD133-D6D1-43A4-BD18-12D7600A985F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Exp_Roam" ID="{8BD436AE-A8F7-4C4C-A95A-259676AF70F3}" ShortID="845704613">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Exp_Roam" ID="{795431AB-8424-47BE-BFF5-EC4E06EA405C}" ShortID="1018142422">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzExplRoam_02" ID="{A6CB6981-CF3B-47EA-81CF-D45BCD021855}" ShortID="428108415">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzExplRoam_02" ID="{C0937AA8-A631-47D1-AB5A-DC4DB8DF1617}" ShortID="308399226">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzExplRoam_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzExplRoam_02" ID="{C0937AA8-A631-47D1-AB5A-DC4DB8DF1617}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzExplRoam_01" ID="{3E25194A-D3C0-43EB-AC20-9DC871C506D0}" ShortID="451574347">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzExplRoam_01" ID="{03DE9399-8596-45C1-9BD9-EC0196D3C8E8}" ShortID="998607955">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzExplRoam_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzExplRoam_01" ID="{03DE9399-8596-45C1-9BD9-EC0196D3C8E8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Exp_SeesYou" ID="{CC0E9CEE-3869-446E-BD3C-965AE153D093}" ShortID="788814777">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Exp_SeesYou" ID="{9D2AAAEF-08BA-4255-ABD4-6EA1B240560D}" ShortID="725151995">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SCRATCH_sfx_ZomzExplFound_01" ID="{08772487-23B9-4D0C-AC0A-E6B1FDA68BFA}" ShortID="1072653205">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzExplFound_01" ID="{26CB8458-5EFD-465F-9B65-956DE398782D}" ShortID="926757841">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzExplFound_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzExplFound_01" ID="{26CB8458-5EFD-465F-9B65-956DE398782D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzExplFound_02" ID="{AF8715E2-8560-436D-86F1-1FB9AEC92A9B}" ShortID="637102749">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzExplFound_02" ID="{7BAB7C8C-8A30-4969-B0DB-58DB80202963}" ShortID="857594352">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzExplFound_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzExplFound_02" ID="{7BAB7C8C-8A30-4969-B0DB-58DB80202963}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzExplFound_03" ID="{849DAB82-E048-49AB-B6B2-8EA4FD82F690}" ShortID="404245004">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzExplFound_03" ID="{C4DD6275-3EC5-4BE5-8E12-CF5AF0DB62ED}" ShortID="878048911">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzExplFound_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzExplFound_03" ID="{C4DD6275-3EC5-4BE5-8E12-CF5AF0DB62ED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SCRATCH_sfx_ZomzExplFound_04" ID="{645C792B-EF92-4D05-9A7E-CC8423B731FF}" ShortID="918741430">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SCRATCH_sfx_ZomzExplFound_04" ID="{27589F51-5BD5-4613-B37C-65F386FB1ECF}" ShortID="941799481">
+													<Language>SFX</Language>
+													<AudioFile>SCRATCH_sfx_ZomzExplFound_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SCRATCH_sfx_ZomzExplFound_04" ID="{27589F51-5BD5-4613-B37C-65F386FB1ECF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="VO" ID="{B27D5494-AA7B-48E8-AF76-62CAE4A5CF0F}" ShortID="137295159">
+					<ChildrenList>
+						<Folder Name="Jalali" ID="{C8AC538D-4C85-4128-AFE2-28B71F3C7435}" ShortID="726077454">
+							<ChildrenList>
+								<Folder Name="SCRATCH" ID="{76AFFEA1-4778-4F41-9ED7-F6522C5394A2}" ShortID="478522021">
+									<ChildrenList>
+										<Folder Name="Lvl2" ID="{728A5B92-63A3-417C-9468-8D63E12C576E}" ShortID="1068094177">
+											<ChildrenList>
+												<Sound Name="SCRATCH_vo_JalaliLevel2Instructions" ID="{735D2AE3-D0BA-4386-8691-A923FC6DB82E}" ShortID="203550302">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>34</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>34</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-50</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SCRATCH_vo_JalaliLevel2Instructions" ID="{A7D362D1-3A9F-4CF8-B88A-333B90171B4F}" ShortID="1022935832">
+															<Language>SFX</Language>
+															<AudioFile>SCRATCH_vo_JalaliLevel2Instructions.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SCRATCH_vo_JalaliLevel2Instructions" ID="{A7D362D1-3A9F-4CF8-B88A-333B90171B4F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</Folder>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Combat" ID="{6B1B6747-E788-4EB7-A134-68C7593C9EBD}" ShortID="967648384">
+					<ChildrenList>
+						<Sound Name="hit" ID="{556B1488-643B-4306-9758-379F91CAE857}" ShortID="710663119">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hit" ID="{7FD5A43F-0528-4896-81EF-AA1A91B0A6C2}" ShortID="687094787">
+									<Language>SFX</Language>
+									<AudioFile>hit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="hit" ID="{7FD5A43F-0528-4896-81EF-AA1A91B0A6C2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Crowd" ID="{785CB5F0-5A3A-47B2-8587-32347D202B19}" ShortID="533801772">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Happy" ID="{ACFEE059-420C-41D3-A52F-1C2B589628F8}" ShortID="839334826">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SCRATCH_sfx_crowdCheering" ID="{DEC69A1F-AEB2-40BB-81EF-FD4DE3E0036B}" ShortID="367718215">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SCRATCH_sfx_crowdCheering" ID="{681BC256-C693-48AA-BD10-D1F9B30BB883}" ShortID="451702042">
+											<Language>SFX</Language>
+											<AudioFile>SCRATCH_sfx_crowdCheering.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SCRATCH_sfx_crowdCheering" ID="{681BC256-C693-48AA-BD10-D1F9B30BB883}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="SCRATCH_sfx_crowdCheering" ID="{DEC69A1F-AEB2-40BB-81EF-FD4DE3E0036B}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Disappointed" ID="{1A41D2EA-D33D-42FF-84F1-5A45460DAFF4}" ShortID="500185257">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SCRATCH_crowdBooing" ID="{D49CF659-A1EA-4DFA-8525-D56C77F4B3A3}" ShortID="87507330">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{771FF8B4-A38B-481E-A712-C582655E0E68}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SCRATCH_crowdBooing" ID="{2A5141A7-D88B-46BA-A24E-75069D9CE07A}" ShortID="166261321">
+											<Language>SFX</Language>
+											<AudioFile>SCRATCH_crowdBooing.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SCRATCH_crowdBooing" ID="{2A5141A7-D88B-46BA-A24E-75069D9CE07A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="SCRATCH_crowdBooing" ID="{D49CF659-A1EA-4DFA-8525-D56C77F4B3A3}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
