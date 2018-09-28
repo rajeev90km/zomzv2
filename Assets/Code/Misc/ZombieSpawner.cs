@@ -112,52 +112,108 @@ public class ZombieSpawner : MonoBehaviour {
 
     public void OnZombieDie()
     {
-        Debug.Log("DEAD ZOMBIE");
         _numZombiesInScene--;
     }
 
 
     private void Update()
 	{
-        //For each cage
-        //Check for each zombie type that has cage max limit
-        //Check each cage list to see if that many are there
-        //if not spawn that many and add to cage
-        for (int i = 0; i < _cages.Count; i++)
+        
+        if (_numZombiesInScene < _maxZombiesInScene)
         {
-            for (int j = 0; j < _cages[i].ZombieConfig.Count; j++)
-            { 
-                if (_cages[i].ZombieConfig[j].MaxZombies > 0)
+            //For each cage
+            //Check for each zombie type that has cage max limit
+            //Check each cage list to see if that many are there
+            //if not spawn that many and add to cage
+            for (int i = 0; i < _cages.Count; i++)
+            {
+                for (int j = 0; j < _cages[i].ZombieConfig.Count; j++)
                 {
-                    int zCount = 0;
-
-                    for (int k = 0; k < _cages[i].CageZombies.Count;k++)
+                    if (_cages[i].ZombieConfig[j].MaxZombies > 0)
                     {
-                        if (_cages[i].ZombieConfig[j].ZombieType == _cages[i].CageZombies[k].zombieType)
-                            zCount++;    
+                        int zCount = 0;
+
+                        for (int k = 0; k < _cages[i].CageZombies.Count; k++)
+                        {
+                            if (_cages[i].ZombieConfig[j].ZombieType == _cages[i].CageZombies[k].zombieType)
+                                zCount++;
+                        }
+
+                        if (zCount < _cages[i].ZombieConfig[j].MaxZombies && _numZombiesInScene < _maxZombiesInScene)
+                        {
+                            GameObject zom = Instantiate(_zombieMapping[_cages[i].ZombieConfig[j].ZombieType], _cages[i].transform);
+                            zom.transform.localPosition = Vector3.zero;
+                            zom.transform.parent = null;
+
+                            ZombieBase zombieBase = zom.GetComponent<ZombieBase>();
+                            zombieBase.WayPointsString = _cages[i].ZombieConfig[j].WayPointString;
+                            zombieBase.zombieType = _cages[i].ZombieConfig[j].ZombieType;
+
+                            _cages[i].CageZombies.Add(zombieBase);
+                            _numZombiesInScene++;
+
+                            _cages[i].StartCoroutine(_cages[i].OpenCloseDoor());
+                        }
+
                     }
-
-                    //Debug.Log(zCount);
-
-                    if(zCount < _cages[i].ZombieConfig[j].MaxZombies && _numZombiesInScene < _maxZombiesInScene)
-                    {
-                        GameObject zom = Instantiate(_zombieMapping[_cages[i].ZombieConfig[j].ZombieType], _cages[i].transform);
-                        zom.transform.localPosition = Vector3.zero;
-                        zom.transform.parent = null;
-
-                        ZombieBase zombieBase = zom.GetComponent<ZombieBase>();
-                        zombieBase.WayPointsString = _cages[i].ZombieConfig[j].WayPointString;
-                        zombieBase.zombieType = _cages[i].ZombieConfig[j].ZombieType;
-
-                        _cages[i].CageZombies.Add(zombieBase);
-                        _numZombiesInScene++;
-
-                        _cages[i].StartCoroutine(_cages[i].OpenCloseDoor());
-                    }
-                        
                 }
             }
+
+
+            //NON RESTRICTIVE ZOMBIES
+            if(_numZombiesInScene < _maxZombiesInScene) 
+            {
+                //FindClosestCage
+                //Spawn A zombie there and open cage
+                Cage closestCage = GetClosestCageToPlayer();
+
+                if (_numZombiesInScene < _maxZombiesInScene)
+                {
+                    for (int i = 0; i < closestCage.ZombieConfig.Count; i++)
+                    {
+
+                        if (closestCage.ZombieConfig[i].MaxZombies < 0)
+                        {
+                            GameObject zom = Instantiate(_zombieMapping[closestCage.ZombieConfig[i].ZombieType], closestCage.transform);
+                            zom.transform.localPosition = Vector3.zero;
+                            zom.transform.parent = null;
+
+                            ZombieBase zombieBase = zom.GetComponent<ZombieBase>();
+                            zombieBase.WayPointsString = closestCage.ZombieConfig[i].WayPointString;
+                            zombieBase.zombieType = closestCage.ZombieConfig[i].ZombieType;
+
+                            closestCage.CageZombies.Add(zombieBase);
+                            _numZombiesInScene++;
+
+                            closestCage.StartCoroutine(closestCage.OpenCloseDoor());
+                        }
+                    }
+                }
+
+            }
+
         }
+
+
 	}
+
+    Cage GetClosestCageToPlayer()
+    {
+        GameObject _player = GameObject.FindWithTag("Player");
+
+        Cage closestCage = null;
+
+        for (int i = 0; i < _cages.Count;i++)
+        {
+            if (closestCage == null)
+                closestCage = _cages[i];
+
+            if (Vector3.Distance(closestCage.transform.position, _player.transform.position) > Vector3.Distance(_cages[i].transform.position, _player.transform.position))
+                closestCage = _cages[i];
+        }
+
+
+        return closestCage;
+    }
 
 }

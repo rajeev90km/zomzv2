@@ -64,8 +64,8 @@ public class Cage : MonoBehaviour {
 
 	public IEnumerator OpenCloseDoor()
     {
-        if (!_isOpening)
-        {
+        //if (!_isOpening)
+        //{
             _isOpening = true;
 
             float t = 0;
@@ -89,7 +89,7 @@ public class Cage : MonoBehaviour {
             }
 
             _isOpening = false;
-        }
+        //}
         yield return null;
     }
 
