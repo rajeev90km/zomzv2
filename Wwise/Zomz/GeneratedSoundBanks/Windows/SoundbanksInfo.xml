@@ -42,6 +42,7 @@
 				<Event Id="3157222669" Name="Gate_Opening" ObjectPath="\Events\Default Work Unit\Gates&amp;Doors\Gate_Opening"/>
 				<Event Id="840483585" Name="Jalali_lvl2_Rules" ObjectPath="\Events\Default Work Unit\Jalali Issa\Jalali_lvl2_Rules"/>
 				<Event Id="358608457" Name="Machete_Attack" ObjectPath="\Events\Default Work Unit\Combat\Weapons\Machete\Machete_Attack"/>
+				<Event Id="3896091313" Name="mx_lvl2" ObjectPath="\Events\Default Work Unit\Music\mx_lvl2"/>
 				<Event Id="3186396807" Name="Pressure_Switch" ObjectPath="\Events\Default Work Unit\Switches_Levers\Pressure_Switch"/>
 				<Event Id="294231328" Name="Reg_Attack" ObjectPath="\Events\Default Work Unit\Zombies\Regular\Reg_Attack"/>
 				<Event Id="2367327007" Name="Reg_Dying" ObjectPath="\Events\Default Work Unit\Zombies\Regular\Reg_Dying"/>
@@ -168,6 +169,10 @@
 				<File Id="743832998" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeDeath_02.wav</ShortName>
 					<Path>SFX\SCRATCH_sfx_AbeDeath_02_56D34C19.wem</Path>
+				</File>
+				<File Id="763974523" Language="SFX">
+					<ShortName>mx_ZOMZ_lvl1.wav</ShortName>
+					<Path>SFX\mx_ZOMZ_lvl1_8956FC97.wem</Path>
 				</File>
 				<File Id="798798055" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegHurt_02.wav</ShortName>

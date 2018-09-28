@@ -5,7 +5,37 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{D96B08D6-6B55-4F6E-8459-BCE287E02328}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Bonfire_Loop" ID="{2A153E08-7564-4046-BC98-28B88250D18C}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Container_Bump" ID="{4C755B56-B9E0-40E6-B6E4-887D68F983C4}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Axe_Attack" ID="{3EC33ACF-72A6-4123-8CDC-61CE4D54E268}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reg_Dying" ID="{8A2D0A01-8741-412D-B28C-EB5F25852770}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pressure_Switch" ID="{09D11CD4-6F1B-41C3-8EE5-7A10745432DA}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Fence_Bump" ID="{A378F5FB-1541-42AB-81B5-8196B24265E6}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Torch_Idle" ID="{F6C394EC-70D4-42F4-A66A-E2BFBE948EAD}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Exp_Roam" ID="{A8405708-CBEA-439D-A78C-B82E2C61324A}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Bonfire_Ignite" ID="{457A14FE-BC55-43D2-886F-65D91D8F7FC3}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Abe_Roll" ID="{6DD15A72-F16C-4466-9AE5-ADE3C491B647}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Destroyed_Crate" ID="{3C451849-874B-44A1-9258-0451BDEC9E12}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Abe_Death" ID="{9DA6CD50-4C3A-4534-8B38-7BA594475D0E}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Gate_Lever" ID="{359B9AEA-C23E-45E4-B352-1B35AF27C096}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reg_Attack" ID="{74B96344-7422-45EE-B178-7B2EAF0E1BA5}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jalali_lvl2_Rules" ID="{DD8C4B8A-AF1D-4827-A57A-698EFEFEA876}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reg_Roam" ID="{78B21FF8-C365-48E3-BC02-42B123D1038D}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Crowd_Boo" ID="{2410CC78-B4B6-4B90-B185-D108E731B3A7}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Footsteps" ID="{8EE236C9-A7AC-4BA3-B3D5-B62E4C32AA5B}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Crowd_Cheer" ID="{5EF399F2-3DC3-4BBA-982F-45D5EEFECBC9}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reg_Hurt" ID="{B50358FD-F68A-4C48-9E62-085DA3FD8044}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Machete_Attack" ID="{22920AD2-C53E-4C4A-82E5-D92403D1AA8A}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Default Work Unit" ID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Barrel_Explode" ID="{23D9F5D8-B714-4CF0-9B4A-07236C016501}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Exp_Attack" ID="{B58AFC9E-A872-4CF1-8038-0BB16EFA5750}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Abe_Hurt" ID="{A822EFB9-22ED-4DF8-8AB4-3257474EF3C6}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Gate_Opening" ID="{8C2E6150-670D-4E55-B05A-DDB04C96D721}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reg_SeesYou" ID="{2A2914B5-9857-4E62-9C82-C77FC33A1FF5}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Torch_Attack" ID="{96D97C5B-BC3D-4EBB-B281-53CAFD86C89C}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Use_HealthKit" ID="{19F8F300-EB43-4EC5-8D56-3EDA6E0C7E22}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Exp_SeesYou" ID="{BDF6AA39-90D3-4FC0-81E9-0297A3133D0C}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Abe_Grunts" ID="{269AC1E4-C40F-4FDD-A9C2-C74778CBAE3A}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

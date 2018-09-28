@@ -96,6 +96,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{9728220C-C84B-4E66-AB91-13EC4041A843}" ShortID="380594272">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_bonfireLoop" ID="{6AF805FD-40D1-4D36-8C44-26D88C1764C0}" WorkUnitID="{8A2C5F6C-55E2-43EF-8629-D879D90BD0FE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -497,6 +507,34 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SCRATCH_vo_JalaliLevel2Instructions" ID="{735D2AE3-D0BA-4386-8691-A923FC6DB82E}" WorkUnitID="{8A2C5F6C-55E2-43EF-8629-D879D90BD0FE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{A2C85B3C-D910-4294-833D-283268192A73}" ShortID="709208546">
+					<ChildrenList>
+						<Event Name="mx_lvl2" ID="{4C267EEA-01CD-4640-8DD1-5E16915194B9}">
+							<ChildrenList>
+								<Action Name="" ID="{D19C84B8-FCC5-4CEE-833D-C0C4A3337059}" ShortID="334079686">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lvl2" ID="{9D0AF421-DA68-44FC-9DD2-3944200419F0}" WorkUnitID="{9B591975-8125-4A95-B410-0FC9646B124E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EF02DA3B-4D2E-43E4-9187-8D51935536CE}" ShortID="802711901">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lvl2" ID="{9D0AF421-DA68-44FC-9DD2-3944200419F0}" WorkUnitID="{9B591975-8125-4A95-B410-0FC9646B124E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

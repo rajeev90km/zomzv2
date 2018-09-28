@@ -26,6 +26,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3298057973	Use_HealthKit			\Default Work Unit\Health_Kits\Use_HealthKit	
 	3606065765	Crowd_Boo			\Default Work Unit\Crowd\Crowd_Boo	
 	3814771491	Abe_Hurt			\Default Work Unit\Abe\Abe_Hurt	
+	3896091313	mx_lvl2			\Default Work Unit\Music\mx_lvl2	
 	3907567496	Torch_Attack			\Default Work Unit\Combat\Weapons\Torch\Torch_Attack	
 	4002745841	Gate_Lever			\Default Work Unit\Switches_Levers\Gate_Lever	
 	4146549089	Exp_Attack			\Default Work Unit\Zombies\Exploder\Exp_Attack	
@@ -60,6 +61,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	676695223	sfx_bonfireLight	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_bonfireLight_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bonfires\sfx_bonfireLight		407504
 	734592948	sfx_pressureSwitch	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_pressureSwitch_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Switches_Levers\sfx_pressureSwitch		170840
 	743832998	SCRATCH_sfx_AbeDeath_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeDeath_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Death\Abe_Death\SCRATCH_sfx_AbeDeath_02		636004
+	763974523	mx_lvl2	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\mx_ZOMZ_lvl1_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\lvl2\mx_lvl2\mx_lvl2		4032068
 	798798055	SCRATCH_sfx_ZomzRegHurt_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegHurt_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Hurt\Reg_Hurt\SCRATCH_sfx_ZomzRegHurt_02		87356
 	803068402	sfx_footsteps_001	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_footsteps_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_footsteps_001		63656
 	809116727	SCRATCH_sfx_AbeAttack_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeAttack_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Attack\Abe_Grunts\SCRATCH_sfx_AbeAttack_01		64240
