@@ -1949,7 +1949,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676861797275996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.45, y: 0, z: -26.18}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4408509672957784}
@@ -2274,11 +2274,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4fe21eccd764b0e9338d2a8673dd59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isChaseOverridden: 0
+  _gameData: {fileID: 0}
   _initState: 0
   _characterStats: {fileID: 11400000, guid: b2f6a99f181cc49449ccb144162889c3, type: 2}
   _currentHealth: 0
   ZomzMode: {fileID: 11400000, guid: 171a4897d216445ffb1428aab63fe011, type: 2}
+  _wayPointsString: 
   _currentState: 0
+  zombieType: 0
   _model: {fileID: 1525115115753824}
   _defaultMaterial: {fileID: 2100000, guid: 0d2dae1243c9c1d4da4309a3eacfbe4e, type: 2}
   _zomzModeMaterial: {fileID: 2100000, guid: 7444f32d9982f46ab8133da7505097ff, type: 2}
@@ -2289,6 +2293,7 @@ MonoBehaviour:
   _attackCost: 25
   _hurtFx: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 2}
   _zombieHealthBar: {fileID: 114787571537383912}
+  _zomzDieEvent: {fileID: 11400000, guid: 4970cc328e48e434cad248ac1a815c0c, type: 2}
   _timeToCharge: 0.75
   _minChargeRate: 2
   _maxChargeRate: 7

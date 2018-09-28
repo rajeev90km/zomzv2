@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 65148996753994270}
   m_Layer: 0
   m_Name: HealthPack_50
-  m_TagString: Untagged
+  m_TagString: HealthPack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,4 +123,6 @@ MonoBehaviour:
   _inventoryType: 0
   _healthPack: {fileID: 11400000, guid: c695fd6b3ec534548a0a93d983892328, type: 2}
   _weapon: {fileID: 0}
+  WeaponType: 0
   _currentDurability: 0
+  IsWeaponPicked: 0

@@ -91,6 +91,9 @@ public class ZombieExplode : ZombieBase
             if (!IsHurting)
                 _zomzController.UnregisterZomzMode();
 
+            if (_zomzDieEvent)
+                _zomzDieEvent.Raise();
+
             Destroy(gameObject);
 
         }

@@ -60,6 +60,9 @@ public class ZombieBase : Being
     }
 
     [SerializeField]
+    private GameData _gameData;
+
+    [SerializeField]
     private ZombieStates _initState;
     public ZombieStates InitState{
         get { return _initState; }
@@ -94,7 +97,16 @@ public class ZombieBase : Being
     protected ZombieStates _previousState = ZombieStates.NONE;
 
     [SerializeField]
+    private string _wayPointsString;
+    public string WayPointsString{
+        get { return _wayPointsString; }
+        set { _wayPointsString = value; }
+    }
+
+    [SerializeField]
     protected ZombieStates _currentState;
+
+    public ZombieTypes zombieType;
 
     [Header("Model Details")]
     [SerializeField]
@@ -129,6 +141,9 @@ public class ZombieBase : Being
     [SerializeField]
     protected Image _zombieHealthBar;
 
+    [SerializeField]
+    protected GameEvent _zomzDieEvent;
+
     protected Coroutine _attackCoroutine;
     protected Coroutine _hurtCoroutine;
 
@@ -148,6 +163,8 @@ public class ZombieBase : Being
     protected int finalLayerMask;
 
     protected Being targetBeing;
+
+    private bool _isChasing = false;
 
 	protected virtual void Awake () 
     {
@@ -176,8 +193,19 @@ public class ZombieBase : Being
 
         _zomzControl = GameObject.FindWithTag("Player").GetComponent<ZomzController>();
 
+	}
+
+    protected virtual IEnumerator Start()
+    {
+        yield return null;
+
         //Waypoints
-        GameObject _wayPointsObj = GameObject.FindWithTag("Waypoints");
+        GameObject _wayPointsObj = null;
+
+        if (_wayPointsString == string.Empty)
+            _wayPointsObj = GameObject.FindWithTag("Waypoints");
+        else
+            _wayPointsObj = GameObject.Find(_wayPointsString);
         if (_wayPointsObj != null)
         {
             for (int i = 0; i < _wayPointsObj.transform.childCount; i++)
@@ -185,7 +213,7 @@ public class ZombieBase : Being
                 _wayPoints.Add(_wayPointsObj.transform.GetChild(i));
             }
         }
-	}
+    }
 
     //*********************************************************************************************************************************************************
     #region AIStateBehaviors
@@ -201,13 +229,13 @@ public class ZombieBase : Being
         if (_isAlive && !_isBeingControlled)
         {
 
-            if(_navMeshAgent.isActiveAndEnabled)
+            if (_navMeshAgent.isActiveAndEnabled && _wayPoints.Count > 0)
             {
                 _navMeshAgent.speed = _characterStats.WalkSpeed;
                 _navMeshAgent.destination = _wayPoints[_nextWayPoint].position;
                 _navMeshAgent.isStopped = false;
 
-                if (_navMeshAgent.remainingDistance <= 1f)
+                if (_navMeshAgent.remainingDistance <= 1f || !_navMeshAgent.hasPath)
                     GetNextWayPoint();
             }
 
@@ -269,12 +297,17 @@ public class ZombieBase : Being
             if (ownCollider)
                 ownCollider.enabled = false;
             _zomzControl.UnregisterZomzMode();
+
+            if (_zomzDieEvent)
+                _zomzDieEvent.Raise();
         }
     }
 	
     // MAIN AI LOOP - GOES THROUGH LIST OF ACTIONS AND DECIDES STATE OF AI
     protected virtual void ExecuteAI()
     {
+        //Debug.Log(gameObject.name);
+
         finalLayerMask = humanLayerMask | playerLayerMask;
 
         Being visibleBeing = GetBeingInLookRange(finalLayerMask, _characterStats.LookRange);
@@ -304,6 +337,10 @@ public class ZombieBase : Being
             ownCollider.enabled = true;
         }
 
+        //REGULAR ZOMBIE CODE
+        if (distanceToBeing > _characterStats.LookRange || (visibleBeing.transform.position.y - transform.position.y >=2))
+            _isChasing = false;
+
         float distanceToChasePosition = Vector3.Distance(transform.position, overriddenChasePosition);
 
         //Reset Chase override if close to the patrol position
@@ -313,20 +350,10 @@ public class ZombieBase : Being
                 _isChaseOverridden = false;
         }
 
-
-        if (visibleBeing == null && !_isChaseOverridden)
+        if (visibleBeing == null && !_isChaseOverridden && !_isChasing)
         {
             _currentState = ZombieStates.PATROL;
             InitNewState("walk");
-            _previousState = _currentState;
-        }
-        //Transition to CHASE mode if close enough to the player
-        else if (_isChaseOverridden || ( visibleBeing != null && visibleBeing.IsAlive  && (unobstructedViewToBeing && !_isAttacking && distanceToBeing > _characterStats.AttackRange && beingAngle < _characterStats.FieldOfView * 0.5f)))
-        {
-            targetBeing = visibleBeing;
-            _animator.ResetTrigger("walk");
-            _currentState = ZombieStates.CHASE;
-            InitNewState("run", false);
             _previousState = _currentState;
         }
         //Transition to ATTACK if in attack range
@@ -337,11 +364,24 @@ public class ZombieBase : Being
             InitNewState("attack", true);
             _previousState = _currentState;
         }
+        //Transition to CHASE mode if close enough to the player
+        else if (_isChasing || _isChaseOverridden || ( visibleBeing != null && visibleBeing.IsAlive  && (unobstructedViewToBeing && !_isAttacking && distanceToBeing > _characterStats.AttackRange && beingAngle < _characterStats.FieldOfView * 0.5f)))
+        {
+            targetBeing = visibleBeing;
+            _animator.ResetTrigger("walk");
+            _currentState = ZombieStates.CHASE;
+            InitNewState("run", false);
+            _previousState = _currentState;
+            _isChasing = true;
+        }
         else
         {
-            _currentState = ZombieStates.PATROL;
-            InitNewState("walk");
-            _previousState = _currentState;
+            if (!_isChasing)
+            {
+                _currentState = ZombieStates.PATROL;
+                InitNewState("walk");
+                _previousState = _currentState;
+            }
         }
 
         switch(_currentState)
@@ -572,7 +612,7 @@ public class ZombieBase : Being
 	
     protected virtual void Update () 
     {
-        if(_isAlive && !_isBeingControlled && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue)
+        if(_isAlive && !_isBeingControlled && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue &&!_gameData.IsPaused)
             ExecuteAI();
 
         //Zomz Mode Registered - MOVEMENt

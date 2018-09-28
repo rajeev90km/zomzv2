@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1674810322359584}
+  m_IsPrefabParent: 1
+--- !u!1 &1674810322359584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4388018820929070}
+  - component: {fileID: 114520017981264176}
+  - component: {fileID: 114693480711873202}
+  m_Layer: 4
+  m_Name: ZombieSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4388018820929070
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674810322359584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 132.17679, y: 1, z: -119.74307}
+  m_LocalScale: {x: 2.4835358, y: 0.68517137, z: 2.1348615}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114520017981264176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674810322359584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3120d87a3a74ba791322de9f704685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _maxZombiesInScene: 12
+  _timeBetweenSpawns: 5
+  _numZombiesInScene: 0
+  _regularZombie: {fileID: 1690766357544074, guid: 6e846b395701744ad8e3c74f94652e12,
+    type: 2}
+  _fastZombie: {fileID: 1676861797275996, guid: 4de1a8f9bacea4136a0113b20070e9be,
+    type: 2}
+  _strongZombie: {fileID: 1875776018789522, guid: 8bbda612cf6dc41cbb8b2f6c49d5b4de,
+    type: 2}
+  _exploderZombie: {fileID: 1871264329401512, guid: 884974974ad604a128c9c9d10437e0e8,
+    type: 2}
+  _vomitZombie: {fileID: 1571711086445500, guid: 0c92431e534814bb0b67185a06d0585e,
+    type: 2}
+  _screamerZombie: {fileID: 1460562176944410, guid: 500cd96334a4e47fcb04b910057fff33,
+    type: 2}
+--- !u!114 &114693480711873202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674810322359584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667daaff2d7244a75a401eece422b7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4970cc328e48e434cad248ac1a815c0c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114520017981264176}
+        m_MethodName: OnZombieDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

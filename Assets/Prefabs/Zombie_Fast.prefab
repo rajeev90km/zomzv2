@@ -2437,7 +2437,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1617578065890028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4932516575973128}
@@ -2776,6 +2776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e88d823f1d1540b8a344fadbd404990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &114035624294322772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2871,6 +2872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68cdc0f19ef142eaaecb16f4457b96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameData: {fileID: 0}
   _characterStats: {fileID: 11400000, guid: b2f6a99f181cc49449ccb144162889c3, type: 2}
   _zomzActionsList: {fileID: 11400000, guid: 7454997a54f2d40e7b197818a56a48b7, type: 2}
   _currentSelectedZombie: {fileID: 11400000, guid: 819903b2282a74b9291d8042e677cdb5,
@@ -2891,6 +2893,7 @@ MonoBehaviour:
   _currentState: {fileID: 11400000, guid: 8ae4a312a99fa4d9fa8792a96b1f8f21, type: 2}
   _remainState: {fileID: 11400000, guid: ee9bcc9702cf844d595957e276deae40, type: 2}
   _deadState: {fileID: 11400000, guid: 45f1d89c4ffc34d879d658e4413d453f, type: 2}
+  _chaseState: {fileID: 0}
   _hurtFX: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 2}
   navMeshAgent: {fileID: 0}
   ChaseTarget: {fileID: 0}
@@ -2901,6 +2904,7 @@ MonoBehaviour:
   _zomzManaAttribute: {fileID: 11400000, guid: f3a6c0e127ede49ad866f88bc2b95abb, type: 2}
   _manaForUnitMovement: 2
   _manaForAttack: 10
+  _zomzAttackCooldown: 10
 --- !u!114 &114836883008268822
 MonoBehaviour:
   m_ObjectHideFlags: 1

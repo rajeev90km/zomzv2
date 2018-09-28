@@ -1548,7 +1548,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871264329401512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.84, y: 0, z: -22.57}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224275383214823252}
@@ -2125,21 +2125,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0724b24e224be421d819917d3af80c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isChaseOverridden: 0
+  _gameData: {fileID: 11400000, guid: fe25c4c301c7243a3b0300d6eb01a3f9, type: 2}
   _initState: 0
   _characterStats: {fileID: 11400000, guid: 7a6fcc103ed7c4633953f5c2576f3875, type: 2}
   _currentHealth: 0
   ZomzMode: {fileID: 11400000, guid: 171a4897d216445ffb1428aab63fe011, type: 2}
+  _wayPointsString: 
   _currentState: 0
+  zombieType: 0
   _model: {fileID: 1440009202276090}
   _defaultMaterial: {fileID: 2100000, guid: 2bc1b335b0b8a6941b209fd34c1fb714, type: 2}
   _zomzModeMaterial: {fileID: 2100000, guid: 7444f32d9982f46ab8133da7505097ff, type: 2}
   _zomzManaAttribute: {fileID: 11400000, guid: f3a6c0e127ede49ad866f88bc2b95abb, type: 2}
   _sightHeightMultiplier: 2.25
-  playerSightHeight: -0.85
+  playerSightHeight: 1.15
   _moveCostPerUnit: 1
   _attackCost: 10
   _hurtFx: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 2}
   _zombieHealthBar: {fileID: 114646443365806394}
+  _zomzDieEvent: {fileID: 11400000, guid: 4970cc328e48e434cad248ac1a815c0c, type: 2}
   _explosionFXPrefab: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 2}
 --- !u!114 &114448341318834206
 MonoBehaviour:
