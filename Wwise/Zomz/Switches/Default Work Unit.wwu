@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7F6DF8DE-6FAB-4C73-AAE0-68DBC9E5C91B}" SchemaVersion="89">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{7F6DF8DE-6FAB-4C73-AAE0-68DBC9E5C91B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7F6DF8DE-6FAB-4C73-AAE0-68DBC9E5C91B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Footsteps" ID="{08178EEB-1BD5-4E7B-81A4-C75BFCB50D8E}" ShortID="55185856">
+					<ChildrenList>
+						<SwitchGroup Name="Material" ID="{97B28AA3-4F74-4EC2-A39F-A0D1F130E192}">
+							<PropertyList>
+								<Property Name="UseGameParameter" Type="bool" Value="True"/>
+							</PropertyList>
+						</SwitchGroup>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

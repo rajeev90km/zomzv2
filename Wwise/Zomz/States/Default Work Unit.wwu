@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{43C563B2-807E-4D9A-8C17-C73520EE416B}" SchemaVersion="89">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{43C563B2-807E-4D9A-8C17-C73520EE416B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{43C563B2-807E-4D9A-8C17-C73520EE416B}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Zomz_Mode" ID="{80C907C9-6EEC-4355-A972-C1373B79E5D8}">
+					<ChildrenList>
+						<State Name="None" ID="{6AA44EB8-ED5D-47A2-A6A6-28C602627F6B}"/>
+						<State Name="Normal" ID="{A585BDF1-ECED-487A-AB6A-F01E76280AA8}"/>
+						<State Name="Zomz" ID="{6A0E3F19-CC9A-4A74-BD9E-F6459DA5C70A}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Normal" ID="{A585BDF1-ECED-487A-AB6A-F01E76280AA8}"/>
+							<EndState Name="Zomz" ID="{6A0E3F19-CC9A-4A74-BD9E-F6459DA5C70A}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Zomz" ID="{6A0E3F19-CC9A-4A74-BD9E-F6459DA5C70A}"/>
+							<EndState Name="Normal" ID="{A585BDF1-ECED-487A-AB6A-F01E76280AA8}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

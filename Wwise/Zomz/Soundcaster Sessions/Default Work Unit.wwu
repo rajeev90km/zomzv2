@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="test" ID="{61268C16-528B-4778-B29D-9811B8E898B6}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="abe_attack" ID="{269AC1E4-C40F-4FDD-A9C2-C74778CBAE3A}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}"/>
+							<ObjectRef Name="Abe_Grunts" ID="{269AC1E4-C40F-4FDD-A9C2-C74778CBAE3A}" WorkUnitID="{89920AC3-0140-4C69-9ADA-39B1A9E930EC}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>

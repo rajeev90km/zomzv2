@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	60346233	Zomz_Mode			\Default Work Unit\Zomz_Mode	
+
+State	ID	Name	State Group			Notes
+	0	None	Zomz_Mode			
+	815279773	Zomz	Zomz_Mode			
+	1160234136	Normal	Zomz_Mode			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Reflect Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Reflect Acoustic Textures\Textures\Mountain	

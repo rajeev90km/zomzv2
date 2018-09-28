@@ -1,6 +1,80 @@
 Event	ID	Name			Wwise Object Path	Notes
-	622635788	abe_attack			\Default Work Unit\abe_attack	
+	294231328	Reg_Attack			\Default Work Unit\Zombies\Regular\Reg_Attack	
+	295986111	Reg_Roam			\Default Work Unit\Zombies\Regular\Reg_Roam	
+	303293398	Destroyed_Crate			\Default Work Unit\Breakables\Crates\Destroyed_Crate	
+	358608457	Machete_Attack			\Default Work Unit\Combat\Weapons\Machete\Machete_Attack	
+	432197282	Crowd_Cheer			\Default Work Unit\Crowd\Crowd_Cheer	
+	668518050	Torch_Idle			\Default Work Unit\Combat\Weapons\Torch\Torch_Idle	
+	840483585	Jalali_lvl2_Rules			\Default Work Unit\Jalali Issa\Jalali_lvl2_Rules	
+	1005834641	Abe_Roll			\Default Work Unit\Abe\Abe_Roll	
+	1179261522	Exp_SeesYou			\Default Work Unit\Zombies\Exploder\Exp_SeesYou	
+	1458752183	Fence_Bump			\Default Work Unit\Fences\Fence_Bump	
+	1818851361	Abe_Grunts			\Default Work Unit\Abe\Abe_Grunts	
+	1847440062	Abe_Death			\Default Work Unit\Abe\Abe_Death	
+	1938734727	Reg_Hurt			\Default Work Unit\Zombies\Regular\Reg_Hurt	
+	1965443127	Barrel_Explode			\Default Work Unit\Barrels\Barrel_Explode	
+	1968405215	Bonfire_Ignite			\Default Work Unit\Bonfires\Bonfire_Ignite	
+	2367327007	Reg_Dying			\Default Work Unit\Zombies\Regular\Reg_Dying	
+	2385628198	Footsteps			\Default Work Unit\Footsteps\Footsteps	
+	2414454291	Bonfire_Loop			\Default Work Unit\Bonfires\Bonfire_Loop	
+	2481564433	Container_Bump			\Default Work Unit\Containers\Container_Bump	
+	2816404490	Axe_Attack			\Default Work Unit\Combat\Weapons\Axe\Axe_Attack	
+	2995248266	Exp_Roam			\Default Work Unit\Zombies\Exploder\Exp_Roam	
+	3120423149	Reg_SeesYou			\Default Work Unit\Zombies\Regular\Reg_SeesYou	
+	3157222669	Gate_Opening			\Default Work Unit\Gates&Doors\Gate_Opening	
+	3186396807	Pressure_Switch			\Default Work Unit\Switches_Levers\Pressure_Switch	
+	3298057973	Use_HealthKit			\Default Work Unit\Health_Kits\Use_HealthKit	
+	3606065765	Crowd_Boo			\Default Work Unit\Crowd\Crowd_Boo	
+	3814771491	Abe_Hurt			\Default Work Unit\Abe\Abe_Hurt	
+	3907567496	Torch_Attack			\Default Work Unit\Combat\Weapons\Torch\Torch_Attack	
+	4002745841	Gate_Lever			\Default Work Unit\Switches_Levers\Gate_Lever	
+	4146549089	Exp_Attack			\Default Work Unit\Zombies\Exploder\Exp_Attack	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	687094787	hit	Y:\Documents\WwiseProjects\Zomz\.cache\Windows\SFX\hit_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\hit		36928
+	23357778	sfx_machete_001	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_machete_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Weapons\Machete\sfx_machete_001		65608
+	44495175	SCRATCH_sfx_AbeHurt_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeHurt_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Hurt\Abe_Hurt\SCRATCH_sfx_AbeHurt_01		50668
+	121487431	sfx_fenceRattle	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_fenceRattle_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fence\sfx_fenceRattle		228260
+	127107335	sfx_shippingContainerHit	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_shippingContainerHit_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Containers\sfx_shippingContainerHit		114644
+	166261321	SCRATCH_crowdBooing	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_crowdBooing_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Crowd\Disappointed\SCRATCH_crowdBooing		607032
+	204762503	SCRATCH_sfx_ZomzRegAttack_04	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegAttack_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Attack\Reg_Attack\SCRATCH_sfx_ZomzRegAttack_04		61472
+	241228860	SCRATCH_sfx_ZomzRegRoam_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegRoam_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Roam\Reg_Roam\SCRATCH_sfx_ZomzRegRoam_01		471820
+	241968987	sfx_crateDestroy	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_crateDestroy_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Breakables\Crates\sfx_crateDestroy		135012
+	269457825	SCRATCH_sfx_AbeAttack_03	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeAttack_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Attack\Abe_Grunts\SCRATCH_sfx_AbeAttack_03		75280
+	282239213	SCRATCH_sfx_AbeHurt_04	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeHurt_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Hurt\Abe_Hurt\SCRATCH_sfx_AbeHurt_04		68992
+	307963381	SCRATCH_sfx_ZomzRegFound_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegFound_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_SeesYou\Reg_SeesYou\SCRATCH_sfx_ZomzRegFound_01		196216
+	308399226	SCRATCH_sfx_ZomzExplRoam_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzExplRoam_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_Roam\Exp_Roam\SCRATCH_sfx_ZomzExplRoam_02		230976
+	344191544	SCRATCH_sfx_AbeHurt_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeHurt_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Hurt\Abe_Hurt\SCRATCH_sfx_AbeHurt_02		63980
+	346497072	sfx_gateOpening	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_gateOpening_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gates&Doors\sfx_gateOpening		391672
+	358868922	sfx_torchIdle	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_torchIdle_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Weapons\Torch\sfx_torchIdle		831836
+	361897516	SCRATCH_sfx_ZomzRegAttack_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegAttack_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Attack\Reg_Attack\SCRATCH_sfx_ZomzRegAttack_01		86968
+	379332826	SCRATCH_sfx_ZomzRegHurt_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegHurt_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Hurt\Reg_Hurt\SCRATCH_sfx_ZomzRegHurt_01		67116
+	423454772	SCRATCH_sfx_AbeDeath_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeDeath_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Death\Abe_Death\SCRATCH_sfx_AbeDeath_01		448360
+	451702042	SCRATCH_sfx_crowdCheering	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_crowdCheering_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Crowd\Happy\SCRATCH_sfx_crowdCheering		2268252
+	453615116	SCRATCH_sfx_ZomzRegHurt_04	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegHurt_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Hurt\Reg_Hurt\SCRATCH_sfx_ZomzRegHurt_04		97300
+	479521239	sfx_gateLever	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_gateLever_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Switches_Levers\sfx_gateLever		125308
+	509483124	amb_bonfireLoop	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\amb_bonfireLoop_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bonfires\amb_bonfireLoop		2484896
+	530538110	SCRATCH_sfx_AbeAttack_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeAttack_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Attack\Abe_Grunts\SCRATCH_sfx_AbeAttack_02		66156
+	532340368	sfx_barrelExplosion	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_barrelExplosion_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Barrels\sfx_barrelExplosion		940920
+	561833558	sfx_torchAttack	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_torchAttack_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Weapons\Torch\sfx_torchAttack		86500
+	668120136	SCRATCH_sfx_AbeHurt_03	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeHurt_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Hurt\Abe_Hurt\SCRATCH_sfx_AbeHurt_03		85284
+	676695223	sfx_bonfireLight	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_bonfireLight_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bonfires\sfx_bonfireLight		407504
+	734592948	sfx_pressureSwitch	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_pressureSwitch_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Switches_Levers\sfx_pressureSwitch		170840
+	743832998	SCRATCH_sfx_AbeDeath_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeDeath_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Death\Abe_Death\SCRATCH_sfx_AbeDeath_02		636004
+	798798055	SCRATCH_sfx_ZomzRegHurt_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegHurt_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Hurt\Reg_Hurt\SCRATCH_sfx_ZomzRegHurt_02		87356
+	803068402	sfx_footsteps_001	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_footsteps_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_footsteps_001		63656
+	809116727	SCRATCH_sfx_AbeAttack_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeAttack_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Attack\Abe_Grunts\SCRATCH_sfx_AbeAttack_01		64240
+	820850791	SCRATCH_sfx_AbeAttack_04	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_AbeAttack_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abe\Abe_Attack\Abe_Grunts\SCRATCH_sfx_AbeAttack_04		71968
+	857594352	SCRATCH_sfx_ZomzExplFound_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzExplFound_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_SeesYou\Exp_SeesYou\SCRATCH_sfx_ZomzExplFound_02		169252
+	878048911	SCRATCH_sfx_ZomzExplFound_03	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzExplFound_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_SeesYou\Exp_SeesYou\SCRATCH_sfx_ZomzExplFound_03		210708
+	883632159	sfx_healthPackUse	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_healthPackUse_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Health Kit\sfx_healthPackUse		576064
+	910194522	SCRATCH_sfx_ZomzRegRoam_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegRoam_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Roam\Reg_Roam\SCRATCH_sfx_ZomzRegRoam_02		690316
+	917311816	SCRATCH_sfx_ZomzRegHurt_03	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegHurt_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Hurt\Reg_Hurt\SCRATCH_sfx_ZomzRegHurt_03		94620
+	926757841	SCRATCH_sfx_ZomzExplFound_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzExplFound_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_SeesYou\Exp_SeesYou\SCRATCH_sfx_ZomzExplFound_01		162396
+	941799481	SCRATCH_sfx_ZomzExplFound_04	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzExplFound_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_SeesYou\Exp_SeesYou\SCRATCH_sfx_ZomzExplFound_04		357360
+	949624666	sfx_ZOMZ_exploderBoom	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\sfx_ZOMZ_exploderBoom_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_Attack\Exp_Attack\sfx_ZOMZ_exploderBoom		1291732
+	979985408	SCRATCH_sfx_ZomzRegDie_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegDie_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Dying\Reg_Dying\SCRATCH_sfx_ZomzRegDie_01		339692
+	994621262	SCRATCH_sfx_ZomzRegAttack_02	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegAttack_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Attack\Reg_Attack\SCRATCH_sfx_ZomzRegAttack_02		86968
+	998607955	SCRATCH_sfx_ZomzExplRoam_01	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzExplRoam_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Exploder\Exp_Roam\Exp_Roam\SCRATCH_sfx_ZomzExplRoam_01		450684
+	1022935832	SCRATCH_vo_JalaliLevel2Instructions	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_vo_JalaliLevel2Instructions_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Jalali\SCRATCH\Lvl2\SCRATCH_vo_JalaliLevel2Instructions		2474512
+	1023979796	SCRATCH_sfx_ZomzRegAttack_03	D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\SFX\SCRATCH_sfx_ZomzRegAttack_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zom_Regular\Reg_Attack\Reg_Attack\SCRATCH_sfx_ZomzRegAttack_03		66484
 

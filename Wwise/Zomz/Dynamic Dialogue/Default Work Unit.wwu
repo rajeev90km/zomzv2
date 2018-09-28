@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F6DF0789-186C-493B-9274-42A055E07ED0}" SchemaVersion="89">
 	<DynamicDialogue>
-		<WorkUnit Name="Default Work Unit" ID="{F6DF0789-186C-493B-9274-42A055E07ED0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F6DF0789-186C-493B-9274-42A055E07ED0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Jalali Issa" ID="{BCFF959E-2868-48C5-B6BF-33FE4DABD65E}" ShortID="435326018">
+					<ChildrenList>
+						<DialogueEvent Name="Jalali_lvl2_Rules" ID="{9934EC89-6862-4054-BE4F-3753D8BAC621}">
+							<EntryList>
+								<Entry>
+									<AudioNodeInfo>
+										<NoObject Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+							</EntryList>
+						</DialogueEvent>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</DynamicDialogue>
 </WwiseDocument>

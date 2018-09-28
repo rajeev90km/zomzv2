@@ -311,6 +311,7 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Abe_Roll" ID="{74A1E3D8-9E90-4869-85A2-4B8B81A02366}" ShortID="848468264"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Zom_Regular" ID="{6659749C-B01E-4C60-8B6E-7E9C9C057DD3}" ShortID="666140442">
