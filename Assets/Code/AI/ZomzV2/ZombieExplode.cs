@@ -57,6 +57,8 @@ public class ZombieExplode : ZombieBase
 
             finalLayerMask = humanLayerMask | playerLayerMask | zombieLayerMask;
 
+            AkSoundEngine.PostEvent("Exp_Attack", gameObject);
+
             yield return new WaitForSeconds(CharacterStats.AttackRate);
 
             Collider[] beingsHit = Physics.OverlapSphere(transform.position, CharacterStats.ExplosionRange, finalLayerMask);
@@ -85,6 +87,8 @@ public class ZombieExplode : ZombieBase
                 _explosionFXObj.transform.position = transform.position;
                 IsAlive = false;
             }
+
+            
 
             yield return new WaitForSeconds(0.3f);
 

@@ -241,6 +241,7 @@ public class CharacterControls : Being
         _gameData.IsPaused = true;
 
         StartCoroutine(RemoveObjectiveCanvasAndPlaceObjectiveOnSide());
+        
     }
 
     public IEnumerator RemoveObjectiveCanvasAndPlaceObjectiveOnSide()
@@ -327,11 +328,12 @@ public class CharacterControls : Being
             if (closestEnemy && closestEnemy.IsAlive)
                 StartCoroutine(closestEnemy.Hurt(_characterStats.AttackStrength + _attackModifier));
         }
+        AkSoundEngine.PostEvent("Abe_Grunts", gameObject);
 
         yield return new WaitForSeconds(_characterStats.AttackRate/2);
         _canAttack = true;
 
-        AkSoundEngine.PostEvent("abe_attack", gameObject);
+        
 
 
         //Update Weapon Durability if Any
