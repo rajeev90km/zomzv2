@@ -283,6 +283,7 @@ public class CharacterControls : Being
 		if (_isAlive)
         {
             _isCrouching = false;
+            _animator.enabled = true;
 
             _isHurting = true;
 
@@ -314,6 +315,8 @@ public class CharacterControls : Being
 
     public override IEnumerator Attack()
     {
+        _isCrouching = false;
+        _animator.enabled = true;
         _isAttacking = true;
         _canAttack = false;
         _animator.SetTrigger(_attackAnimations[Random.Range(0, _attackAnimations.Length)]);
@@ -423,7 +426,9 @@ public class CharacterControls : Being
             _animator.SetTrigger("endcrouch");
             _ownCollider.height = DEFAULT_COLLIDER_HEIGHT;
             _ownCollider.center = DEFAULT_COLLIDER_CENTER;
-        }    
+        }
+
+        _isCrouching = false;
     }
 
     IEnumerator PlayFallAnimation()
@@ -816,6 +821,7 @@ public class CharacterControls : Being
                     if(_isCrouching){
                         _ownCollider.height = CROUCH_COLLIDER_HEIGHT;
                         _ownCollider.center = CROUCH_COLLIDER_CENTER;
+                        _animator.ResetTrigger("endcrouch");
                         _animator.SetTrigger("crouch");
                     }
                     else{
@@ -858,6 +864,10 @@ public class CharacterControls : Being
                     {
                         targetSpeed = _characterStats.PushSpeed;
                     }
+
+                    if (_isCrouching)
+                        targetSpeed = _characterStats.WalkSpeed;
+
                     _currentSpeed = Mathf.SmoothDamp(_currentSpeed, targetSpeed, ref _speedSmoothVelocity, _speedSmoothTime);
 
                     Vector3 rightMovement = right * _currentSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
@@ -897,7 +907,7 @@ public class CharacterControls : Being
                     {
                         _animator.ResetTrigger("hurt1");
 
-                        EndCrouch();
+                        //EndCrouch();
 
                         if (!_canPush)
                             transform.forward = heading;
@@ -920,7 +930,20 @@ public class CharacterControls : Being
 
                     float animationSpeedPercent = ((running) ? 1 : 0.5f) * heading.magnitude;
 
-                    if (_animator)
+                    if (_isCrouching)
+                    {
+                        if (heading != Vector3.zero)
+                        {
+                            _animator.ResetTrigger("endcrouchwalk");
+                            _animator.SetTrigger("crouchwalk");
+                        }
+                        else
+                        {
+                            _animator.ResetTrigger("crouchwalk");
+                            _animator.SetTrigger("endcrouchwalk");
+                        }
+                    }
+                    else
                         _animator.SetFloat("speedPercent", animationSpeedPercent, _speedSmoothTime, Time.deltaTime);
                 }
             }
