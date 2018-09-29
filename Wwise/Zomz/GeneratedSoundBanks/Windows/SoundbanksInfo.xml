@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>D:\GitHub\Zomz\zomzv2\Wwise\Zomz\</ProjectRoot>
-		<SourceFilesRoot>D:\GitHub\Zomz\zomzv2\Wwise\Zomz\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitHub\Zomz\zomzv2\Wwise\Zomz\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>/Users/rajeevmukundan/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Zomzv2/Wwise/Zomz/</ProjectRoot>
+		<SourceFilesRoot>/Users/rajeevmukundan/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Zomzv2/Wwise/Zomz/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/rajeevmukundan/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Zomzv2/Wwise/Zomz/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitHub\Zomz\zomzv2\Wwise\Zomz\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/rajeevmukundan/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Zomzv2/Wwise/Zomz/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -56,191 +56,191 @@
 			<IncludedMemoryFiles>
 				<File Id="23357778" Language="SFX">
 					<ShortName>sfx_machete_001.wav</ShortName>
-					<Path>SFX\sfx_machete_001_56D34C19.wem</Path>
+					<Path>SFX/sfx_machete_001_56D34C19.wem</Path>
 				</File>
 				<File Id="44495175" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeHurt_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeHurt_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeHurt_01_56D34C19.wem</Path>
 				</File>
 				<File Id="121487431" Language="SFX">
 					<ShortName>sfx_fenceRattle.wav</ShortName>
-					<Path>SFX\sfx_fenceRattle_56D34C19.wem</Path>
+					<Path>SFX/sfx_fenceRattle_56D34C19.wem</Path>
 				</File>
 				<File Id="127107335" Language="SFX">
 					<ShortName>sfx_shippingContainerHit.wav</ShortName>
-					<Path>SFX\sfx_shippingContainerHit_56D34C19.wem</Path>
+					<Path>SFX/sfx_shippingContainerHit_56D34C19.wem</Path>
 				</File>
 				<File Id="166261321" Language="SFX">
 					<ShortName>SCRATCH_crowdBooing.wav</ShortName>
-					<Path>SFX\SCRATCH_crowdBooing_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_crowdBooing_56D34C19.wem</Path>
 				</File>
 				<File Id="204762503" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegAttack_04.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegAttack_04_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegAttack_04_56D34C19.wem</Path>
 				</File>
 				<File Id="241228860" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegRoam_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegRoam_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegRoam_01_56D34C19.wem</Path>
 				</File>
 				<File Id="241968987" Language="SFX">
 					<ShortName>sfx_crateDestroy.wav</ShortName>
-					<Path>SFX\sfx_crateDestroy_56D34C19.wem</Path>
+					<Path>SFX/sfx_crateDestroy_56D34C19.wem</Path>
 				</File>
 				<File Id="269457825" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeAttack_03.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeAttack_03_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeAttack_03_56D34C19.wem</Path>
 				</File>
 				<File Id="282239213" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeHurt_04.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeHurt_04_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeHurt_04_56D34C19.wem</Path>
 				</File>
 				<File Id="307963381" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegFound_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegFound_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegFound_01_56D34C19.wem</Path>
 				</File>
 				<File Id="308399226" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzExplRoam_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzExplRoam_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzExplRoam_02_56D34C19.wem</Path>
 				</File>
 				<File Id="344191544" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeHurt_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeHurt_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeHurt_02_56D34C19.wem</Path>
 				</File>
 				<File Id="346497072" Language="SFX">
 					<ShortName>sfx_gateOpening.wav</ShortName>
-					<Path>SFX\sfx_gateOpening_56D34C19.wem</Path>
+					<Path>SFX/sfx_gateOpening_56D34C19.wem</Path>
 				</File>
 				<File Id="358868922" Language="SFX">
 					<ShortName>sfx_torchIdle.wav</ShortName>
-					<Path>SFX\sfx_torchIdle_56D34C19.wem</Path>
+					<Path>SFX/sfx_torchIdle_56D34C19.wem</Path>
 				</File>
 				<File Id="361897516" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegAttack_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegAttack_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegAttack_01_56D34C19.wem</Path>
 				</File>
 				<File Id="379332826" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegHurt_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegHurt_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegHurt_01_56D34C19.wem</Path>
 				</File>
 				<File Id="423454772" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeDeath_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeDeath_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeDeath_01_56D34C19.wem</Path>
 				</File>
 				<File Id="451702042" Language="SFX">
 					<ShortName>SCRATCH_sfx_crowdCheering.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_crowdCheering_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_crowdCheering_56D34C19.wem</Path>
 				</File>
 				<File Id="453615116" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegHurt_04.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegHurt_04_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegHurt_04_56D34C19.wem</Path>
 				</File>
 				<File Id="479521239" Language="SFX">
 					<ShortName>sfx_gateLever.wav</ShortName>
-					<Path>SFX\sfx_gateLever_56D34C19.wem</Path>
+					<Path>SFX/sfx_gateLever_56D34C19.wem</Path>
 				</File>
 				<File Id="509483124" Language="SFX">
 					<ShortName>amb_bonfireLoop.wav</ShortName>
-					<Path>SFX\amb_bonfireLoop_56D34C19.wem</Path>
+					<Path>SFX/amb_bonfireLoop_56D34C19.wem</Path>
 				</File>
 				<File Id="530538110" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeAttack_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeAttack_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeAttack_02_56D34C19.wem</Path>
 				</File>
 				<File Id="532340368" Language="SFX">
 					<ShortName>sfx_barrelExplosion.wav</ShortName>
-					<Path>SFX\sfx_barrelExplosion_56D34C19.wem</Path>
+					<Path>SFX/sfx_barrelExplosion_56D34C19.wem</Path>
 				</File>
 				<File Id="561833558" Language="SFX">
 					<ShortName>sfx_torchAttack.wav</ShortName>
-					<Path>SFX\sfx_torchAttack_56D34C19.wem</Path>
+					<Path>SFX/sfx_torchAttack_56D34C19.wem</Path>
 				</File>
 				<File Id="668120136" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeHurt_03.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeHurt_03_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeHurt_03_56D34C19.wem</Path>
 				</File>
 				<File Id="676695223" Language="SFX">
 					<ShortName>sfx_bonfireLight.wav</ShortName>
-					<Path>SFX\sfx_bonfireLight_56D34C19.wem</Path>
+					<Path>SFX/sfx_bonfireLight_56D34C19.wem</Path>
 				</File>
 				<File Id="734592948" Language="SFX">
 					<ShortName>sfx_pressureSwitch.wav</ShortName>
-					<Path>SFX\sfx_pressureSwitch_56D34C19.wem</Path>
+					<Path>SFX/sfx_pressureSwitch_56D34C19.wem</Path>
 				</File>
 				<File Id="743832998" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeDeath_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeDeath_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeDeath_02_56D34C19.wem</Path>
 				</File>
 				<File Id="763974523" Language="SFX">
 					<ShortName>mx_ZOMZ_lvl1.wav</ShortName>
-					<Path>SFX\mx_ZOMZ_lvl1_8956FC97.wem</Path>
+					<Path>SFX/mx_ZOMZ_lvl1_8956FC97.wem</Path>
 				</File>
 				<File Id="798798055" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegHurt_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegHurt_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegHurt_02_56D34C19.wem</Path>
 				</File>
 				<File Id="803068402" Language="SFX">
 					<ShortName>sfx_footsteps_001.wav</ShortName>
-					<Path>SFX\sfx_footsteps_001_56D34C19.wem</Path>
+					<Path>SFX/sfx_footsteps_001_56D34C19.wem</Path>
 				</File>
 				<File Id="809116727" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeAttack_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeAttack_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeAttack_01_56D34C19.wem</Path>
 				</File>
 				<File Id="820850791" Language="SFX">
 					<ShortName>SCRATCH_sfx_AbeAttack_04.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_AbeAttack_04_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_AbeAttack_04_56D34C19.wem</Path>
 				</File>
 				<File Id="857594352" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzExplFound_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzExplFound_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzExplFound_02_56D34C19.wem</Path>
 				</File>
 				<File Id="878048911" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzExplFound_03.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzExplFound_03_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzExplFound_03_56D34C19.wem</Path>
 				</File>
 				<File Id="883632159" Language="SFX">
 					<ShortName>sfx_healthPackUse.wav</ShortName>
-					<Path>SFX\sfx_healthPackUse_56D34C19.wem</Path>
+					<Path>SFX/sfx_healthPackUse_56D34C19.wem</Path>
 				</File>
 				<File Id="910194522" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegRoam_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegRoam_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegRoam_02_56D34C19.wem</Path>
 				</File>
 				<File Id="917311816" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegHurt_03.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegHurt_03_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegHurt_03_56D34C19.wem</Path>
 				</File>
 				<File Id="926757841" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzExplFound_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzExplFound_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzExplFound_01_56D34C19.wem</Path>
 				</File>
 				<File Id="941799481" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzExplFound_04.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzExplFound_04_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzExplFound_04_56D34C19.wem</Path>
 				</File>
 				<File Id="949624666" Language="SFX">
 					<ShortName>sfx_ZOMZ_exploderBoom.wav</ShortName>
-					<Path>SFX\sfx_ZOMZ_exploderBoom_56D34C19.wem</Path>
+					<Path>SFX/sfx_ZOMZ_exploderBoom_56D34C19.wem</Path>
 				</File>
 				<File Id="979985408" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegDie_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegDie_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegDie_01_56D34C19.wem</Path>
 				</File>
 				<File Id="994621262" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegAttack_02.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegAttack_02_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegAttack_02_56D34C19.wem</Path>
 				</File>
 				<File Id="998607955" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzExplRoam_01.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzExplRoam_01_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzExplRoam_01_56D34C19.wem</Path>
 				</File>
 				<File Id="1022935832" Language="SFX">
 					<ShortName>SCRATCH_vo_JalaliLevel2Instructions.wav</ShortName>
-					<Path>SFX\SCRATCH_vo_JalaliLevel2Instructions_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_vo_JalaliLevel2Instructions_56D34C19.wem</Path>
 				</File>
 				<File Id="1023979796" Language="SFX">
 					<ShortName>SCRATCH_sfx_ZomzRegAttack_03.wav</ShortName>
-					<Path>SFX\SCRATCH_sfx_ZomzRegAttack_03_56D34C19.wem</Path>
+					<Path>SFX/SCRATCH_sfx_ZomzRegAttack_03_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
