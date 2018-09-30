@@ -10,6 +10,7 @@ public class ZombieExplode : ZombieBase
     private int _enemyLayerMask;
     private int _playerLayerMask;
     private int _enemyAndPlayerLayerMask;
+    private int flammableMask;
 
     GameObject _explosionFXObj;
 
@@ -19,6 +20,7 @@ public class ZombieExplode : ZombieBase
 	{
         base.Awake();
 
+        flammableMask = (1 << LayerMask.NameToLayer("Flammable"));
 
         _zomzController = GameObject.FindWithTag("Player").GetComponent<ZomzController>();
 	}
@@ -57,6 +59,7 @@ public class ZombieExplode : ZombieBase
 
             finalLayerMask = humanLayerMask | playerLayerMask | zombieLayerMask;
 
+
             AkSoundEngine.PostEvent("Exp_Attack", gameObject);
 
             yield return new WaitForSeconds(CharacterStats.AttackRate);
@@ -76,6 +79,28 @@ public class ZombieExplode : ZombieBase
                         being.StartCoroutine(being.Hurt( (CharacterStats.ExplosionRange - d )/CharacterStats.ExplosionRange * CharacterStats.AttackStrength));
                     }
                 }
+            }
+
+
+            Collider[] otherFlammableObjects = Physics.OverlapSphere(transform.position, CharacterStats.ExplosionRange, flammableMask);
+
+            for (int i = 0; i < otherFlammableObjects.Length; i++)
+            {
+                Explosive explosive = otherFlammableObjects[i].GetComponent<Explosive>();
+
+                if(explosive)
+                {
+                    explosive.Explode();
+                }
+
+
+                Flammable flammable = otherFlammableObjects[i].GetComponent<Flammable>();
+
+                if(flammable)
+                {
+                    flammable.OnCombustion();
+                }
+
             }
 
             IsAttacking = false;

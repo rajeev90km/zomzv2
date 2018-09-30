@@ -210,6 +210,11 @@ public class CharacterControls : Being
     private Vector3 _axePosition = new Vector3(-0.186f, 0.069f, 0.016f);
     private Vector3 _axeRotation = new Vector3(0, 0, 90);
 
+    private Vector3 _fireTorchPosition = new Vector3(0.196f, 0.097f, 0.012f);
+    private Vector3 _fireTorchRotation = new Vector3(0, -90, 90);
+
+    private int flammableMask;
+
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -226,6 +231,7 @@ public class CharacterControls : Being
         //LayerMasks
         humanLayerMask = (1 << LayerMask.NameToLayer("Human"));
         zombieLayerMask = (1 << LayerMask.NameToLayer("Enemy"));
+        flammableMask = (1 << LayerMask.NameToLayer("Flammable"));
         finalLayerMask = humanLayerMask | zombieLayerMask;
 
         GameObject postProcessObj = GameObject.FindWithTag("PostProcessing");
@@ -330,27 +336,44 @@ public class CharacterControls : Being
             transform.LookAt(closestEnemy.transform);
             if (closestEnemy && closestEnemy.IsAlive)
                 StartCoroutine(closestEnemy.Hurt(_characterStats.AttackStrength + _attackModifier));
+
+            //Update Weapon Durability if Any
+            if (_currentWeapon != null)
+            {
+                if (_currentWeapon.CurrentDurability > 1)
+                    _currentWeapon.CurrentDurability -= 1;
+                else
+                {
+                    Destroy(_currentWeapon.gameObject);
+                    _currentWeapon = null;
+                    _attackModifier = 0;
+                }
+            }
         }
+
+        Collider[] otherFlammableObjects = Physics.OverlapSphere(transform.position, CharacterStats.AttackRange, flammableMask);
+
+        for (int i = 0; i < otherFlammableObjects.Length;i++)
+        {
+            if(otherFlammableObjects[i].CompareTag("Bonfire"))
+            {
+                otherFlammableObjects[i].GetComponent<Flammable>().OnCombustion();
+            }
+
+            else
+            {
+                Explosive explosive = otherFlammableObjects[i].GetComponent<Explosive>();
+                if (explosive)
+                    explosive.Explode();
+            }
+        }
+
+
         AkSoundEngine.PostEvent("Abe_Grunts", gameObject);
 
         yield return new WaitForSeconds(_characterStats.AttackRate/2);
         _canAttack = true;
 
-        
-
-
-        //Update Weapon Durability if Any
-        if (_currentWeapon != null)
-        {
-            if (_currentWeapon.CurrentDurability > 1)
-                _currentWeapon.CurrentDurability -= 1;
-            else
-            {
-                Destroy(_currentWeapon.gameObject);
-                _currentWeapon = null;
-                _attackModifier = 0;
-            }
-        }
 
 
         yield return new WaitForSeconds(0.35f);
@@ -595,7 +618,7 @@ public class CharacterControls : Being
         yield return new WaitForSeconds(endClimbWait);
         _animator.SetTrigger("finishclimb");
 
-        if (transform.localPosition.y >= 0.01f)
+        if (transform.localPosition.y >= -0.05f)
             transform.position = _currentLadder.LadderTop.position;
         else
             transform.localPosition = new Vector3(transform.localPosition.x , 0.01f, transform.localPosition.z);
@@ -699,6 +722,11 @@ public class CharacterControls : Being
                             _currentWeapon.gameObject.transform.localPosition = _axePosition;
                             _currentWeapon.gameObject.transform.localEulerAngles = _axeRotation;
                         }
+                        else if (_currentWeapon.WeaponType == WeaponType.FIRETORCH)
+                        {
+                            _currentWeapon.gameObject.transform.localPosition = _fireTorchPosition;
+                            _currentWeapon.gameObject.transform.localEulerAngles = _fireTorchRotation;
+                        }
 
                         _attackModifier = _currentWeapon.Weapon.AttackStrength;
 
@@ -712,14 +740,14 @@ public class CharacterControls : Being
 
                 }
 
-
+                //CLIMB
                 if (_canClimb && !_isAttacking && !_isHurting && !_isDiving && !_isPushing && !_isCrouching)
                 {
                     rigidbody.useGravity = false;
                     rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                     _isClimbing = true;
 
-                    if (transform.localPosition.y <= _currentLadder.LadderHeight && transform.localPosition.y >= 0.01f)
+                    if (transform.localPosition.y <= _currentLadder.LadderHeight && transform.localPosition.y >= -0.05f)
                     {
                         float keyInput = Input.GetAxis("Vertical");
 

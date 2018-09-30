@@ -10,7 +10,8 @@ public enum InventoryType {
 public enum WeaponType
 {
     MACHETE = 0,
-    AXE = 1
+    AXE = 1,
+    FIRETORCH = 2
 }
 
 public class InventoryItem : MonoBehaviour {

@@ -18,13 +18,14 @@ public class Explosive : Interactable {
     private int _enemyLayerMask;
     private int _playerLayerMask;
     private int _enemyAndPlayerLayerMask;
-
+    private int flammableMask;
     private bool _isParticleHit = false;
 
 	private void Awake()
 	{
         _enemyLayerMask = (1 << LayerMask.NameToLayer("Enemy"));
         _playerLayerMask = (1 << LayerMask.NameToLayer("Player"));
+        flammableMask = (1 << LayerMask.NameToLayer("Flammable"));
         _enemyAndPlayerLayerMask = _enemyLayerMask | _playerLayerMask;
 	}
 
@@ -72,7 +73,7 @@ public class Explosive : Interactable {
 	}
 
 
-    void Explode()
+    public void Explode()
     {
         _explodeFX = Instantiate(_explodeFXPrefab);
         _explodeFX.transform.position = transform.position;
@@ -93,6 +94,21 @@ public class Explosive : Interactable {
                     being.StartCoroutine(being.Hurt(hurtAmount));
                 }
             }
+        }
+
+
+        Collider[] otherFlammableObjects = Physics.OverlapSphere(transform.position, _explosionRange, flammableMask);
+
+        for (int i = 0; i < otherFlammableObjects.Length; i++)
+        {
+            
+            Flammable flammable = otherFlammableObjects[i].GetComponent<Flammable>();
+
+            if (flammable)
+            {
+                flammable.OnCombustion();
+            }
+
         }
 
         Destroy(gameObject);
