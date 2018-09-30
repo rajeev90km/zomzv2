@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Flammable : MonoBehaviour {
 
@@ -12,7 +13,11 @@ public class Flammable : MonoBehaviour {
 
     public bool _isLit = false;
 
+    [SerializeField]
     private float _litTime = 100f;
+
+    [SerializeField]
+    private UnityEvent _onCombustionEvent;
 
     public void OnCombustion()
     {
@@ -24,6 +29,8 @@ public class Flammable : MonoBehaviour {
 
                 if (fireFx != null)
                     Destroy(fireFx);
+
+                _onCombustionEvent.Invoke();
 
                 fireFx = Instantiate(FireVFXPrefab);
                 fireFx.transform.position = FireSpawnTransform.position;

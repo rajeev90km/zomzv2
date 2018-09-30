@@ -19,6 +19,7 @@ TagManager:
   - HealthPack
   - Weapon
   - Bonfire
+  - LevelController
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - Human
   - Barrel
   - Flammable
-  - 
+  - LevelController
   - 
   - 
   - 
