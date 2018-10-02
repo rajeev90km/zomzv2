@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2571379d78879140bd416e082ab159a
+guid: 68b1a906989f4ad4ebbbf28b1c821696
 timeCreated: 1530488705
 licenseType: Free
 ModelImporter:
@@ -9,21 +9,34 @@ ModelImporter:
     400000: //RootNode
     2100000: lambert3
     2100002: lambert2
+    2100004: lambert6
+    2100006: lambert7
     2300000: //RootNode
     3300000: //RootNode
     4300000: Container_40ft1_Container_40ft_hollow_Door3
+    4300002: Container_40ft_sealed
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert2
-    second: {fileID: 2100000, guid: 20646b07be1d2fa40a33674dc854d065, type: 2}
+    second: {fileID: 2100000, guid: e1fd4fec1e2e3c744a4f0afcacb51945, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert3
     second: {fileID: 2100000, guid: 087e4c92a5f090449b524617eae752e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: 087e4c92a5f090449b524617eae752e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert7
+    second: {fileID: 2100000, guid: e1fd4fec1e2e3c744a4f0afcacb51945, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
