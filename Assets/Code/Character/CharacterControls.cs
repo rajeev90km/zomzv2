@@ -618,7 +618,7 @@ public class CharacterControls : Being
         yield return new WaitForSeconds(endClimbWait);
         _animator.SetTrigger("finishclimb");
 
-        if (transform.localPosition.y >= -0.05f)
+        if (transform.localPosition.y >= -0.12f)
             transform.position = _currentLadder.LadderTop.position;
         else
             transform.localPosition = new Vector3(transform.localPosition.x , 0.01f, transform.localPosition.z);
@@ -747,7 +747,7 @@ public class CharacterControls : Being
                     rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                     _isClimbing = true;
 
-                    if (transform.localPosition.y <= _currentLadder.LadderHeight && transform.localPosition.y >= -0.05f)
+                    if (transform.localPosition.y <= _currentLadder.LadderHeight && transform.localPosition.y >= -0.12f)
                     {
                         float keyInput = Input.GetAxis("Vertical");
 
@@ -778,7 +778,16 @@ public class CharacterControls : Being
 
                 if (!_isClimbing)
                 {
-                    if (Physics.Raycast(transform.position, -transform.up, HitDistance, GroundedLayerMask))
+                    //Debug.DrawRay(transform.position, -transform.up, Color.white);
+                    //Debug.DrawRay(transform.position - transform.forward * 0.2f, -transform.up, Color.white);
+
+                    bool a = Physics.Raycast(transform.position, -transform.up, HitDistance, GroundedLayerMask);
+                    bool b = Physics.Raycast(transform.position - transform.forward * 0.2f, -transform.up, HitDistance, GroundedLayerMask);
+                    bool c = Physics.Raycast(transform.position + transform.forward * 0.2f, -transform.up, HitDistance, GroundedLayerMask);
+                    bool d = Physics.Raycast(transform.position + transform.right * 0.2f, -transform.up, HitDistance, GroundedLayerMask);
+                    bool e = Physics.Raycast(transform.position - transform.right * 0.2f, -transform.up, HitDistance, GroundedLayerMask);
+
+                    if (a || b || c || d || e)
                     {
                         IsGrounded = true;
                     }
