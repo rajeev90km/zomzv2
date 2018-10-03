@@ -39,6 +39,8 @@ GameObject:
   - component: {fileID: 95860074322170904}
   - component: {fileID: 65083771594086796}
   - component: {fileID: 114104355457321770}
+  - component: {fileID: 54753359167492972}
+  - component: {fileID: 65144729290976836}
   m_Layer: 0
   m_Name: Machete
   m_TagString: Weapon
@@ -95,15 +97,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1064114740948246}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.75, y: 2.03, z: -40.74}
+  m_LocalRotation: {x: -0, y: -0.35303494, z: -0, w: 0.9356102}
+  m_LocalPosition: {x: 16.625, y: 0.029999971, z: -41.053}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 4191568169106914}
   - {fileID: 4203159198206234}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.195001, y: -41.466003, z: 5.451}
 --- !u!23 &23166568724187704
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -186,6 +188,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261722015315104}
   m_Mesh: {fileID: 4300000, guid: d272d1a6aa81ffa48a19ee7c97e980b2, type: 3}
+--- !u!54 &54753359167492972
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064114740948246}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!65 &65083771594086796
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -198,6 +215,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8536087, y: 0.08099061, z: 0.45250255}
   m_Center: {x: 0.0032737732, y: 0.009776688, z: -0.02444148}
+--- !u!65 &65144729290976836
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064114740948246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7270007, y: 0.031025125, z: 0.098909765}
+  m_Center: {x: -0.00072546006, y: 0.0000008583069, z: -0.0036644489}
 --- !u!95 &95860074322170904
 Animator:
   serializedVersion: 3

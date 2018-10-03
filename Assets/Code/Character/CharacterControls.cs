@@ -682,6 +682,7 @@ public class CharacterControls : Being
                         _interactText.SetActive(false);
                         currentGateSwitch.Activate();
                         currentGateSwitch = null;
+                        return;
                     }
 
 
@@ -710,6 +711,8 @@ public class CharacterControls : Being
                     {
                         _currentWeapon = currentInventoryWeapon;
                         _currentWeapon.GetComponent<Collider>().enabled = false;
+                        _currentWeapon.GetComponent<Rigidbody>().useGravity = false;
+                        _currentWeapon.GetComponent<Rigidbody>().isKinematic = true;
                         _currentWeapon.gameObject.transform.parent = _rightHand.transform;
 
                         if (_currentWeapon.WeaponType == WeaponType.MACHETE)
@@ -732,10 +735,19 @@ public class CharacterControls : Being
 
                         _interactBg.SetActive(false);
                         _interactText.SetActive(false);
+                        currentInventoryWeapon = null;
                     }
                     else if (currentInventoryWeapon != null && _currentWeapon != null)
                     {
                         ShowInteractWarning(ALREADY_HOLDING_WEAPON_WARNING);
+                    }
+                    else if (currentInventoryWeapon == null && _currentWeapon != null)
+                    {
+                        _currentWeapon.GetComponent<Collider>().enabled = true;
+                        _currentWeapon.GetComponent<Rigidbody>().useGravity = true;
+                        _currentWeapon.GetComponent<Rigidbody>().isKinematic = false;
+                        _currentWeapon.gameObject.transform.parent = null;
+                        _currentWeapon = null;
                     }
 
                 }
