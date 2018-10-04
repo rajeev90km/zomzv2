@@ -11,6 +11,13 @@ public abstract class Being : MonoBehaviour
         set { _isAlive = value; }
     }
 
+    protected bool _isCrouching = false;
+    public bool IsCrouching
+    {
+        get { return _isCrouching; }
+        set { _isCrouching = value; }
+    }
+
     public abstract IEnumerator Attack();
 
     public abstract IEnumerator Hurt(float pDamage = 0.0f);

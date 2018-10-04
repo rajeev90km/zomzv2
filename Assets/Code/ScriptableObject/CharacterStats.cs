@@ -43,4 +43,5 @@ public class CharacterStats : ScriptableObject
 
     public float ExplosionRange = 7f;
 
+    public float HearingRange = 4f;
 }

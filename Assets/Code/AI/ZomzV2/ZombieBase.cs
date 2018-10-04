@@ -335,11 +335,28 @@ public class ZombieBase : Being
                 }
             }
             ownCollider.enabled = true;
+
+            //Check Hearing
+            if(!unobstructedViewToBeing)
+            {
+                if (distanceToBeing <= CharacterStats.HearingRange && !visibleBeing.IsCrouching)
+                {
+                    unobstructedViewToBeing = true;
+                    _isChasing = true;
+                }
+                else
+                {
+                    unobstructedViewToBeing = false;
+                }
+            }
         }
 
         //REGULAR ZOMBIE CODE
-        if (distanceToBeing > _characterStats.LookRange || (visibleBeing.transform.position.y - transform.position.y >=2))
+        if (distanceToBeing > _characterStats.LookRange || (visibleBeing.transform.position.y - transform.position.y >= 2))
+        {
             _isChasing = false;
+            unobstructedViewToBeing = false;
+        }
 
         float distanceToChasePosition = Vector3.Distance(transform.position, overriddenChasePosition);
 
@@ -404,8 +421,8 @@ public class ZombieBase : Being
 
     void OnDrawGizmos()
     {
-        //Gizmos.color = Color.white;
-        //Gizmos.DrawWireSphere(transform.position, CharacterStats.LookRange);
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, CharacterStats.HearingRange);
 
         //Gizmos.color = Color.yellow;
         //Gizmos.DrawWireSphere(transform.position, CharacterStats.AttackRange);

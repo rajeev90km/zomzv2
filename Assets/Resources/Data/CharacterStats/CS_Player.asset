@@ -17,7 +17,7 @@ MonoBehaviour:
   RunSpeed: 4
   PushSpeed: 1
   FieldOfView: 90
-  LookRange: 4
+  LookRange: 5
   AttackRate: 0.75
   HurtRate: 0.7
   AttackStrength: 34
@@ -30,3 +30,4 @@ MonoBehaviour:
   DiveTime: 0.9
   StompRange: 5
   ExplosionRange: 7
+  HearingRange: 4
