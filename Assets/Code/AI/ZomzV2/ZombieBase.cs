@@ -313,6 +313,7 @@ public class ZombieBase : Being
         Being visibleBeing = GetBeingInLookRange(finalLayerMask, _characterStats.LookRange);
         float distanceToBeing = Mathf.Infinity;
         Vector3 beingDirection = Vector3.zero;
+        Vector3 beingDirectionCrouched = Vector3.zero;
         float beingAngle = Mathf.Infinity;
         bool unobstructedViewToBeing = false;
 
@@ -320,14 +321,17 @@ public class ZombieBase : Being
         {
             distanceToBeing = Vector3.Distance(transform.position, visibleBeing.transform.position);
             beingDirection = new Vector3(visibleBeing.transform.position.x, playerSightHeight, visibleBeing.transform.position.z) - transform.position;
+            //beingDirectionCrouched = new Vector3(visibleBeing.transform.position.x, playerSightHeight/2f, visibleBeing.transform.position.z) - transform.position;
             beingAngle = Vector3.Angle(beingDirection, transform.forward);
 
             RaycastHit hit;
 
             Debug.DrawRay(transform.position + transform.forward + transform.up * _sightHeightMultiplier, beingDirection, Color.green);
+            //Debug.DrawRay(transform.position + transform.forward + transform.up * _sightHeightMultiplier, beingDirectionCrouched, Color.green);
 
             ownCollider.enabled = false;
-            if (Physics.Raycast(transform.position + transform.up * _sightHeightMultiplier, beingDirection, out hit, Mathf.Infinity))
+            if (Physics.Raycast(transform.position + transform.up * _sightHeightMultiplier, beingDirection, out hit, Mathf.Infinity))// ||
+                //Physics.Raycast(transform.position + transform.up * _sightHeightMultiplier, beingDirectionCrouched, out hit, Mathf.Infinity))
             {
                 if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human"))
                 {
@@ -344,10 +348,10 @@ public class ZombieBase : Being
             unobstructedViewToBeing = true;
             _isChasing = true;
         }
-        else
-        {
-            unobstructedViewToBeing = false;
-        }
+        //else
+        //{
+        //    unobstructedViewToBeing = false;
+        //}
 
         //REGULAR ZOMBIE CODE
         if (distanceToBeing > _characterStats.LookRange || (visibleBeing.transform.position.y - transform.position.y >= 2))

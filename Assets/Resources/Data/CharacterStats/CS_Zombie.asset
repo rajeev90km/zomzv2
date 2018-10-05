@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   WalkSpeed: 2.5
+  CrouchWalkSpeed: 0
   ClimbSpeed: 1.5
   RunSpeed: 4.5
   PushSpeed: 1
@@ -30,3 +31,4 @@ MonoBehaviour:
   DiveTime: 1
   StompRange: 5
   ExplosionRange: 7
+  HearingRange: 5
