@@ -6,4 +6,6 @@ public abstract class LevelData : ScriptableObject {
 
     public bool ObjectiveComplete;
 
+    public bool CanUseZomzMode;
+
 }

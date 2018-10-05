@@ -12,6 +12,8 @@ public class ZomzController : MonoBehaviour {
 
     public ZomzData ZomzMode;
 
+    public GameData gameData;
+
     private int _enemyLayerMask;
     private CharacterControls _characterControls;
     private Animator _animator;
@@ -205,22 +207,28 @@ public class ZomzController : MonoBehaviour {
             //Request Zomz Mode
             if (Input.GetKeyDown(KeyCode.Z) && _zomzManaAttribute.CurrentValue >= 100 && _characterControls.IsAlive)
             {
-                if (!ZomzMode.IsRegistered)
+                if (gameData.CurrentLevelData.CanUseZomzMode)
                 {
-                    if (!ZomzMode.CurrentValue)
-                        ProcessZomzMode();
-                    else
-                        RegisterZomzMode();
+                    if (!ZomzMode.IsRegistered)
+                    {
+                        if (!ZomzMode.CurrentValue)
+                            ProcessZomzMode();
+                        else
+                            RegisterZomzMode();
+                    }
                 }
             }
 
             //End Zomz Mode if ESC or if out of mana
             if (Input.GetKeyDown(KeyCode.Escape) || _zomzManaAttribute.CurrentValue <= 0 && _characterControls.IsAlive)
             {
-                if (ZomzMode.CurrentSelectedZombie)
-                    UnregisterZomzMode();
-                
-                EndZomzMode();
+                if (gameData.CurrentLevelData.CanUseZomzMode)
+                {
+                    if (ZomzMode.CurrentSelectedZombie)
+                        UnregisterZomzMode();
+
+                    EndZomzMode();
+                }
 
             }
         }

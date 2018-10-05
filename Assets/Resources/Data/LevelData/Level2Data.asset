@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23593cd6174944ea79be1ea681fc2164, type: 3}
   m_Name: Level2Data
   m_EditorClassIdentifier: 
-  ObjectiveComplete: 1
+  ObjectiveComplete: 0
+  CanUseZomzMode: 0
   BonfiresRequiredToWin: 4
   BonfiresLit: []
