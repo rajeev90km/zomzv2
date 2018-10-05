@@ -15,8 +15,11 @@ public class Level2Controller : MonoBehaviour {
 
 	public void OnBonfireLit(Flammable pBonfire)
 	{
-        if(!LevelData.BonfiresLit.Contains(pBonfire))
+        AkSoundEngine.PostEvent("Bonfire_Ignite", gameObject);
+        AkSoundEngine.PostEvent("Bonfire_Loop", gameObject);
+        if (!LevelData.BonfiresLit.Contains(pBonfire))
         {
+            
             LevelData.BonfiresLit.Add(pBonfire);
         }
 

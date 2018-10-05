@@ -17,21 +17,21 @@ MonoBehaviour:
   m_lastPopulateTimePsrt1: 0
   AcousticTextureWwu:
   - Guid: '{3339471A-618F-4907-B6B6-65B59D2F71EB}'
-    m_lastTimePart2: -1999236399
-    m_lastTimePsrt1: -281936000
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1100377612
     ParentPhysicalPath: 
-    PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   - Guid: '{463D666B-3CA8-4FA5-8B4A-5FEF12B883F6}'
-    m_lastTimePart2: -1999236411
-    m_lastTimePsrt1: -442328448
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1100387585
     ParentPhysicalPath: 
-    PhysicalPath: Virtual Acoustics/Factory Reflect Acoustic Textures.wwu
+    PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     List:
     - Guid: f2532d2fccda8e408b8898b1b52a26d6
       ID: -126323319
       Name: Acoustic_Banner
-      Path: Factory Reflect Acoustic Textures/Textures/Acoustic_Banner
+      Path: Factory Reflect Acoustic Textures\Textures\Acoustic_Banner
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -42,7 +42,7 @@ MonoBehaviour:
     - Guid: 32c20a8be202de4ebeacfdd1a900e3ed
       ID: 1873957695
       Name: Anechoic
-      Path: Factory Reflect Acoustic Textures/Textures/Anechoic
+      Path: Factory Reflect Acoustic Textures\Textures\Anechoic
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -53,7 +53,7 @@ MonoBehaviour:
     - Guid: a9a586b004f2534ca838bdb18b18f6d6
       ID: 504532776
       Name: Brick
-      Path: Factory Reflect Acoustic Textures/Textures/Brick
+      Path: Factory Reflect Acoustic Textures\Textures\Brick
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -64,7 +64,7 @@ MonoBehaviour:
     - Guid: 8975223456dc604296c4b9f4b669092b
       ID: -1882360988
       Name: Carpet
-      Path: Factory Reflect Acoustic Textures/Textures/Carpet
+      Path: Factory Reflect Acoustic Textures\Textures\Carpet
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -75,7 +75,7 @@ MonoBehaviour:
     - Guid: 001cf85c9628e04aaf7c3080bdaba682
       ID: 841620460
       Name: Concrete
-      Path: Factory Reflect Acoustic Textures/Textures/Concrete
+      Path: Factory Reflect Acoustic Textures\Textures\Concrete
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -86,7 +86,7 @@ MonoBehaviour:
     - Guid: 19c9d2305f92434189063dbb3c4ae5e2
       ID: -1099468548
       Name: Cork_Tiles
-      Path: Factory Reflect Acoustic Textures/Textures/Cork_Tiles
+      Path: Factory Reflect Acoustic Textures\Textures\Cork_Tiles
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -97,7 +97,7 @@ MonoBehaviour:
     - Guid: 339ee6f8975c6849b508a1535f2d66e8
       ID: -1366806192
       Name: Curtains
-      Path: Factory Reflect Acoustic Textures/Textures/Curtains
+      Path: Factory Reflect Acoustic Textures\Textures\Curtains
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -108,7 +108,7 @@ MonoBehaviour:
     - Guid: f4e3a4680b4c8746a8b8a84db93dbc8f
       ID: -624659732
       Name: Drywall
-      Path: Factory Reflect Acoustic Textures/Textures/Drywall
+      Path: Factory Reflect Acoustic Textures\Textures\Drywall
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -119,7 +119,7 @@ MonoBehaviour:
     - Guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
       ID: 1970351858
       Name: Fabric
-      Path: Factory Reflect Acoustic Textures/Textures/Fabric
+      Path: Factory Reflect Acoustic Textures\Textures\Fabric
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -130,7 +130,7 @@ MonoBehaviour:
     - Guid: 313793c51a00b44a98dd9b033a8c8eab
       ID: 513139656
       Name: Mountain
-      Path: Factory Reflect Acoustic Textures/Textures/Mountain
+      Path: Factory Reflect Acoustic Textures\Textures\Mountain
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -141,7 +141,7 @@ MonoBehaviour:
     - Guid: c4da82a82a13b747ba9db9907ba29cc0
       ID: -1657378743
       Name: Tile
-      Path: Factory Reflect Acoustic Textures/Textures/Tile
+      Path: Factory Reflect Acoustic Textures\Textures\Tile
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -152,7 +152,7 @@ MonoBehaviour:
     - Guid: 96bcff1fe76f9e48ba6c7c14a71391ae
       ID: 2058049674
       Name: Wood
-      Path: Factory Reflect Acoustic Textures/Textures/Wood
+      Path: Factory Reflect Acoustic Textures\Textures\Wood
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -163,7 +163,7 @@ MonoBehaviour:
     - Guid: e5d1857ba2c1634e9a13cec54b641adc
       ID: -32444547
       Name: Wood_Bright
-      Path: Factory Reflect Acoustic Textures/Textures/Wood_Bright
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Bright
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -174,7 +174,7 @@ MonoBehaviour:
     - Guid: 8e474652dac50c4ea0dec98d1479529a
       ID: 1755085759
       Name: Wood_Deep
-      Path: Factory Reflect Acoustic Textures/Textures/Wood_Deep
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Deep
       PathAndIcons:
       - ElementName: Factory Reflect Acoustic Textures
         ObjectType: 12
@@ -184,22 +184,22 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{BFE70C38-2C50-44DF-B2C4-AE47D14795F6}'
-    m_lastTimePart2: -1999236397
-    m_lastTimePsrt1: -231870592
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1095430877
     ParentPhysicalPath: 
-    PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{2D3E0F48-3817-4199-A0BB-89AD39953FF4}'
-    m_lastTimePart2: -1999231590
-    m_lastTimePsrt1: -1839662464
+    m_lastTimePart2: -1999231640
+    m_lastTimePsrt1: 1554527696
     ParentPhysicalPath: 
-    PhysicalPath: SoundBanks/Default Work Unit.wwu
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
     - Guid: d6086bd9556b6e4f8459bce287e02328
       ID: -1133058374
       Name: main
-      Path: Default Work Unit/main
+      Path: Default Work Unit\main
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -207,15 +207,15 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{89920AC3-0140-4C69-9ADA-39B1A9E930EC}'
-    m_lastTimePart2: -1999231590
-    m_lastTimePsrt1: -1839662464
+    m_lastTimePart2: -1999231613
+    m_lastTimePsrt1: 986087856
     ParentPhysicalPath: 
-    PhysicalPath: Events/Default Work Unit.wwu
+    PhysicalPath: Events\Default Work Unit.wwu
     List:
     - Guid: 50cda69d3a4c34458b387ba594475d0e
       ID: 1847440062
       Name: Abe_Death
-      Path: Default Work Unit/Abe/Abe_Death
+      Path: Default Work Unit\Abe\Abe_Death
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -229,7 +229,7 @@ MonoBehaviour:
     - Guid: e4c19a260fc4dd4fa9c2c74778cbae3a
       ID: 1818851361
       Name: Abe_Grunts
-      Path: Default Work Unit/Abe/Abe_Grunts
+      Path: Default Work Unit\Abe\Abe_Grunts
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -243,7 +243,7 @@ MonoBehaviour:
     - Guid: b9ef22a8ed22f84d8ab43257474ef3c6
       ID: -480195805
       Name: Abe_Hurt
-      Path: Default Work Unit/Abe/Abe_Hurt
+      Path: Default Work Unit\Abe\Abe_Hurt
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -257,7 +257,7 @@ MonoBehaviour:
     - Guid: 725ad16d6cf166449ae5ade3c491b647
       ID: 1005834641
       Name: Abe_Roll
-      Path: Default Work Unit/Abe/Abe_Roll
+      Path: Default Work Unit\Abe\Abe_Roll
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -271,7 +271,7 @@ MonoBehaviour:
     - Guid: cf3ac33ea67223418cdc61ce4d54e268
       ID: -1478562806
       Name: Axe_Attack
-      Path: Default Work Unit/Combat/Weapons/Axe/Axe_Attack
+      Path: Default Work Unit\Combat\Weapons\Axe\Axe_Attack
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -289,7 +289,7 @@ MonoBehaviour:
     - Guid: d8f5d92314b7f04c9b4a07236c016501
       ID: 1965443127
       Name: Barrel_Explode
-      Path: Default Work Unit/Barrels/Barrel_Explode
+      Path: Default Work Unit\Barrels\Barrel_Explode
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -303,7 +303,7 @@ MonoBehaviour:
     - Guid: fe147a4555bcd243886f65d91d8f7fc3
       ID: 1968405215
       Name: Bonfire_Ignite
-      Path: Default Work Unit/Bonfires/Bonfire_Ignite
+      Path: Default Work Unit\Bonfires\Bonfire_Ignite
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -317,7 +317,7 @@ MonoBehaviour:
     - Guid: 083e152a64754640bc9828b88250d18c
       ID: -1880513005
       Name: Bonfire_Loop
-      Path: Default Work Unit/Bonfires/Bonfire_Loop
+      Path: Default Work Unit\Bonfires\Bonfire_Loop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -331,7 +331,7 @@ MonoBehaviour:
     - Guid: 565b754ce0b9e640b6e4887d68f983c4
       ID: -1813402863
       Name: Container_Bump
-      Path: Default Work Unit/Containers/Container_Bump
+      Path: Default Work Unit\Containers\Container_Bump
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -345,7 +345,7 @@ MonoBehaviour:
     - Guid: 78cc1024b6b4904bb185d108e731b3a7
       ID: -688901531
       Name: Crowd_Boo
-      Path: Default Work Unit/Crowd/Crowd_Boo
+      Path: Default Work Unit\Crowd\Crowd_Boo
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -359,7 +359,7 @@ MonoBehaviour:
     - Guid: f299f35ec33dba4b982f45d5eefecbc9
       ID: 432197282
       Name: Crowd_Cheer
-      Path: Default Work Unit/Crowd/Crowd_Cheer
+      Path: Default Work Unit\Crowd\Crowd_Cheer
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -373,7 +373,7 @@ MonoBehaviour:
     - Guid: 4918453c4b87a14492580451bdec9e12
       ID: 303293398
       Name: Destroyed_Crate
-      Path: Default Work Unit/Breakables/Crates/Destroyed_Crate
+      Path: Default Work Unit\Breakables\Crates\Destroyed_Crate
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -389,7 +389,7 @@ MonoBehaviour:
     - Guid: 9efc8ab572a8f14c80380bb16efa5750
       ID: -148418207
       Name: Exp_Attack
-      Path: Default Work Unit/Zombies/Exploder/Exp_Attack
+      Path: Default Work Unit\Zombies\Exploder\Exp_Attack
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -405,7 +405,7 @@ MonoBehaviour:
     - Guid: 085740a8eacb9d43a78cb82e2c61324a
       ID: -1299719030
       Name: Exp_Roam
-      Path: Default Work Unit/Zombies/Exploder/Exp_Roam
+      Path: Default Work Unit\Zombies\Exploder\Exp_Roam
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -421,7 +421,7 @@ MonoBehaviour:
     - Guid: 39aaf6bdd390c04f81e90297a3133d0c
       ID: 1179261522
       Name: Exp_SeesYou
-      Path: Default Work Unit/Zombies/Exploder/Exp_SeesYou
+      Path: Default Work Unit\Zombies\Exploder\Exp_SeesYou
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -437,7 +437,7 @@ MonoBehaviour:
     - Guid: fbf578a34115ab4281b58196b24265e6
       ID: 1458752183
       Name: Fence_Bump
-      Path: Default Work Unit/Fences/Fence_Bump
+      Path: Default Work Unit\Fences\Fence_Bump
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -451,7 +451,7 @@ MonoBehaviour:
     - Guid: c936e28eaca7a34bb3d5b62e4c32aa5b
       ID: -1909339098
       Name: Footsteps
-      Path: Default Work Unit/Footsteps/Footsteps
+      Path: Default Work Unit\Footsteps\Footsteps
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -465,7 +465,7 @@ MonoBehaviour:
     - Guid: ea9a9b353ec2e445b3521b35af27c096
       ID: -292221455
       Name: Gate_Lever
-      Path: Default Work Unit/Switches_Levers/Gate_Lever
+      Path: Default Work Unit\Switches_Levers\Gate_Lever
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -479,7 +479,7 @@ MonoBehaviour:
     - Guid: 50612e8c0d67554eb05addb04c96d721
       ID: -1137744627
       Name: Gate_Opening
-      Path: Default Work Unit/Gates&Doors/Gate_Opening
+      Path: Default Work Unit\Gates&Doors\Gate_Opening
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -493,7 +493,7 @@ MonoBehaviour:
     - Guid: 8a4b8cdd1daf2748a57a698efefea876
       ID: 840483585
       Name: Jalali_lvl2_Rules
-      Path: Default Work Unit/Jalali Issa/Jalali_lvl2_Rules
+      Path: Default Work Unit\Jalali Issa\Jalali_lvl2_Rules
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -507,7 +507,7 @@ MonoBehaviour:
     - Guid: d20a92223ec54a4c82e5d92403d1aa8a
       ID: 358608457
       Name: Machete_Attack
-      Path: Default Work Unit/Combat/Weapons/Machete/Machete_Attack
+      Path: Default Work Unit\Combat\Weapons\Machete\Machete_Attack
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -525,7 +525,7 @@ MonoBehaviour:
     - Guid: ea7e264ccd0140468dd15e16915194b9
       ID: -398875983
       Name: mx_lvl2
-      Path: Default Work Unit/Music/mx_lvl2
+      Path: Default Work Unit\Music\mx_lvl2
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -539,7 +539,7 @@ MonoBehaviour:
     - Guid: d41cd1091b6fc3418ee57a10745432da
       ID: -1108570489
       Name: Pressure_Switch
-      Path: Default Work Unit/Switches_Levers/Pressure_Switch
+      Path: Default Work Unit\Switches_Levers\Pressure_Switch
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -553,7 +553,7 @@ MonoBehaviour:
     - Guid: 4463b9742274ee45b1787b2eaf0e1ba5
       ID: 294231328
       Name: Reg_Attack
-      Path: Default Work Unit/Zombies/Regular/Reg_Attack
+      Path: Default Work Unit\Zombies\Regular\Reg_Attack
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -569,7 +569,7 @@ MonoBehaviour:
     - Guid: 010a2d8a41872d41b28ceb5f25852770
       ID: -1927640289
       Name: Reg_Dying
-      Path: Default Work Unit/Zombies/Regular/Reg_Dying
+      Path: Default Work Unit\Zombies\Regular\Reg_Dying
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -585,7 +585,7 @@ MonoBehaviour:
     - Guid: fd5803b58af6484c9e62085da3fd8044
       ID: 1938734727
       Name: Reg_Hurt
-      Path: Default Work Unit/Zombies/Regular/Reg_Hurt
+      Path: Default Work Unit\Zombies\Regular\Reg_Hurt
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -601,7 +601,7 @@ MonoBehaviour:
     - Guid: f81fb27865c3e348bc0242b123d1038d
       ID: 295986111
       Name: Reg_Roam
-      Path: Default Work Unit/Zombies/Regular/Reg_Roam
+      Path: Default Work Unit\Zombies\Regular\Reg_Roam
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -617,7 +617,7 @@ MonoBehaviour:
     - Guid: b514292a5798624e9c82c77fc33a1ff5
       ID: -1174544147
       Name: Reg_SeesYou
-      Path: Default Work Unit/Zombies/Regular/Reg_SeesYou
+      Path: Default Work Unit\Zombies\Regular\Reg_SeesYou
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -633,7 +633,7 @@ MonoBehaviour:
     - Guid: 5b7cd9963dbcbb4eb28153cafd86c89c
       ID: -387399800
       Name: Torch_Attack
-      Path: Default Work Unit/Combat/Weapons/Torch/Torch_Attack
+      Path: Default Work Unit\Combat\Weapons\Torch\Torch_Attack
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -651,7 +651,7 @@ MonoBehaviour:
     - Guid: ec94c3f6d470f442a66ae2bfbe948ead
       ID: 668518050
       Name: Torch_Idle
-      Path: Default Work Unit/Combat/Weapons/Torch/Torch_Idle
+      Path: Default Work Unit\Combat\Weapons\Torch\Torch_Idle
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -669,7 +669,7 @@ MonoBehaviour:
     - Guid: 00f3f81943ebc54e8d563eda6e0c7e22
       ID: -996909323
       Name: Use_HealthKit
-      Path: Default Work Unit/Health_Kits/Use_HealthKit
+      Path: Default Work Unit\Health_Kits\Use_HealthKit
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -684,24 +684,24 @@ MonoBehaviour:
   - /Zomz
   - /Zomz/Events
   - /Zomz/Events/Default Work Unit
-  - /Zomz/Events/Default Work Unit/Abe
+  - /Zomz/Events/Default Work Unit/Bonfires
   RtpcWwu:
   - Guid: '{4C82564E-69D3-45F5-BAD3-18653E3676D5}'
-    m_lastTimePart2: -1999236399
-    m_lastTimePsrt1: -281936000
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1095351058
     ParentPhysicalPath: 
-    PhysicalPath: Game Parameters/Default Work Unit.wwu
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
     List: []
   - Guid: '{D7135222-D1DB-42D0-ADC0-930743567776}'
-    m_lastTimePart2: -1999236411
-    m_lastTimePsrt1: -442328448
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1095361028
     ParentPhysicalPath: 
-    PhysicalPath: Game Parameters/Factory Motion.wwu
+    PhysicalPath: Game Parameters\Factory Motion.wwu
     List:
     - Guid: e37e38283ac11643b9c3db5c521624af
       ID: 1524500807
       Name: Playback_Rate
-      Path: Factory Motion/Playback_Rate
+      Path: Factory Motion\Playback_Rate
       PathAndIcons:
       - ElementName: Factory Motion
         ObjectType: 12
@@ -710,22 +710,22 @@ MonoBehaviour:
     - Guid: 05aa129177f5fd449f4e4424158129e6
       ID: 796049864
       Name: RPM
-      Path: Factory Motion/RPM
+      Path: Factory Motion\RPM
       PathAndIcons:
       - ElementName: Factory Motion
         ObjectType: 12
       - ElementName: RPM
         ObjectType: 13
   - Guid: '{3B167755-FB42-458B-98BF-96F557AFB3B9}'
-    m_lastTimePart2: -1999236411
-    m_lastTimePsrt1: -442328448
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1095371006
     ParentPhysicalPath: 
-    PhysicalPath: Game Parameters/Factory SoundSeed Air Game Syncs.wwu
+    PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     List:
     - Guid: 59062ef746431c4ea1b1dab46a05101e
       ID: 1351367891
       Name: SS_Air_Fear
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Fear
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fear
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -734,7 +734,7 @@ MonoBehaviour:
     - Guid: 37fe2d2f9e4f944d83d853cca39781ad
       ID: -1292209176
       Name: SS_Air_Freefall
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Freefall
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Freefall
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -743,7 +743,7 @@ MonoBehaviour:
     - Guid: dc79aea23acaba4696529986c322a87b
       ID: 1029930033
       Name: SS_Air_Fury
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Fury
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fury
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -752,7 +752,7 @@ MonoBehaviour:
     - Guid: 45b4e209a3c47f44b3ca818a1d925ef7
       ID: -1646418679
       Name: SS_Air_Month
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Month
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Month
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -761,7 +761,7 @@ MonoBehaviour:
     - Guid: 1a81b7e32f7b0f49b44f5fe51b468041
       ID: -447042342
       Name: SS_Air_Presence
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Presence
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Presence
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -770,7 +770,7 @@ MonoBehaviour:
     - Guid: ab9048a3d5b92645a64d5290c43ef2dc
       ID: 822163944
       Name: SS_Air_RPM
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_RPM
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_RPM
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -779,7 +779,7 @@ MonoBehaviour:
     - Guid: efeb291393a12e47a38c64668b494879
       ID: -1220270574
       Name: SS_Air_Size
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Size
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Size
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -788,7 +788,7 @@ MonoBehaviour:
     - Guid: db8c3fe9d1063747acaf7cd44bbed783
       ID: -579304704
       Name: SS_Air_Storm
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Storm
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Storm
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -797,7 +797,7 @@ MonoBehaviour:
     - Guid: 2ca76f537e8c8b4cae03ef34fdadc314
       ID: -1091570167
       Name: SS_Air_TimeOfDay
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_TimeOfDay
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -806,7 +806,7 @@ MonoBehaviour:
     - Guid: 197ba8edaa73a0409f192073606db710
       ID: -134719478
       Name: SS_Air_Turbulence
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Turbulence
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Turbulence
       PathAndIcons:
       - ElementName: Factory SoundSeed Air Game Syncs
         ObjectType: 12
@@ -814,15 +814,15 @@ MonoBehaviour:
         ObjectType: 13
   StateWwu:
   - Guid: '{43C563B2-807E-4D9A-8C17-C73520EE416B}'
-    m_lastTimePart2: -1999231590
-    m_lastTimePsrt1: -1839662464
+    m_lastTimePart2: -1999231641
+    m_lastTimePsrt1: -847299304
     ParentPhysicalPath: 
-    PhysicalPath: States/Default Work Unit.wwu
+    PhysicalPath: States\Default Work Unit.wwu
     List:
     - Guid: c907c980ec6e5543a972c1373b79e5d8
       ID: 60346233
       Name: Zomz_Mode
-      Path: Default Work Unit/Zomz_Mode
+      Path: Default Work Unit\Zomz_Mode
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -846,15 +846,15 @@ MonoBehaviour:
       - Zomz
   SwitchWwu:
   - Guid: '{7F6DF8DE-6FAB-4C73-AAE0-68DBC9E5C91B}'
-    m_lastTimePart2: -1999231590
-    m_lastTimePsrt1: -1839662464
+    m_lastTimePart2: -1999231641
+    m_lastTimePsrt1: -847468818
     ParentPhysicalPath: 
-    PhysicalPath: Switches/Default Work Unit.wwu
+    PhysicalPath: Switches\Default Work Unit.wwu
     List:
     - Guid: a38ab297744fc24ea39fa0d1f130e192
       ID: -429652670
       Name: Material
-      Path: Default Work Unit/Footsteps/Material
+      Path: Default Work Unit\Footsteps\Material
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -868,8 +868,8 @@ MonoBehaviour:
       values: []
   TriggerWwu:
   - Guid: '{027A29ED-1A8A-4B43-931C-E58F0BE5DA2D}'
-    m_lastTimePart2: -1999236399
-    m_lastTimePsrt1: -281936000
+    m_lastTimePart2: -1999231979
+    m_lastTimePsrt1: 1100377612
     ParentPhysicalPath: 
-    PhysicalPath: Triggers/Default Work Unit.wwu
+    PhysicalPath: Triggers\Default Work Unit.wwu
     List: []

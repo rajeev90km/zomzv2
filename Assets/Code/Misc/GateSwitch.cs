@@ -48,7 +48,9 @@ public class GateSwitch : MonoBehaviour {
 
         float t = 0;
 
-        while(t<1)
+        AkSoundEngine.PostEvent("Gate_Lever", gameObject);
+
+        while (t<1)
         {
             _lever.transform.localEulerAngles = new Vector3 (0, 0, Mathf.Lerp(0, LEVER_Z_ORIENTATION, t));
             t += Time.deltaTime / _leverSwitchTime;
@@ -56,6 +58,8 @@ public class GateSwitch : MonoBehaviour {
         }
 
         t = 0;
+
+        AkSoundEngine.PostEvent("Gate_Opening", gameObject);
 
         while (t < 1)
         {

@@ -3708,7 +3708,7 @@ MonoBehaviour:
   ALREADY_HOLDING_WEAPON_WARNING: Already holding a weapon!
   OBJECTIVE_NOT_COMPLETE_WARNING: Complete objective to open this gate!
   endClimbWait: 0
-  _levelInitWaitTime: 1
+  _levelInitWaitTime: 0.75
 --- !u!114 &114975378614110270
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -219,8 +219,10 @@ public class ZombieBase : Being
     #region AIStateBehaviors
     protected void InitNewState(string pStateAnimTrigger, bool pIsLoopedAnim = false)
     {
-        if(_previousState!=_currentState || pIsLoopedAnim)
-            _animator.SetTrigger(pStateAnimTrigger); 
+        if (_previousState != _currentState || pIsLoopedAnim)
+        {
+            _animator.SetTrigger(pStateAnimTrigger);
+        }
     }
 
     //Patrol Around Waypoint Object placed in the Scene - Randomized
@@ -236,7 +238,9 @@ public class ZombieBase : Being
                 _navMeshAgent.isStopped = false;
 
                 if (_navMeshAgent.remainingDistance <= 1f || !_navMeshAgent.hasPath)
+                {
                     GetNextWayPoint();
+                }
             }
 
         }
@@ -292,6 +296,7 @@ public class ZombieBase : Being
     {
         if (_isAlive)
         {
+            AkSoundEngine.PostEvent("Reg_Dying", gameObject);
             _isAlive = false;
             _animator.SetTrigger("die");
             if (ownCollider)
@@ -449,8 +454,11 @@ public class ZombieBase : Being
 
             Being closestBeingToAttack = GetClosestBeingToAttack(finalLayerMask, _characterStats.AttackRange);
 
-            if(closestBeingToAttack)
+            if (closestBeingToAttack)
+            {
+                AkSoundEngine.PostEvent("Reg_Attack", gameObject);
                 transform.LookAt(closestBeingToAttack.transform);
+            }
 
             yield return new WaitForSeconds(_characterStats.AttackRate / 2);
 
@@ -507,7 +515,9 @@ public class ZombieBase : Being
                 _isHurting = true;
                 _animator.SetTrigger("hurt");
                 _navMeshAgent.isStopped = true;
-                
+
+                AkSoundEngine.PostEvent("Reg_Hurt", gameObject);
+
                 if (_currentHealth - pDamage > 0)
                     _currentHealth -= pDamage;
                 else
