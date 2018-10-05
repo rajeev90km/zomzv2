@@ -7,6 +7,8 @@ public class GameData : ScriptableObject
 {
     public bool IsPaused = false;
 
+    public LevelData CurrentLevelData;
+
     public CurrentConversation CurrentConversation;
 
 	private void OnDisable()

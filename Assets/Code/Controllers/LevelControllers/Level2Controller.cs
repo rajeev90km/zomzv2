@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Level2Controller : MonoBehaviour {
 
-    public int BonfiresRequiredToWin = 4;
+    public Level2Data LevelData;
 
-    public List<Flammable> BonfiresLit = new List<Flammable>();
+    public GameData GameData;
 
-    public void OnBonfireLit(Flammable pBonfire)
+	private void Awake()
 	{
-        if(!BonfiresLit.Contains(pBonfire))
+        GameData.CurrentLevelData = LevelData;	
+	}
+
+	public void OnBonfireLit(Flammable pBonfire)
+	{
+        if(!LevelData.BonfiresLit.Contains(pBonfire))
         {
-            BonfiresLit.Add(pBonfire);
+            LevelData.BonfiresLit.Add(pBonfire);
+        }
+
+        if(LevelData.BonfiresLit.Count == LevelData.BonfiresRequiredToWin)
+        {
+            LevelData.ObjectiveComplete = true;
         }
 	}
 

@@ -16,6 +16,13 @@ public class GateSwitch : MonoBehaviour {
     [SerializeField]
     private float _doorOpenTime;
 
+    [SerializeField]
+    private bool _isLastSwitch = false;
+    public bool IsLastSwitch
+    {
+        get { return _isLastSwitch; }
+    }
+
     private bool _isActivated = false;
     public bool IsActivated
     {
