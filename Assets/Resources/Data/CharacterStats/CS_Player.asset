@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   WalkSpeed: 2.3
+  CrouchWalkSpeed: 2.8
   ClimbSpeed: 1.5
   RunSpeed: 4
   PushSpeed: 1

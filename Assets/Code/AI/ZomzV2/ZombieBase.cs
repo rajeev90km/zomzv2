@@ -335,20 +335,18 @@ public class ZombieBase : Being
                 }
             }
             ownCollider.enabled = true;
+        }
 
-            //Check Hearing
-            if(!unobstructedViewToBeing)
-            {
-                if (distanceToBeing <= CharacterStats.HearingRange && !visibleBeing.IsCrouching)
-                {
-                    unobstructedViewToBeing = true;
-                    _isChasing = true;
-                }
-                else
-                {
-                    unobstructedViewToBeing = false;
-                }
-            }
+        //Check Hearing
+        if (distanceToBeing <= CharacterStats.HearingRange && !visibleBeing.IsCrouching)
+        {
+            Debug.Log("Can Hear");
+            unobstructedViewToBeing = true;
+            _isChasing = true;
+        }
+        else
+        {
+            unobstructedViewToBeing = false;
         }
 
         //REGULAR ZOMBIE CODE

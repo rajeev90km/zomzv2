@@ -9,6 +9,8 @@ public class CharacterStats : ScriptableObject
 
 	public float WalkSpeed;
 
+    public float CrouchWalkSpeed;
+
     public float ClimbSpeed = 1.5f;
 
 	public float RunSpeed;
