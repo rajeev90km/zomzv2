@@ -78,7 +78,7 @@ MonoBehaviour:
     value: 0
   tint:
     overrideState: 1
-    value: 11
+    value: 26
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -87,7 +87,7 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 5
+    value: 7
   brightness:
     overrideState: 0
     value: 0
@@ -1579,7 +1579,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 3
+    value: 1
   threshold:
     overrideState: 0
     value: 1
