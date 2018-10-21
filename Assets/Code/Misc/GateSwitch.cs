@@ -31,7 +31,7 @@ public class GateSwitch : MonoBehaviour {
 
     private const float LEVER_Z_ORIENTATION = 60f;
 
-    private const float DOOR_OPEN_ORIENTATION = -60f;
+    private const float DOOR_OPEN_ORIENTATION = 60f;
 
 	public void Activate()
 	{
@@ -63,7 +63,7 @@ public class GateSwitch : MonoBehaviour {
 
         while (t < 1)
         {
-            _connectedDoor.transform.eulerAngles = new Vector3(0, Mathf.Lerp(0, DOOR_OPEN_ORIENTATION, Mathf.SmoothStep(0f, 1f, t)),0);
+            _connectedDoor.transform.localEulerAngles = new Vector3(0, Mathf.Lerp(0, DOOR_OPEN_ORIENTATION, Mathf.SmoothStep(0f, 1f, t)),0);
             t += Time.deltaTime / _doorOpenTime;
             yield return null;
         }
