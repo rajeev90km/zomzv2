@@ -66,6 +66,11 @@ ModelImporter:
     100116: tow_pole_low
     100118: transform3
     100120: transform4
+    100122: Light1
+    100124: Light2
+    100126: Light3
+    100128: Light4
+    100130: Pole
     400000: bottom_pulley_low
     400002: Bracket1_low
     400004: Bracket_support_low
@@ -127,6 +132,11 @@ ModelImporter:
     400116: tow_pole_low
     400118: transform3
     400120: transform4
+    400122: Light1
+    400124: Light2
+    400126: Light3
+    400128: Light4
+    400130: Pole
     2100000: aiStandardSurface1
     2100002: aiStandardSurface2
     2300000: bottom_pulley_low
@@ -185,6 +195,12 @@ ModelImporter:
     2300106: top_pulley2_low
     2300108: top_pulley_cable_low
     2300110: tow_pole_low
+    2300112: Generator_unit
+    2300114: Light1
+    2300116: Light2
+    2300118: Light3
+    2300120: Light4
+    2300122: Pole
     3300000: bottom_pulley_low
     3300002: Bracket1_low
     3300004: Bracket_support_low
@@ -241,6 +257,12 @@ ModelImporter:
     3300106: top_pulley2_low
     3300108: top_pulley_cable_low
     3300110: tow_pole_low
+    3300112: Generator_unit
+    3300114: Light1
+    3300116: Light2
+    3300118: Light3
+    3300120: Light4
+    3300122: Pole
     4300000: main_low
     4300002: lid1_low
     4300004: lid2_low
@@ -297,6 +319,12 @@ ModelImporter:
     4300106: light2_low
     4300108: light3_low
     4300110: light4_low
+    4300112: Generator_unit
+    4300114: Pole
+    4300116: Light1
+    4300118: Light2
+    4300120: Light3
+    4300122: Light4
     9500000: //RootNode
   externalObjects:
   - first:
