@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,5 +25,7 @@ public class GameEvent : ScriptableObject
 		if (eventListeners.Contains(listener))
 			eventListeners.Remove(listener);
 	}
+
+    //public void RegisterDelegateListener(Callback)
 
 }

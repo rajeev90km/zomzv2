@@ -8,13 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23593cd6174944ea79be1ea681fc2164, type: 3}
-  m_Name: Level2Data
+  m_Script: {fileID: 11500000, guid: 3561cf5882249451990a4a597a5d02f2, type: 3}
+  m_Name: Level1Data
   m_EditorClassIdentifier: 
   ObjectiveComplete: 0
   CanUseZomzMode: 0
-  ObjectiveText: Light all 4 bonfires and escape
-  LevelBeginConversation: {fileID: 11400000, guid: 77b31829554aebe45876d6fd9f92bfe5,
+  ObjectiveText: Kill contender and escape
+  LevelBeginConversation: {fileID: 11400000, guid: 7de58a84087772f48870118d85d439fb,
     type: 2}
-  BonfiresRequiredToWin: 4
-  BonfiresLit: []
+  GuyKilled: 0

@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level2Controller : MonoBehaviour {
+public class Level2Controller : LevelControllerBase {
 
     public Level2Data LevelData;
 
-    public GameData GameData;
-
-	private void Awake()
-	{
-        GameData.CurrentLevelData = LevelData;	
-	}
+    private void Awake()
+    {
+        GameData.CurrentLevelData = LevelData;
+    }
 
 	public void OnBonfireLit(Flammable pBonfire)
 	{

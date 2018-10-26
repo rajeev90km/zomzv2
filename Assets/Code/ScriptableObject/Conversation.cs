@@ -24,7 +24,7 @@ public class ConversationEntity
 
     public Sprite Avatar;
 
-    public CharacterPosition CharPosition;
+    public Sprite RightCharacter;
 
     public Sprite BackgroundImage;
 

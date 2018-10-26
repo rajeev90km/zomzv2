@@ -156,13 +156,13 @@ public class ConversationController : MonoBehaviour {
 
         Color c = Color.white;
         c.a = 0.3f;
-        for (int i = 0; i < _avatars.Length; i++){
-            if(_avatars[i].color.a > 0f && i!=(int) pEntity.CharPosition)
-                _avatars[i].color = c;
-        }
+        //for (int i = 0; i < _avatars.Length; i++){
+        //    if(_avatars[i].color.a > 0f && i!=(int) pEntity.CharPosition)
+        //        _avatars[i].color = c;
+        //}
 
-        _avatars[(int)pEntity.CharPosition].sprite = pEntity.Avatar;
-        StartCoroutine(FadeInAvatar(_avatars[(int)pEntity.CharPosition]));
+        //_avatars[(int)pEntity.CharPosition].sprite = pEntity.Avatar;
+        //StartCoroutine(FadeInAvatar(_avatars[(int)pEntity.CharPosition]));
 
         _audioData.CurrentPlayingBGM = pEntity.BackgroundMusic;
 

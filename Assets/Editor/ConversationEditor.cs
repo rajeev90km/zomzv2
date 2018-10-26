@@ -48,10 +48,10 @@ public class ConversationEditor : Editor
             element.FindPropertyRelative("Avatar"), GUIContent.none);
         
         //Char Position
-        EditorGUI.LabelField(new Rect(rect.x, rect.y + 4 * _padding + 3 * EditorGUIUtility.singleLineHeight, _labelWidth, EditorGUIUtility.singleLineHeight), "Char Pos");
+        EditorGUI.LabelField(new Rect(rect.x, rect.y + 4 * _padding + 3 * EditorGUIUtility.singleLineHeight, _labelWidth, EditorGUIUtility.singleLineHeight), "Target Avatar");
         EditorGUI.PropertyField(
             new Rect(rect.x + _labelWidth, rect.y + 4 * _padding + 3 * EditorGUIUtility.singleLineHeight, _textBoxWidth, EditorGUIUtility.singleLineHeight),
-            element.FindPropertyRelative("CharPosition"), GUIContent.none);
+            element.FindPropertyRelative("RightCharacter"), GUIContent.none);
        
         //Background Image
         EditorGUI.LabelField(new Rect(rect.x, rect.y + 5 * _padding + 4 * EditorGUIUtility.singleLineHeight, _labelWidth, EditorGUIUtility.singleLineHeight), "BG Image");

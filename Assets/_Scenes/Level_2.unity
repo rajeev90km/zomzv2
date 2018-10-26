@@ -10013,15 +10013,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1578642117390050, guid: f887d8249f1ef45848280cb77fd65a7d, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224092683147578802, guid: f887d8249f1ef45848280cb77fd65a7d,
+    - target: {fileID: 114949046175824820, guid: f887d8249f1ef45848280cb77fd65a7d,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: _zomzCanvas
+      value: 
+      objectReference: {fileID: 1183751977}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f887d8249f1ef45848280cb77fd65a7d, type: 2}
   m_IsPrefabParent: 0
@@ -24238,8 +24234,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 996265430}
-  m_LocalRotation: {x: 0.37323296, y: 0.0063968934, z: 0.0025731423, w: -0.9277121}
-  m_LocalPosition: {x: 7.078484, y: -7.6423655, z: -51.00379}
+  m_LocalRotation: {x: 0.20515783, y: 0.047713872, z: 0.007981585, w: -0.9775326}
+  m_LocalPosition: {x: 10.792, y: -2.74, z: -45.35148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -28181,9 +28177,18 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1604426936647438, guid: 7e6841b4fddcb454cbcd3ceb307b0e90, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e6841b4fddcb454cbcd3ceb307b0e90, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1183751977 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1604426936647438, guid: 7e6841b4fddcb454cbcd3ceb307b0e90,
+    type: 2}
+  m_PrefabInternal: {fileID: 1183751976}
 --- !u!1001 &1184254937
 Prefab:
   m_ObjectHideFlags: 0
@@ -31773,8 +31778,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea578f65e1c7406785af0ca271cc821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelData: {fileID: 11400000, guid: 753cb212a32ab417bbd2bad5b1bfdc7f, type: 2}
   GameData: {fileID: 11400000, guid: fe25c4c301c7243a3b0300d6eb01a3f9, type: 2}
+  ConversationPanel: {fileID: 0}
+  AvatarHolder: {fileID: 0}
+  Avatar1: {fileID: 0}
+  TargetAvatar: {fileID: 0}
+  AvatarName: {fileID: 0}
+  ConversationText: {fileID: 0}
+  IsConversationInProgress: 0
+  LevelData: {fileID: 11400000, guid: 753cb212a32ab417bbd2bad5b1bfdc7f, type: 2}
 --- !u!1001 &1323188239
 Prefab:
   m_ObjectHideFlags: 0

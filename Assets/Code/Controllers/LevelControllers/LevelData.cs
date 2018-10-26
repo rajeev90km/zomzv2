@@ -8,4 +8,7 @@ public abstract class LevelData : ScriptableObject {
 
     public bool CanUseZomzMode;
 
+    public string ObjectiveText;
+
+    public Conversation LevelBeginConversation;
 }

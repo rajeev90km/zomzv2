@@ -21,6 +21,7 @@ TagManager:
   - Bonfire
   - LevelController
   - LevelEndTrigger
+  - PlayerStart
   layers:
   - Default
   - TransparentFX
