@@ -57,6 +57,8 @@ public class ZomzController : MonoBehaviour {
     private GameObject _pointerArrowObj;
     private Coroutine _zomzManaUseCoroutine;
 
+    LevelControllerBase currentLevelController;
+     
 	void Awake () 
     {
         //Cache Properties
@@ -68,9 +70,11 @@ public class ZomzController : MonoBehaviour {
 
         _zombiesUnderControl = new List<ZombieBase>();
         _enemyLayerMask = (1 << LayerMask.NameToLayer("Enemy"));
+
+        currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
 	}
 
-    public void ProcessZomzMode()
+	public void ProcessZomzMode()
     {
         if(!ZomzMode.CurrentValue)
         {
@@ -177,59 +181,62 @@ public class ZomzController : MonoBehaviour {
 
 	void Update () 
     {
-        if (!_gameData.IsPaused)
+        if (!_gameData.IsPaused && !currentLevelController.IsConversationInProgress)
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (ZomzMode.CurrentValue)
+            if (Camera.main)
             {
-                if (Input.GetMouseButtonDown(0))
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (ZomzMode.CurrentValue)
                 {
-                    if (Physics.Raycast(ray, out hit, Mathf.Infinity, _enemyLayerMask))
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        if (hit.transform != null)
+                        if (Physics.Raycast(ray, out hit, Mathf.Infinity, _enemyLayerMask))
                         {
-                            ZombieBase zBase = hit.transform.gameObject.GetComponent<ZombieBase>();
-
-                            if (zBase != null && zBase.IsAlive)
+                            if (hit.transform != null)
                             {
-                                _pointerArrowObj.SetActive(true);
-                                ZomzMode.CurrentSelectedZombie = hit.transform.gameObject.GetComponent<ZombieBase>();
+                                ZombieBase zBase = hit.transform.gameObject.GetComponent<ZombieBase>();
 
-                                Vector3 zombiePos = hit.transform.gameObject.transform.position;
-                                _pointerArrowObj.transform.position = new Vector3(zombiePos.x, 4, zombiePos.z);
+                                if (zBase != null && zBase.IsAlive)
+                                {
+                                    _pointerArrowObj.SetActive(true);
+                                    ZomzMode.CurrentSelectedZombie = hit.transform.gameObject.GetComponent<ZombieBase>();
+
+                                    Vector3 zombiePos = hit.transform.gameObject.transform.position;
+                                    _pointerArrowObj.transform.position = new Vector3(zombiePos.x, 4, zombiePos.z);
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            //Request Zomz Mode
-            if (Input.GetKeyDown(KeyCode.Z) && _zomzManaAttribute.CurrentValue >= 100 && _characterControls.IsAlive)
-            {
-                if (gameData.CurrentLevelData.CanUseZomzMode)
+                //Request Zomz Mode
+                if (Input.GetKeyDown(KeyCode.Z) && _zomzManaAttribute.CurrentValue >= 100 && _characterControls.IsAlive)
                 {
-                    if (!ZomzMode.IsRegistered)
+                    if (gameData.CurrentLevelData.CanUseZomzMode)
                     {
-                        if (!ZomzMode.CurrentValue)
-                            ProcessZomzMode();
-                        else
-                            RegisterZomzMode();
+                        if (!ZomzMode.IsRegistered)
+                        {
+                            if (!ZomzMode.CurrentValue)
+                                ProcessZomzMode();
+                            else
+                                RegisterZomzMode();
+                        }
                     }
                 }
-            }
 
-            //End Zomz Mode if ESC or if out of mana
-            if (Input.GetKeyDown(KeyCode.Escape) || _zomzManaAttribute.CurrentValue <= 0 && _characterControls.IsAlive)
-            {
-                if (gameData.CurrentLevelData.CanUseZomzMode)
+                //End Zomz Mode if ESC or if out of mana
+                if (Input.GetKeyDown(KeyCode.Escape) || _zomzManaAttribute.CurrentValue <= 0 && _characterControls.IsAlive)
                 {
-                    if (ZomzMode.CurrentSelectedZombie)
-                        UnregisterZomzMode();
+                    if (gameData.CurrentLevelData.CanUseZomzMode)
+                    {
+                        if (ZomzMode.CurrentSelectedZombie)
+                            UnregisterZomzMode();
 
-                    EndZomzMode();
+                        EndZomzMode();
+                    }
+
                 }
-
             }
         }
 	}

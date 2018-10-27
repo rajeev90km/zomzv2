@@ -22,6 +22,7 @@ TagManager:
   - LevelController
   - LevelEndTrigger
   - PlayerStart
+  - InitCameraPans
   layers:
   - Default
   - TransparentFX

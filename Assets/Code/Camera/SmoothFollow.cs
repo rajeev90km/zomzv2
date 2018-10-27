@@ -23,8 +23,11 @@ public class SmoothFollow : MonoBehaviour {
     private Vector3 _offset;
     private Vector3 _offsetWithoutY;
 
+    LevelControllerBase currentLevelController;
+
 	void Start () 
     {
+        currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
         _targetTransform = _defaultFollowTransform;
         _offset	= transform.position - _targetTransform.position;     
 	}
@@ -56,21 +59,27 @@ public class SmoothFollow : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () 
     {
-        if (Input.GetMouseButton(0))
+        if (!currentLevelController.IsConversationInProgress && !currentLevelController.EntrySequenceInProgress)
         {
-            _offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotateSpeed, Vector3.up) * _offset;
+            if (Input.GetMouseButton(0))
+            {
+                Debug.Log("can Move mouse");
+                _offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotateSpeed, Vector3.up) * _offset;
+            }
         }
-        
+
         Vector3 newPos = _targetTransform.position + _offset;
         transform.position = Vector3.Slerp(transform.position, newPos, _smoothnessFactor);
 
         _offsetWithoutY = transform.position - _targetTransform.position;
         _offsetWithoutY.y = 0;
 
-        if (Input.GetMouseButton(0))
-            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * _rotateSpeed);
-        //transform.rotation = Quaternion.LookRotation(_offsetWithoutY);
-        //transform.LookAt(_targetTransform);
-		
+        if (!currentLevelController.IsConversationInProgress && !currentLevelController.EntrySequenceInProgress)
+        {
+            if (Input.GetMouseButton(0))
+                transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * _rotateSpeed);
+            //transform.rotation = Quaternion.LookRotation(_offsetWithoutY);
+            //transform.LookAt(_targetTransform);
+        }
 	}
 }

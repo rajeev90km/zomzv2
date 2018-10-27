@@ -58,9 +58,13 @@ public class CameraControls : MonoBehaviour
 
     private float _zoomValue = 0.75f;
 
+    LevelControllerBase currentLevelController;
+
     void Start()
     {
-        
+
+        currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
+
         if (_mask != null)
             _mask.SetActive(false);
 
@@ -143,40 +147,41 @@ public class CameraControls : MonoBehaviour
 
         if (_targetTransform != null)
         {
+            if (!currentLevelController.IsConversationInProgress && !currentLevelController.EntrySequenceInProgress)
+            {
+                if (_playerCharacter != null)
+                    _playerCharacter.ResetDirectionVectors();
 
-            if (_playerCharacter != null)
-                _playerCharacter.ResetDirectionVectors();
-
-            _zoomValue -= Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
-
-
-            if (_zoomValue > 1)
-                _zoomValue = 1;
-
-            if (_zoomValue < 0)
-                _zoomValue = 0;
+                _zoomValue -= Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
 
 
-            Vector3 finalPos = Vector3.Lerp(_cameraTopPosition.position, _cameraBottomPosition.position, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, _zoomValue)));
-            Quaternion finalRot = Quaternion.Slerp(_cameraTopPosition.rotation, _cameraBottomPosition.rotation, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, _zoomValue)));
-            //float fov = Camera.main.fieldOfView;
-            //fov += Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
-            //fov = Mathf.Clamp(fov, _minFov, _maxFov);
-            //Camera.main.fieldOfView = fov;
+                if (_zoomValue > 1)
+                    _zoomValue = 1;
 
-            transform.position = Vector3.Lerp(transform.position, finalPos, _smoothnessFactor);
-            transform.rotation = Quaternion.Lerp(transform.rotation, finalRot, _smoothnessFactor);
-
-            //_cameraOffset = transform.position - _targetTransform.position;     
-
-            //if(Input.GetMouseButton(0))
-            //    _cameraOffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotateSpeed, Vector3.up) * _cameraOffset;
-
-            //Vector3 newPos = _targetTransform.position + _cameraOffset;
-            //transform.position = Vector3.Slerp(transform.position, newPos, _smoothnessFactor);
-            //transform.LookAt(_targetTransform);
+                if (_zoomValue < 0)
+                    _zoomValue = 0;
 
 
+                Vector3 finalPos = Vector3.Lerp(_cameraTopPosition.position, _cameraBottomPosition.position, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, _zoomValue)));
+                Quaternion finalRot = Quaternion.Slerp(_cameraTopPosition.rotation, _cameraBottomPosition.rotation, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, _zoomValue)));
+                //float fov = Camera.main.fieldOfView;
+                //fov += Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
+                //fov = Mathf.Clamp(fov, _minFov, _maxFov);
+                //Camera.main.fieldOfView = fov;
+
+                transform.position = Vector3.Lerp(transform.position, finalPos, _smoothnessFactor);
+                transform.rotation = Quaternion.Lerp(transform.rotation, finalRot, _smoothnessFactor);
+
+                //_cameraOffset = transform.position - _targetTransform.position;     
+
+                //if(Input.GetMouseButton(0))
+                //    _cameraOffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotateSpeed, Vector3.up) * _cameraOffset;
+
+                //Vector3 newPos = _targetTransform.position + _cameraOffset;
+                //transform.position = Vector3.Slerp(transform.position, newPos, _smoothnessFactor);
+                //transform.LookAt(_targetTransform);
+
+            }
 
 
         }

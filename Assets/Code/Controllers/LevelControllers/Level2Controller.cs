@@ -6,8 +6,9 @@ public class Level2Controller : LevelControllerBase {
 
     public Level2Data LevelData;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         GameData.CurrentLevelData = LevelData;
     }
 
