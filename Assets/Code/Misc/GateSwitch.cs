@@ -31,7 +31,8 @@ public class GateSwitch : MonoBehaviour {
 
     private const float LEVER_Z_ORIENTATION = 60f;
 
-    private const float DOOR_OPEN_ORIENTATION = 60f;
+    [SerializeField]
+    private float _doorOpenOrientation = 60f;
 
 	public void Activate()
 	{
@@ -61,9 +62,12 @@ public class GateSwitch : MonoBehaviour {
 
         AkSoundEngine.PostEvent("Gate_Opening", gameObject);
 
+        Vector3 initEulerAngles = _connectedDoor.transform.localEulerAngles;
+        Vector3 endEulerAngles = _connectedDoor.transform.localEulerAngles - new Vector3(0, _connectedDoor.transform.localEulerAngles.y + _doorOpenOrientation , 0 );
+
         while (t < 1)
         {
-            _connectedDoor.transform.localEulerAngles = new Vector3(0, Mathf.Lerp(0, DOOR_OPEN_ORIENTATION, Mathf.SmoothStep(0f, 1f, t)),0);
+            _connectedDoor.transform.localEulerAngles = Vector3.Lerp(initEulerAngles, endEulerAngles, t);
             t += Time.deltaTime / _doorOpenTime;
             yield return null;
         }

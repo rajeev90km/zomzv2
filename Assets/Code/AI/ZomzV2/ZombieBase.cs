@@ -166,11 +166,15 @@ public class ZombieBase : Being
 
     private bool _isChasing = false;
 
-	protected virtual void Awake () 
+    private LevelControllerBase currentLevelController;
+
+    protected virtual void Awake () 
     {
         humanLayerMask = (1 << LayerMask.NameToLayer("Human"));
         playerLayerMask = (1 << LayerMask.NameToLayer("Player"));
         zombieLayerMask = (1 << LayerMask.NameToLayer("Enemy"));
+
+        currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
 
         //Cache Properties
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -529,7 +533,18 @@ public class ZombieBase : Being
                 if (_hurtFx != null)
                     Instantiate(_hurtFx, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
 
-                yield return new WaitForSeconds(_characterStats.HurtRate);
+                Vector3 initPos = transform.position;
+                Vector3 endPos = transform.position - transform.forward * 0.75f;
+
+                float t = 0;
+                while (t < 1)
+                {
+                    transform.position = Vector3.Lerp(initPos, endPos, t);
+                    t += Time.deltaTime / (_characterStats.HurtRate / 2);
+                    yield return null;
+                }
+
+                yield return new WaitForSeconds(_characterStats.HurtRate/2);
 
                 _isHurting = false;
                 _isAttacking = false;
@@ -638,62 +653,65 @@ public class ZombieBase : Being
     {
         _nextWayPoint = (_wayPoints.Count - _nextWayPoint) % _wayPoints.Count;
     }
-	
-    protected virtual void Update () 
+
+    protected virtual void Update()
     {
-        if(_isAlive && !_isBeingControlled && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue &&!_gameData.IsPaused)
+        if (_isAlive && !_isBeingControlled && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue && !_gameData.IsPaused)
             ExecuteAI();
 
-        //Zomz Mode Registered - MOVEMENt
-        if(_isBeingControlled && !_isAttacking && !_isHurting)
+        if (!currentLevelController.EntrySequenceInProgress && !currentLevelController.IsConversationInProgress)
         {
-            bool running = Input.GetKey(KeyCode.LeftShift);
-            float targetSpeed = ((running) ? _characterStats.RunSpeed : _characterStats.WalkSpeed);
-            _currentSpeed = Mathf.SmoothDamp(_currentSpeed, targetSpeed, ref _speedSmoothVelocity, _speedSmoothTime);
-
-            Vector3 rightMovement = right * _currentSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
-            Vector3 upMovement = forward * _currentSpeed * Time.deltaTime * Input.GetAxis("Vertical");
-
-            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-
-            if (heading != Vector3.zero)
+            //Zomz Mode Registered - MOVEMENt
+            if (_isBeingControlled && !_isAttacking && !_isHurting)
             {
-                transform.forward = heading;
-                transform.position += rightMovement + upMovement;
+                bool running = Input.GetKey(KeyCode.LeftShift);
+                float targetSpeed = ((running) ? _characterStats.RunSpeed : _characterStats.WalkSpeed);
+                _currentSpeed = Mathf.SmoothDamp(_currentSpeed, targetSpeed, ref _speedSmoothVelocity, _speedSmoothTime);
+
+                Vector3 rightMovement = right * _currentSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
+                Vector3 upMovement = forward * _currentSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+
+                Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+
+                if (heading != Vector3.zero)
+                {
+                    transform.forward = heading;
+                    transform.position += rightMovement + upMovement;
+                }
+
+                float animationSpeedPercent = ((running) ? 1 : 0.5f) * heading.magnitude;
+
+                if (ZomzMode.ManaConsumeType == ZomzManaConsumeType.ACTION_BASED)
+                    _zomzManaAttribute.CurrentValue -= animationSpeedPercent * _moveCostPerUnit;
+
+                if (animationSpeedPercent == 0 && _animState != ZombieStates.NONE)
+                {
+                    _animator.SetTrigger("idle");
+                    _animState = ZombieStates.NONE;
+                }
+                else if (animationSpeedPercent == 0.5f && _animState != ZombieStates.PATROL)
+                {
+                    _animator.SetTrigger("walk");
+                    _animState = ZombieStates.PATROL;
+                }
+                if (animationSpeedPercent == 1f && _animState != ZombieStates.CHASE)
+                {
+                    _animator.SetTrigger("run");
+                    _animState = ZombieStates.CHASE;
+                }
             }
 
-            float animationSpeedPercent = ((running) ? 1 : 0.5f) * heading.magnitude;
+            //Zomz Registered - ATTACK
+            if (_isBeingControlled)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    StartCoroutine(Attack());
+                }
+            }
 
-            if(ZomzMode.ManaConsumeType == ZomzManaConsumeType.ACTION_BASED)
-                _zomzManaAttribute.CurrentValue -= animationSpeedPercent * _moveCostPerUnit;
-
-            if (animationSpeedPercent == 0 && _animState != ZombieStates.NONE)
-            {
-                _animator.SetTrigger("idle");
-                _animState = ZombieStates.NONE;
-            }
-            else if (animationSpeedPercent == 0.5f && _animState != ZombieStates.PATROL)
-            {
-                _animator.SetTrigger("walk");
-                _animState = ZombieStates.PATROL;
-            }
-            if (animationSpeedPercent == 1f && _animState != ZombieStates.CHASE)
-            {
-                _animator.SetTrigger("run");
-                _animState = ZombieStates.CHASE;
-            }
+            if (!_playerController.IsAlive)
+                _isBeingControlled = false;
         }
-
-        //Zomz Registered - ATTACK
-        if(_isBeingControlled)
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(Attack());
-            }
-        }
-
-        if (!_playerController.IsAlive)
-            _isBeingControlled = false;
 	}
 }

@@ -12,9 +12,12 @@ public class AlwaysLookAtCamera : MonoBehaviour {
 	}
 
 	void Update () {
-        Vector3 relativePos = Camera.main.transform.position - transform.position;
-        relativePos.y = 0;
-        Quaternion rotation = Quaternion.LookRotation(relativePos) * Quaternion.Euler(_rotationOffset);
-        transform.rotation = rotation;
+        if (Camera.main)
+        {
+            Vector3 relativePos = Camera.main.transform.position - transform.position;
+            relativePos.y = 0;
+            Quaternion rotation = Quaternion.LookRotation(relativePos) * Quaternion.Euler(_rotationOffset);
+            transform.rotation = rotation;
+        }
 	}
 }

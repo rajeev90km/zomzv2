@@ -78,6 +78,9 @@ public class HumanBase : Being
     [SerializeField]
     protected HumanStates _currentState;
 
+    [SerializeField]
+    GameObject _wayPointsObj;
+
     [Header("Miscellaneous")]
     [SerializeField]
     protected float _sightHeightMultiplier = 1f;
@@ -141,7 +144,7 @@ public class HumanBase : Being
             finalLayerMask = finalLayerMask | humanLayerMask | playerLayerMask;
 
         //Waypoints
-        GameObject _wayPointsObj = GameObject.FindWithTag("Waypoints");
+        //GameObject _wayPointsObj = GameObject.FindWithTag("Waypoints");
         if (_wayPointsObj != null)
         {
             for (int i = 0; i < _wayPointsObj.transform.childCount; i++)
@@ -170,7 +173,12 @@ public class HumanBase : Being
             {
                 if (Vector3.Distance(closestEnemy.transform.position, transform.position) <= _characterStats.AttackRange && !_isHurting)
                 {
-                    closestEnemy.StartCoroutine(closestEnemy.Hurt(_characterStats.AttackStrength));
+                    if (closestEnemy.GetComponent<CharacterControls>() || closestEnemy.GetComponent<HumanBase>())
+                    {
+                        closestEnemy.StartCoroutine(closestEnemy.Hurt(_characterStats.HumanAttackStrength));
+                    }
+                    else
+                        closestEnemy.StartCoroutine(closestEnemy.Hurt(_characterStats.AttackStrength));
                 }
             }
 
@@ -219,11 +227,24 @@ public class HumanBase : Being
 
                 if (_humanHealthBar)
                     _humanHealthBar.fillAmount = _currentHealth / CharacterStats.Health;
-
+                
                 if (_hurtFx != null)
                     Instantiate(_hurtFx, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
 
-                yield return new WaitForSeconds(_characterStats.HurtRate);
+                //yield return new WaitForSeconds(_characterStats.HurtRate);
+
+                Vector3 initPos = transform.position;
+                Vector3 endPos = transform.position - transform.forward * 0.75f;
+
+                float t = 0;
+                while (t < 1)
+                {
+                    transform.position = Vector3.Lerp(initPos, endPos,t);
+                    t += Time.deltaTime / ( _characterStats.HurtRate / 2 );
+                    yield return null;
+                }
+
+                yield return new WaitForSeconds(_characterStats.HurtRate / 2);
 
                 _isHurting = false;
                 _isAttacking = false;
@@ -242,13 +263,13 @@ public class HumanBase : Being
 
     protected virtual void Update()
     {
-        if (!currentLevelController.EntrySequenceInProgress && !currentLevelController.IsConversationInProgress)
-        {
+        //if (!currentLevelController.EntrySequenceInProgress && !currentLevelController.IsConversationInProgress)
+        //{
             if (_isAlive && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue)
             {
                 ExecuteAI();
             }
-        }
+        //}
     }
 
     //*********************************************************************************************************************************************************

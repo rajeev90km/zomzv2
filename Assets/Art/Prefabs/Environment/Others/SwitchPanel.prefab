@@ -70,8 +70,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1233220053819076}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.143, y: 2.606, z: -28.138}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -32.733, y: -0.0040285587, z: -4.521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4429365626227104}
@@ -243,3 +243,5 @@ MonoBehaviour:
   _connectedDoor: {fileID: 0}
   _leverSwitchTime: 0.5
   _doorOpenTime: 3
+  _isLastSwitch: 0
+  _doorOpenOrientation: -60

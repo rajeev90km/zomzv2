@@ -20,7 +20,8 @@ MonoBehaviour:
   FieldOfView: 180
   LookRange: 7
   AttackRate: 1
-  HurtRate: 1.2
+  HurtRate: 1
+  HumanAttackStrength: 10
   AttackStrength: 10
   AttackRange: 1.25
   ShootRange: 7

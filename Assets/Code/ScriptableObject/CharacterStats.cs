@@ -25,7 +25,9 @@ public class CharacterStats : ScriptableObject
 
     public float HurtRate = 1f;
 
-	public float AttackStrength = 10f;
+    public float HumanAttackStrength = 10f;
+
+    public float AttackStrength = 10f;
 
 	public float AttackRange = 1.2f;
 

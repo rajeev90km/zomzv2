@@ -13,14 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   WalkSpeed: 2.5
+  CrouchWalkSpeed: 0
+  ClimbSpeed: 1.5
   RunSpeed: 4.5
   PushSpeed: 1
   FieldOfView: 180
   LookRange: 10
-  AttackRate: 1
+  AttackRate: 0.9
   HurtRate: 0.5
-  AttackStrength: 10
+  HumanAttackStrength: 7
+  AttackStrength: 15
   AttackRange: 1.25
+  ShootRange: 7
   ZomzRange: 10
   ZomzSpeed: 5
   AttackDamageToSelf: 0
@@ -28,3 +32,4 @@ MonoBehaviour:
   DiveTime: 1
   StompRange: 5
   ExplosionRange: 7
+  HearingRange: 4
