@@ -57,6 +57,7 @@ public class LevelControllerBase : MonoBehaviour {
 
         for (int i = 0; i < panData.Count; i++)
         {
+
             float t = 0;
 
             Vector3 initPos = panData[i].GetChild(0).position;
@@ -67,6 +68,11 @@ public class LevelControllerBase : MonoBehaviour {
 
             InitCamera.transform.position = initPos;
             InitCamera.transform.rotation = initRotation;
+
+            FadeBgAnimator.ResetTrigger("fadein");
+            FadeBgAnimator.ResetTrigger("fadeout");
+            FadeBgAnimator.SetTrigger("fadein");
+            FadeBgAnimator.speed = 3;
 
             while(t<1)
             {
@@ -79,6 +85,16 @@ public class LevelControllerBase : MonoBehaviour {
 
             InitCamera.transform.position = endPos;
             InitCamera.transform.rotation = endRotation;
+
+            if (i < panData.Count - 1)
+            {
+                FadeBgAnimator.gameObject.SetActive(true);
+                FadeBgAnimator.ResetTrigger("fadein");
+                FadeBgAnimator.ResetTrigger("fadeout");
+                FadeBgAnimator.SetTrigger("fadeout");
+                FadeBgAnimator.speed = 7;
+                yield return new WaitForSeconds(0.5f);
+            }
         }
 
         FadeBgAnimator.gameObject.SetActive(true);

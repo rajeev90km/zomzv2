@@ -106,18 +106,22 @@ public class HumanBase : Being
 
     protected Being targetBeing;
 
+    private LevelControllerBase currentLevelController;
+
     protected virtual void Awake()
     {
+        currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
+
         //Cache Properties
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         ownCollider = GetComponent<Collider>();
 
         //Set initial State
-        _initState = HumanStates.WALK;
-        _currentState = _initState;
-        InitNewState("walk");
-        _previousState = _currentState;
+        //_initState = HumanStates.WALK;
+        //_currentState = _initState;
+        //InitNewState("walk");
+        //_previousState = _currentState;
 
         //Cache Player Controls
         _player = GameObject.FindWithTag("Player");
@@ -238,9 +242,12 @@ public class HumanBase : Being
 
     protected virtual void Update()
     {
-        if (_isAlive && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue)
+        if (!currentLevelController.EntrySequenceInProgress && !currentLevelController.IsConversationInProgress)
         {
-            ExecuteAI();
+            if (_isAlive && !_isAttacking && !_isHurting && !ZomzMode.CurrentValue)
+            {
+                ExecuteAI();
+            }
         }
     }
 
