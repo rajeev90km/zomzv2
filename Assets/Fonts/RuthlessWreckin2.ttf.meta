@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 0638822a63f8c8e4f9f13c562fe67306
+timeCreated: 1540770241
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ruthless Wreckin TWO
+  fontNames:
+  - Ruthless Wreckin TWO
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
