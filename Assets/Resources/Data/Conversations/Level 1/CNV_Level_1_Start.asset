@@ -44,7 +44,7 @@ MonoBehaviour:
     Text: Abe! This man is the only thing standing in your way from salvation. Kill
       him and you will earn entry to my promised land.
     Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
-    RightCharacter: {fileID: 21300000, guid: 9d231789d44ebce4a906938aa72299a2, type: 3}
+    RightCharacter: {fileID: 21300000, guid: cc7bf8675946144a9aa97d7175887df0, type: 3}
     BackgroundImage: {fileID: 0}
     DialogueVO: {fileID: 0}
     BackgroundMusic: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   - CharacterName: Jalali
     Text: Fail and you and your family will not be welcome here.
     Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
-    RightCharacter: {fileID: 21300000, guid: 9d231789d44ebce4a906938aa72299a2, type: 3}
+    RightCharacter: {fileID: 21300000, guid: c6fdb723b9ef64794ad8d023e9fbcd3f, type: 3}
     BackgroundImage: {fileID: 0}
     DialogueVO: {fileID: 0}
     BackgroundMusic: {fileID: 0}

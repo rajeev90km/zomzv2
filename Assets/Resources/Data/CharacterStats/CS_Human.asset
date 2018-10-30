@@ -21,7 +21,7 @@ MonoBehaviour:
   LookRange: 10
   AttackRate: 0.9
   HurtRate: 0.5
-  HumanAttackStrength: 7
+  HumanAttackStrength: 5
   AttackStrength: 15
   AttackRange: 1.25
   ShootRange: 7

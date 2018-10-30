@@ -244,15 +244,49 @@ public class HumanBase : Being
                     yield return null;
                 }
 
-                yield return new WaitForSeconds(_characterStats.HurtRate / 2);
-
-                _isHurting = false;
-                _isAttacking = false;
-
                 if (_currentHealth <= 0.1f)
                 {
                     DieState();
                 }
+
+                if(_isAlive)
+                {
+                    float val = Random.Range(0, 1);
+
+                    if(val<0.2f)
+                    {
+                        Vector3 randomDirection = Random.insideUnitSphere * _characterStats.LookRange / 2;    
+                        randomDirection += transform.position;
+
+                        NavMeshHit hit;
+                        NavMesh.SamplePosition(randomDirection, out hit, _characterStats.LookRange / 2, 1);
+                        Vector3 finalPosition = hit.position;
+
+                        _animator.SetTrigger("run");
+                        _navMeshAgent.speed = _characterStats.RunSpeed;
+                        _navMeshAgent.destination = finalPosition;
+                        _navMeshAgent.isStopped = false;
+
+                        while(Vector3.Distance(transform.position,finalPosition)>0.1f && _navMeshAgent.hasPath)
+                        {
+                            yield return null;
+                        }
+
+                        _animator.SetTrigger("guarded");
+                        transform.LookAt(_playerController.transform);
+
+                        yield return new WaitForSeconds(0.2f);
+                    }
+                    else
+                    {
+                        yield return new WaitForSeconds(_characterStats.HurtRate / 2);
+                    }
+                }
+
+
+
+                _isHurting = false;
+                _isAttacking = false;
             }
         }
 

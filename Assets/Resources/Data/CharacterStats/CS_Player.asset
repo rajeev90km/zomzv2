@@ -19,8 +19,9 @@ MonoBehaviour:
   PushSpeed: 1
   FieldOfView: 90
   LookRange: 5
-  AttackRate: 0.75
+  AttackRate: 0.71
   HurtRate: 0.7
+  HumanAttackStrength: 10
   AttackStrength: 34
   AttackRange: 1.2
   ShootRange: 7

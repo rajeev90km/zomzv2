@@ -63,7 +63,6 @@ public class SmoothFollow : MonoBehaviour {
         {
             if (Input.GetMouseButton(0))
             {
-                Debug.Log("can Move mouse");
                 _offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotateSpeed, Vector3.up) * _offset;
             }
         }
