@@ -279,7 +279,7 @@ public class HumanBase : Being
 
                         yield return new WaitForSeconds(0.2f);
                     }
-                    else if(val>0.2f && val< 0.9f)
+                    else if(val>0.2f && val< 0.4f)
                     {
                         Vector3 pointInFront;
 
