@@ -251,7 +251,9 @@ public class HumanBase : Being
 
                 if(_isAlive)
                 {
-                    float val = Random.Range(0, 1);
+                    float val = Random.value;
+
+                    Debug.Log(val);
 
                     if(val<0.2f)
                     {
@@ -276,6 +278,32 @@ public class HumanBase : Being
                         transform.LookAt(_playerController.transform);
 
                         yield return new WaitForSeconds(0.2f);
+                    }
+                    else if(val>0.2f && val< 0.9f)
+                    {
+                        Vector3 pointInFront;
+
+                        float rval = Random.value;
+
+                        if(rval<=0.5)
+                            pointInFront = transform.position + ((transform.forward + transform.right) * 3f);
+                        else
+                            pointInFront = transform.position + ((transform.forward - transform.right) * 3f);
+
+                        float a = 0;
+
+                        _animator.SetTrigger("roll");
+
+                        Vector3 curPos = transform.position;
+
+                        while(a<1)
+                        {
+                            transform.position = Vector3.Lerp(curPos, pointInFront,a);
+                            a += Time.deltaTime;
+                            yield return null;
+                        }
+
+                        transform.LookAt(_playerController.transform);
                     }
                     else
                     {
@@ -471,6 +499,20 @@ public class HumanBase : Being
     {
         _nextWayPoint = (_wayPoints.Count - _nextWayPoint) % _wayPoints.Count;
     }
+
+    Vector3 RandomPointInCircle(float radius, float angle)
+    {
+        float rad = angle * Mathf.Deg2Rad;
+        Vector3 position = new Vector3(Mathf.Sin(rad), 0, Mathf.Cos(rad));
+        return position * radius;
+    }
+
+    Vector3 RandomPointInCircle(Transform trans, float radius, float angle)
+    {
+        float rad = angle * Mathf.Deg2Rad;
+        Vector3 position = trans.right * Mathf.Sin(rad) + trans.forward * Mathf.Cos(rad);
+        return trans.position - ( position * radius );
+    }
     #endregion
 
 
@@ -493,4 +535,6 @@ public class HumanBase : Being
         
     }
     #endregion
+
+
 }

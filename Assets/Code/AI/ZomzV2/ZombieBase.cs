@@ -544,7 +544,7 @@ public class ZombieBase : Being
                     yield return null;
                 }
 
-                yield return new WaitForSeconds(_characterStats.HurtRate/2);
+                //yield return new WaitForSeconds(_characterStats.HurtRate/2);
 
                 _isHurting = false;
                 _isAttacking = false;

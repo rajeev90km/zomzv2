@@ -43,7 +43,7 @@ public class LevelControllerBase : MonoBehaviour {
 
     public bool IsConversationInProgress = false;
 
-    private const float INIT_CAMERA_PAN_TIME = 5f;
+    private const float INIT_CAMERA_PAN_TIME = 1f;
 
     private GameObject mainCameraObj;
 
