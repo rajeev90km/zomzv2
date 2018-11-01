@@ -35,6 +35,8 @@ public class ConversationEntity
     public AudioClip SFX;
 
     public AudioClip ExitSFX;
+
+    public string PanTransform;
 }
 
 /// <summary>

@@ -21,6 +21,7 @@ MonoBehaviour:
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
   - CharacterName: Jalali
     Text: This man, just like many of you, came to me seeking sanctuary!
     Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
@@ -30,6 +31,7 @@ MonoBehaviour:
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
   - CharacterName: Jalali
     Text: But, we do not let the weak reside here without reason. He must first prove
       himself worthy!
@@ -40,6 +42,7 @@ MonoBehaviour:
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
   - CharacterName: Jalali
     Text: Abe! This man is the only thing standing in your way from salvation. Kill
       him and you will earn entry to my promised land.
@@ -50,6 +53,7 @@ MonoBehaviour:
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: HumanViewTransform
   - CharacterName: Jalali
     Text: Fail and you and your family will not be welcome here.
     Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
@@ -59,6 +63,7 @@ MonoBehaviour:
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
   - CharacterName: Jalali
     Text: I, your new god, grace you. Here's your chance. Show me I'm not wasting
       my time. Now begin!
@@ -69,4 +74,5 @@ MonoBehaviour:
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
   PauseGamePlay: 1

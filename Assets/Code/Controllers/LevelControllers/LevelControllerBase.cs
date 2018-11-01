@@ -43,11 +43,15 @@ public class LevelControllerBase : MonoBehaviour {
 
     public bool IsConversationInProgress = false;
 
-    private const float INIT_CAMERA_PAN_TIME = 1f;
+    public float CameraPanTime = 1f;
 
     private GameObject mainCameraObj;
 
     public bool EntrySequenceInProgress = false;
+
+    Transform currentPanTransform = null;
+
+    Coroutine midConvoPanCoroutine = null;
 
     public IEnumerator StartInitCameraPans()
     {
@@ -79,7 +83,7 @@ public class LevelControllerBase : MonoBehaviour {
                 InitCamera.transform.position = Vector3.Lerp(initPos, endPos, t);
                 InitCamera.transform.rotation = Quaternion.Lerp(initRotation,endRotation, t);
 
-                t += Time.deltaTime / INIT_CAMERA_PAN_TIME;
+                t += Time.deltaTime / CameraPanTime;
                 yield return null;
             }
 
@@ -129,6 +133,9 @@ public class LevelControllerBase : MonoBehaviour {
 
 	public void BeginConversation(Conversation pConversation)
     {
+        InitCamera.transform.position = mainCameraObj.transform.position;
+        InitCamera.transform.rotation = mainCameraObj.transform.rotation;
+
         IsConversationInProgress = true;
 
         if (ConversationPanel)
@@ -147,6 +154,8 @@ public class LevelControllerBase : MonoBehaviour {
 
     public void EndConversation()
     {
+        StartCoroutine(PanCameraDuringConversation(mainCameraObj.transform.position, mainCameraObj.transform.rotation, 0.5f, true));
+
         if (ConversationPanel)
             ConversationPanel.SetActive(false);
 
@@ -160,6 +169,8 @@ public class LevelControllerBase : MonoBehaviour {
         _bottomCutSceneBorder.SetTrigger("fadeout");
 
         IsConversationInProgress = false;
+
+
     }
 
     void ProcessConversationEntity(ConversationEntity pConversationEntity)
@@ -192,6 +203,66 @@ public class LevelControllerBase : MonoBehaviour {
         {
             ConversationText.text = pConversationEntity.Text;
         }
+
+        if(pConversationEntity.PanTransform != "")
+        {
+            Transform pantransform = GameObject.Find(pConversationEntity.PanTransform).transform;
+
+            if (currentPanTransform != pantransform)
+            {
+                currentPanTransform = pantransform;
+
+                mainCameraObj.SetActive(false);
+                InitCamera.gameObject.SetActive(true);
+                //InitCamera.transform.position = pantransform.position;
+                //InitCamera.transform.rotation = pantransform.rotation;
+                if(midConvoPanCoroutine!=null)
+                {
+                    StopCoroutine(midConvoPanCoroutine);
+                    midConvoPanCoroutine = null;
+                }
+                midConvoPanCoroutine = StartCoroutine(PanCameraDuringConversation(pantransform.position, pantransform.rotation,0.5f,false));
+            }
+
+        }
+        else
+        {
+            //if (midConvoPanCoroutine != null)
+            //{
+            //    StopCoroutine(midConvoPanCoroutine);
+            //    midConvoPanCoroutine = null;
+            //}
+
+            //midConvoPanCoroutine = StartCoroutine(PanCameraDuringConversation(mainCameraObj.transform.position, mainCameraObj.transform.rotation,true));
+
+            //InitCamera.gameObject.SetActive(false);
+            //mainCameraObj.SetActive(true);
+        }
+    }
+
+    IEnumerator PanCameraDuringConversation(Vector3 endPos, Quaternion endRot, float transitionTime, bool disableAtEnd)
+    {
+        float t = 0;
+
+        Vector3 initPos = InitCamera.transform.position;
+        Quaternion initRot = InitCamera.transform.rotation;
+
+        while(t<1)
+        {
+            InitCamera.transform.position = Vector3.Lerp(initPos, endPos, t);
+            InitCamera.transform.rotation = Quaternion.Lerp(initRot, endRot, t);
+
+            t += Time.deltaTime / transitionTime;
+            yield return null;
+        }
+
+        if (disableAtEnd)
+        {
+            InitCamera.gameObject.SetActive(false);
+            mainCameraObj.SetActive(true);
+        }
+
+        midConvoPanCoroutine = null;
     }
 
 

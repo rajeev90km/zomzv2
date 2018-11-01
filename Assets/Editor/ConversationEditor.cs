@@ -14,7 +14,7 @@ public class ConversationEditor : Editor
         _list = new ReorderableList(serializedObject,
                 serializedObject.FindProperty("AllDialogues"),
                 true, true, true, true);
-        _list.elementHeight = 220f;
+        _list.elementHeight = 235f;
         _list.drawElementCallback += DrawElement;
         _list.drawHeaderCallback = (Rect rect) => {
             EditorGUI.LabelField(rect, "Conversation Entities");
@@ -88,6 +88,12 @@ public class ConversationEditor : Editor
         EditorGUI.PropertyField(
             new Rect(rect.x + _labelWidth, rect.y + 10 * _padding + 9 * EditorGUIUtility.singleLineHeight, _textBoxWidth, EditorGUIUtility.singleLineHeight),
             element.FindPropertyRelative("ExitSFX"), GUIContent.none);
+
+        // Exit SFX
+        EditorGUI.LabelField(new Rect(rect.x, rect.y + 11 * _padding + 10 * EditorGUIUtility.singleLineHeight, _labelWidth, EditorGUIUtility.singleLineHeight), "Pan Transform");
+        EditorGUI.PropertyField(
+            new Rect(rect.x + _labelWidth, rect.y + 11 * _padding + 10 * EditorGUIUtility.singleLineHeight, _textBoxWidth, EditorGUIUtility.singleLineHeight),
+            element.FindPropertyRelative("PanTransform"), GUIContent.none);
     }
 
     public override void OnInspectorGUI()

@@ -22,7 +22,7 @@ MonoBehaviour:
   AttackRate: 0.9
   HurtRate: 0.5
   HumanAttackStrength: 5
-  AttackStrength: 15
+  AttackStrength: 20
   AttackRange: 1.25
   ShootRange: 7
   ZomzRange: 10
