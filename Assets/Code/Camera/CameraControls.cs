@@ -152,8 +152,11 @@ public class CameraControls : MonoBehaviour
                 if (_playerCharacter != null)
                     _playerCharacter.ResetDirectionVectors();
 
+            #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+                _zoomValue += Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
+            #else
                 _zoomValue -= Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
-
+            #endif
 
                 if (_zoomValue > 1)
                     _zoomValue = 1;

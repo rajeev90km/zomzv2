@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 224765933058162112}
   - component: {fileID: 222942598008864700}
   - component: {fileID: 114646443365806394}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ZombieHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 114448341318834206}
   - component: {fileID: 114968487587834932}
   - component: {fileID: 114049943143146154}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ZombieHealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

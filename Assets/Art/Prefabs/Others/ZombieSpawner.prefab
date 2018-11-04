@@ -64,6 +64,8 @@ MonoBehaviour:
   _maxZombiesInScene: 12
   _timeBetweenSpawns: 5
   _numZombiesInScene: 0
+  _minDeathWaitTime: 5
+  _maxDeathWaitTime: 10
   _regularZombie: {fileID: 1690766357544074, guid: 6e846b395701744ad8e3c74f94652e12,
     type: 2}
   _fastZombie: {fileID: 1676861797275996, guid: 4de1a8f9bacea4136a0113b20070e9be,

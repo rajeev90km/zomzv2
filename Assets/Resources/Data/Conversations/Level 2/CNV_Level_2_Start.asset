@@ -13,21 +13,129 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllDialogues:
   - CharacterName: Jalali
-    Text: Bring the little one to me! I want her to see her papa from the front row!
-    Avatar: {fileID: 21300000, guid: 854a823e18d69bf49900df83e7826c26, type: 3}
-    CharPosition: 0
+    Text: Good Morning, my servants!
+    Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
+    RightCharacter: {fileID: 0}
     BackgroundImage: {fileID: 0}
     DialogueVO: {fileID: 0}
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Jalali
+    Text: Here we are again to withess a fighter risk his life for sanctuary. Here,
+      we all serve a purpose. His is our entertainment. Are you not entertained?
+    Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
+    RightCharacter: {fileID: 0}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
   - CharacterName: Serwa
-    Text: Nanyamka! Let her go!
-    Avatar: {fileID: 21300000, guid: d7f95946467e1db458607b976d7946a3, type: 3}
-    CharPosition: 3
+    Text: "I can\u2019t watch. Nanyamka, close your eyes! Keep them closed until I
+      say."
+    Avatar: {fileID: 21300000, guid: 7be49eaa304fd9f499e1c32e138d5298, type: 3}
+    RightCharacter: {fileID: 21300000, guid: 86e90ee429097554ea4d31c7697e3ffe, type: 3}
     BackgroundImage: {fileID: 0}
     DialogueVO: {fileID: 0}
     BackgroundMusic: {fileID: 0}
     SFX: {fileID: 0}
     ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Jalali
+    Text: hm... Guards, bring me his daughter! She should see her father from the
+      front row!
+    Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
+    RightCharacter: {fileID: 0}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Guard
+    Text: Yess, Issa.
+    Avatar: {fileID: 21300000, guid: 5a80608ce5d0fa841873fb84cae0a876, type: 3}
+    RightCharacter: {fileID: 0}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Serwa
+    Text: No, Nanyamka! Let her go!
+    Avatar: {fileID: 21300000, guid: d7f95946467e1db458607b976d7946a3, type: 3}
+    RightCharacter: {fileID: 0}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Nanyamka
+    Text: Mama!
+    Avatar: {fileID: 21300000, guid: d7f95946467e1db458607b976d7946a3, type: 3}
+    RightCharacter: {fileID: 21300000, guid: 4b7f823f5f0284640be9fa741e0e9632, type: 3}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Jalali
+    Text: Get back in your seat Serwa! Your husband is risking his life for your safety.
+      The least you could do is show a little support.
+    Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
+    RightCharacter: {fileID: 21300000, guid: 7be49eaa304fd9f499e1c32e138d5298, type: 3}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Jalali
+    Text: "What kind of role model are you being for Nanyamka?  Don\u2019t worry.
+      I\u2019ll teach her proper manners."
+    Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
+    RightCharacter: {fileID: 21300000, guid: 7be49eaa304fd9f499e1c32e138d5298, type: 3}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Jalali
+    Text: Now Abe. In this round, light all the bonfires and then leave through the
+      exit to move on. And your daughter is watching, so don't disappoint her!
+    Avatar: {fileID: 21300000, guid: 3b8767c9d31c0ce41943f8a67bcd60e7, type: 3}
+    RightCharacter: {fileID: 21300000, guid: 90501b8e5dbcb8b469c57b1d4c4d16b2, type: 3}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Nanyamka
+    Text: Papa! Please be careful.
+    Avatar: {fileID: 21300000, guid: 86e90ee429097554ea4d31c7697e3ffe, type: 3}
+    RightCharacter: {fileID: 21300000, guid: 90501b8e5dbcb8b469c57b1d4c4d16b2, type: 3}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
+  - CharacterName: Jalali
+    Text: Abe. What are you waiting for? GO!
+    Avatar: {fileID: 21300000, guid: 854a823e18d69bf49900df83e7826c26, type: 3}
+    RightCharacter: {fileID: 21300000, guid: c6fdb723b9ef64794ad8d023e9fbcd3f, type: 3}
+    BackgroundImage: {fileID: 0}
+    DialogueVO: {fileID: 0}
+    BackgroundMusic: {fileID: 0}
+    SFX: {fileID: 0}
+    ExitSFX: {fileID: 0}
+    PanTransform: 
   PauseGamePlay: 1

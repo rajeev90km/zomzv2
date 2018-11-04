@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 114004600950725040}
   - component: {fileID: 114682612531849014}
   - component: {fileID: 114653111598498334}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ZombieHealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 224228395065136338}
   - component: {fileID: 222038888785163142}
   - component: {fileID: 114965328584911584}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ZombieHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4145,6 +4145,7 @@ MonoBehaviour:
   _attackCost: 10
   _hurtFx: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 2}
   _zombieHealthBar: {fileID: 114965328584911584}
+  _zomzDieEvent: {fileID: 0}
   _stompFx: {fileID: 100002, guid: 20b31fcfaed0cb842a56fbbe2419428f, type: 2}
 --- !u!114 &114060543170724854
 MonoBehaviour:

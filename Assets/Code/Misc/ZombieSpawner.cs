@@ -15,6 +15,12 @@ public class ZombieSpawner : MonoBehaviour {
 
     public int _numZombiesInScene = 0;
 
+    [SerializeField]
+    private float _minDeathWaitTime = 5f;
+
+    [SerializeField]
+    private float _maxDeathWaitTime = 10f;
+
     public GameObject _regularZombie;
     public GameObject _fastZombie;
     public GameObject _strongZombie;
@@ -38,8 +44,6 @@ public class ZombieSpawner : MonoBehaviour {
         _zombieMapping.Add(ZombieTypes.SCREAMER, _screamerZombie);
 
         StartCoroutine(InitSpawnZombies());
-
-
 	}
 
     IEnumerator InitSpawnZombies()
@@ -112,6 +116,13 @@ public class ZombieSpawner : MonoBehaviour {
 
     public void OnZombieDie()
     {
+        StartCoroutine(DelaySpawnZombie());
+    }
+
+    IEnumerator DelaySpawnZombie()
+    {
+        float waitTime = Random.Range(_minDeathWaitTime, _maxDeathWaitTime);
+        yield return new WaitForSeconds(waitTime);
         _numZombiesInScene--;
     }
 
