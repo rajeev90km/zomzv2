@@ -81,6 +81,16 @@ public class HumanBase : Being
     [SerializeField]
     GameObject _wayPointsObj;
 
+    [Header("Fight Parameters")]
+    [SerializeField]
+    protected float _guardedPoseChance = 0.2f;
+
+    [SerializeField]
+    protected float _rollComboChance = 0.35f;
+
+    [SerializeField]
+    protected float _blockAttackChance = 0.2f;
+
     [Header("Miscellaneous")]
     [SerializeField]
     protected float _sightHeightMultiplier = 1f;
@@ -217,31 +227,41 @@ public class HumanBase : Being
                 _currentState = HumanStates.HURT;
 
                 _isHurting = true;
-                _animator.SetTrigger("hurt");
                 _navMeshAgent.isStopped = true;
 
-                if (_currentHealth - pDamage > 0)
-                    _currentHealth -= pDamage;
-                else
-                    _currentHealth = 0;
+                float blockVal = Random.value;
 
-                if (_humanHealthBar)
-                    _humanHealthBar.fillAmount = _currentHealth / CharacterStats.Health;
-                
-                if (_hurtFx != null)
-                    Instantiate(_hurtFx, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
-
-                //yield return new WaitForSeconds(_characterStats.HurtRate);
-
-                Vector3 initPos = transform.position;
-                Vector3 endPos = transform.position - transform.forward * 0.75f;
-
-                float t = 0;
-                while (t < 1)
+                if (blockVal < _blockAttackChance)
                 {
-                    transform.position = Vector3.Lerp(initPos, endPos,t);
-                    t += Time.deltaTime / ( _characterStats.HurtRate / 2 );
-                    yield return null;
+                    _animator.SetTrigger("block");
+                    yield return new WaitForSeconds(_characterStats.HurtRate / 2);
+                }
+                else
+                {
+                    _animator.SetTrigger("hurt");
+                    if (_currentHealth - pDamage > 0)
+                        _currentHealth -= pDamage;
+                    else
+                        _currentHealth = 0;
+
+                    if (_humanHealthBar)
+                        _humanHealthBar.fillAmount = _currentHealth / CharacterStats.Health;
+
+                    if (_hurtFx != null)
+                        Instantiate(_hurtFx, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
+
+                    //yield return new WaitForSeconds(_characterStats.HurtRate);
+
+                    Vector3 initPos = transform.position;
+                    Vector3 endPos = transform.position - transform.forward * 0.75f;
+
+                    float t = 0;
+                    while (t < 1)
+                    {
+                        transform.position = Vector3.Lerp(initPos, endPos, t);
+                        t += Time.deltaTime / (_characterStats.HurtRate / 2);
+                        yield return null;
+                    }
                 }
 
                 if (_currentHealth <= 0.1f)

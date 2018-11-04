@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 114779850922661096}
   - component: {fileID: 114259882271803588}
   - component: {fileID: 114949305123148484}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 224060499242471146}
   - component: {fileID: 222782330344728030}
   - component: {fileID: 114757324504037816}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,8 +1339,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1020818613075934}
-  m_LocalRotation: {x: -0, y: -0.68124557, z: -0, w: 0.73205495}
-  m_LocalPosition: {x: 8.66, y: 0, z: 2.42}
+  m_LocalRotation: {x: -0, y: 0.5792743, z: -0, w: 0.8151327}
+  m_LocalPosition: {x: -11.22, y: 1.9891069, z: -22.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4273172101357380}
@@ -1354,7 +1354,7 @@ Transform:
   - {fileID: 224486276085958164}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -85.882, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 70.799, z: 0}
 --- !u!4 &4299574222593910
 Transform:
   m_ObjectHideFlags: 1
@@ -2228,6 +2228,10 @@ MonoBehaviour:
   _characterStats: {fileID: 11400000, guid: 17ceff4dbbfda47239318969ba62262e, type: 2}
   _currentHealth: 0
   _currentState: 0
+  _wayPointsObj: {fileID: 0}
+  _guardedPoseChance: 0.2
+  _rollComboChance: 0.35
+  _blockAttackChance: 0.2
   _sightHeightMultiplier: 1.5
   playerSightHeight: 0
   _hurtFx: {fileID: 100000, guid: f7261c1b6aae14ad3bb8800b75e3436b, type: 2}
