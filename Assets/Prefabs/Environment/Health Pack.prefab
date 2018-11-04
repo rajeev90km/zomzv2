@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 65492304245712120}
   - component: {fileID: 65085633439997246}
   m_Layer: 0
-  m_Name: Health pack
+  m_Name: Health Pack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

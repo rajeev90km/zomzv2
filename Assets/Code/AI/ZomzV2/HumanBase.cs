@@ -275,7 +275,7 @@ public class HumanBase : Being
 
                     Debug.Log(val);
 
-                    if(val<0.2f)
+                    if(val<_guardedPoseChance)
                     {
                         Vector3 randomDirection = Random.insideUnitSphere * _characterStats.LookRange / 2;    
                         randomDirection += transform.position;
@@ -299,7 +299,7 @@ public class HumanBase : Being
 
                         yield return new WaitForSeconds(0.2f);
                     }
-                    else if(val>0.2f && val< 0.55f)
+                    else if(val> _guardedPoseChance && val< _guardedPoseChance + _rollComboChance)
                     {
                         Vector3 pointInFront;
 

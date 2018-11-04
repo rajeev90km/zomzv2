@@ -2231,7 +2231,7 @@ MonoBehaviour:
   _wayPointsObj: {fileID: 0}
   _guardedPoseChance: 0.2
   _rollComboChance: 0.35
-  _blockAttackChance: 0.2
+  _blockAttackChance: 0.15
   _sightHeightMultiplier: 1.5
   playerSightHeight: 0
   _hurtFx: {fileID: 100000, guid: f7261c1b6aae14ad3bb8800b75e3436b, type: 2}
