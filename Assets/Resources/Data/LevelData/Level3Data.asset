@@ -14,5 +14,6 @@ MonoBehaviour:
   ObjectiveComplete: 0
   CanUseZomzMode: 1
   ObjectiveText: Survive the night
+  CanScreenGlitch: 1
   LevelBeginConversation: {fileID: 11400000, guid: 8ff28d6e9e2750247a8b8827baaf5dd0,
     type: 2}

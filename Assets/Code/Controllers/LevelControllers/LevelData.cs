@@ -10,5 +10,7 @@ public abstract class LevelData : ScriptableObject {
 
     public string ObjectiveText;
 
+    public bool CanScreenGlitch;
+
     public Conversation LevelBeginConversation;
 }

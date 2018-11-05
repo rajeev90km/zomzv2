@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Kino;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,6 +51,9 @@ public class CameraControls : MonoBehaviour
     [SerializeField]
     private float _zoomSensitivity = 10f;
 
+    [SerializeField]
+    private GameData gameData;
+
     RaycastHit _hit;
     Renderer oldRenderer;
     Renderer r;
@@ -60,8 +64,11 @@ public class CameraControls : MonoBehaviour
 
     LevelControllerBase currentLevelController;
 
+    AnalogGlitch analogGlitch;
+
     void Start()
     {
+        analogGlitch = GetComponent<AnalogGlitch>();
 
         currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
 
@@ -91,6 +98,57 @@ public class CameraControls : MonoBehaviour
 
         _cameraOffset = transform.position - _targetTransform.position;
 
+    }
+
+    private void OnEnable()
+    {
+        if (gameData.CurrentLevelData)
+        {
+            if (gameData.CurrentLevelData.CanScreenGlitch)
+            {
+                StartCoroutine(StartScreenGlitch());
+            }
+        }
+    }
+
+    IEnumerator StartScreenGlitch()
+    {
+        float t = 0;
+        float glitchTime = 0.5f;
+        float targetGlitch = 0.5f;
+
+        while (gameData.CurrentLevelData.CanScreenGlitch)
+        {
+            yield return new WaitForSeconds(Random.Range(1f, 4f)); 
+
+            t = 0;
+            analogGlitch.colorDrift = 0;
+            analogGlitch.scanLineJitter = 0;
+
+            while (t < 1)
+            {
+                analogGlitch.colorDrift = Mathf.Lerp(0, targetGlitch, t);
+                analogGlitch.scanLineJitter = Mathf.Lerp(0, targetGlitch, t);
+
+                t += Time.deltaTime / (glitchTime / 2 );
+                yield return null;
+            }
+
+            t = 0;
+
+            while (t < 1)
+            {
+                analogGlitch.colorDrift = Mathf.Lerp(targetGlitch, 0, t);
+                analogGlitch.scanLineJitter = Mathf.Lerp(targetGlitch, 0, t);
+
+                t += Time.deltaTime / (glitchTime / 2);
+                yield return null;
+            }
+
+            analogGlitch.colorDrift = 0;
+            analogGlitch.scanLineJitter = 0;
+        }
+        yield return null;
     }
 
 
