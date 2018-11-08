@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum ZomzManaConsumeType
 {
@@ -26,9 +27,6 @@ public class ZomzController : MonoBehaviour {
         get { return _canUseZomzMode; }
         set { _canUseZomzMode = value; }
     }
-
-    [SerializeField]
-    private GameData _gameData;
 
     [SerializeField]
     private GameFloatAttribute _zomzManaAttribute;
@@ -58,7 +56,31 @@ public class ZomzController : MonoBehaviour {
     private Coroutine _zomzManaUseCoroutine;
 
     LevelControllerBase currentLevelController;
-     
+
+    PostProcessVolume _postProcessVolume;
+
+    ColorGrading colorGrading;
+    ChromaticAberration chromaticAberration;
+
+    [SerializeField]
+    GameObject ZomzCameraObj;
+
+    [SerializeField]
+    GameObject _zomzManaObj;
+
+    [SerializeField]
+    GameObject _step1Obj;
+
+    [SerializeField]
+    GameObject _pressEscObj;
+
+    Camera ZomzCamera;
+
+    float normalSaturation = 20;
+    float zomzModeSaturation = -60;
+    float normalChromaticAberration = 0;
+    float zomzModeChromaticAberration = 0.7f;
+
 	void Awake () 
     {
         //Cache Properties
@@ -72,17 +94,61 @@ public class ZomzController : MonoBehaviour {
         _enemyLayerMask = (1 << LayerMask.NameToLayer("Enemy"));
 
         currentLevelController = GameObject.FindWithTag("LevelController").GetComponent<LevelControllerBase>();
+
+        GameObject postProcessObj = GameObject.FindWithTag("PostProcessing");
+        if (postProcessObj)
+        {
+            _postProcessVolume = postProcessObj.GetComponent<PostProcessVolume>();
+            _postProcessVolume.profile.TryGetSettings<ColorGrading>(out colorGrading);
+            _postProcessVolume.profile.TryGetSettings<ChromaticAberration>(out chromaticAberration);
+        }
+
+        ZomzCamera = ZomzCameraObj.GetComponent<Camera>();
 	}
+
+    void ZomzModePostProcess()
+    {
+        ZomzCameraObj.SetActive(true);
+        colorGrading.saturation.value = zomzModeSaturation;
+        chromaticAberration.intensity.value = zomzModeChromaticAberration;
+
+        _pressEscObj.SetActive(true);
+    }
+
+    void ResetZomzModePostProcess()
+    {
+        ZomzCameraObj.SetActive(false);
+        colorGrading.saturation.value = normalSaturation;
+        chromaticAberration.intensity.value = normalChromaticAberration;
+
+        if (_step1Obj.activeSelf)
+            _step1Obj.SetActive(false);
+
+        _pressEscObj.SetActive(false);
+    }
+
+    public void InitZomzMode()
+    {
+        gameData.CurrentLevelData.CanUseZomzMode = true;
+        gameData.CurrentLevelData.CanScreenGlitch = false;
+
+        _zomzManaObj.SetActive(true);
+        _step1Obj.SetActive(true);
+
+        ProcessZomzMode();
+    }
 
 	public void ProcessZomzMode()
     {
-        if(!ZomzMode.CurrentValue)
+        if (!ZomzMode.CurrentValue)
         {
             _zombiesUnderControl.Clear();
             ZomzMode.CurrentValue = true;
 
             if (ZomzMode.CurrentValue)
             {
+                ZomzModePostProcess();
+
                 _zomzStartEvent.Raise();
                 _zomzManaAttribute.ResetAttribute();
 
@@ -102,6 +168,11 @@ public class ZomzController : MonoBehaviour {
                 }
             }
         }
+        else
+        {
+            Debug.Log("Disable");
+            ZomzCameraObj.SetActive(false);
+        }
     }
 
     public void RegisterZomzMode()
@@ -112,12 +183,15 @@ public class ZomzController : MonoBehaviour {
             ZomzMode.CurrentSelectedZombie.OnZomzModeRegister();
             _zomzRegisterEvent.Raise();
 
-            if(ZomzMode.ManaConsumeType == ZomzManaConsumeType.TIME_BOUND)
+
+            if (ZomzMode.ManaConsumeType == ZomzManaConsumeType.TIME_BOUND)
                 _zomzManaUseCoroutine = StartCoroutine(UseTimeBasedZomzMana());
         }
         _zomzEndEvent.Raise();
         ZomzMode.CurrentValue = false;
         _pointerArrowObj.SetActive(false);
+
+        ResetZomzModePostProcess();
     }
 
     public void UnregisterZomzMode()
@@ -132,11 +206,15 @@ public class ZomzController : MonoBehaviour {
             StopCoroutine(_zomzManaUseCoroutine);
         _zomzManaUseCoroutine = null;
 
+        ResetZomzModePostProcess();
+
         StartCoroutine(ZomzCoolDown());
     }
 
     public void EndZomzMode()
     {
+        ResetZomzModePostProcess();
+
         _pointerArrowObj.SetActive(false);
         ZomzMode.CurrentSelectedZombie = null;
         ZomzMode.CurrentValue = false;
@@ -181,7 +259,7 @@ public class ZomzController : MonoBehaviour {
 
 	void Update () 
     {
-        if (!_gameData.IsPaused && !currentLevelController.IsConversationInProgress)
+        if (!gameData.IsPaused && !currentLevelController.IsConversationInProgress)
         {
             if (Camera.main)
             {
@@ -203,7 +281,7 @@ public class ZomzController : MonoBehaviour {
                                     ZomzMode.CurrentSelectedZombie = hit.transform.gameObject.GetComponent<ZombieBase>();
 
                                     Vector3 zombiePos = hit.transform.gameObject.transform.position;
-                                    _pointerArrowObj.transform.position = new Vector3(zombiePos.x, 4, zombiePos.z);
+                                    _pointerArrowObj.transform.position = new Vector3(zombiePos.x, zombiePos.y + 3, zombiePos.z);
                                 }
                             }
                         }
@@ -220,7 +298,9 @@ public class ZomzController : MonoBehaviour {
                             if (!ZomzMode.CurrentValue)
                                 ProcessZomzMode();
                             else
+                            {
                                 RegisterZomzMode();
+                            }
                         }
                     }
                 }

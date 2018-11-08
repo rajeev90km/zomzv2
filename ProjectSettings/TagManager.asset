@@ -23,6 +23,7 @@ TagManager:
   - LevelEndTrigger
   - PlayerStart
   - InitCameraPans
+  - ZomzStart
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
   - Barrel
   - Flammable
   - LevelController
-  - 
+  - PointerArrow
   - 
   - 
   - 

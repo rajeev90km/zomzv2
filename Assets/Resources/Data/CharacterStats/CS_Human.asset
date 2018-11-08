@@ -25,7 +25,7 @@ MonoBehaviour:
   AttackStrength: 20
   AttackRange: 1.25
   ShootRange: 7
-  ZomzRange: 10
+  ZomzRange: 15
   ZomzSpeed: 5
   AttackDamageToSelf: 0
   DiveDistance: 3

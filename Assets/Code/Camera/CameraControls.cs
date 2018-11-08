@@ -60,7 +60,7 @@ public class CameraControls : MonoBehaviour
     ChangedObject changedObject;
     CharacterControls _playerCharacter;
 
-    private float _zoomValue = 0.75f;
+    private float _zoomValue = 0.6f;
 
     LevelControllerBase currentLevelController;
 
