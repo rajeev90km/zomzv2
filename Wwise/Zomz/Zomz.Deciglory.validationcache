@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="89">
-	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1538154635" DateHigh="0"/>
+	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1540342261" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Actor-Mixer Hierarchy\Factory Motion.wwu" DateLow="1538010302" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1538010302" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1538010302" DateHigh="0"/>
@@ -27,7 +27,7 @@
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Game Parameters\Default Work Unit.wwu" DateLow="1538010302" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Game Parameters\Factory Motion.wwu" DateLow="1538010302" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1538010302" DateHigh="0"/>
-	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1538167436" DateHigh="0"/>
+	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1540342261" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1538010302" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Mixing Sessions\Default Work Unit.wwu" DateLow="1538010302" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Modulators\Default Work Unit.wwu" DateLow="1538010302" DateHigh="0"/>
@@ -41,6 +41,6 @@
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Triggers\Default Work Unit.wwu" DateLow="1538010303" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Virtual Acoustics\Default Work Unit.wwu" DateLow="1538010303" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1538010303" DateHigh="0"/>
-	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Zomz.Deciglory.wsettings" DateLow="1538194306" DateHigh="0"/>
+	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Zomz.Deciglory.wsettings" DateLow="1540609575" DateHigh="0"/>
 	<ValidationCacheItem File="D:\GitHub\Zomz\zomzv2\Wwise\Zomz\Zomz.wproj" DateLow="1538155948" DateHigh="0"/>
 </ValidationCache>
