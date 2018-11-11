@@ -12,5 +12,7 @@ public abstract class LevelData : ScriptableObject {
 
     public bool CanScreenGlitch;
 
+    public bool IsInjured;
+
     public Conversation LevelBeginConversation;
 }
