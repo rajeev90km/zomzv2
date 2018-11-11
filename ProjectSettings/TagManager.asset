@@ -4,7 +4,26 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Shootable
+  - fow
+  - Moveable
+  - Enemy
+  - Waypoints
+  - FxTemporaire
+  - ParticleHurt
+  - Human
+  - JalaliVantagePoints
+  - Ladder
+  - PostProcessing
+  - PromptZone
+  - SwitchPanel
+  - HealthPack
+  - Weapon
+  - Bonfire
+  - LevelController
+  - LevelEndTrigger
+  - PlayerStart
+  - InitCameraPans
+  - ZomzStart
   layers:
   - Default
   - TransparentFX
@@ -14,17 +33,17 @@ TagManager:
   - UI
   - 
   - 
-  - Lighting
+  - AlwaysVisible
+  - Moveable
   - Ground
-  - Postprocessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Pushable
+  - Human
+  - Barrel
+  - Flammable
+  - LevelController
+  - PointerArrow
   - 
   - 
   - 
@@ -39,9 +58,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Fire
-    uniqueID: 3804908061
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
