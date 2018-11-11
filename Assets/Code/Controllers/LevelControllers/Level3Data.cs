@@ -9,5 +9,6 @@ public class Level3Data : LevelData {
 	private void OnEnable()
 	{
         CanScreenGlitch = true;
+        IsInjured = true;
 	}
 }

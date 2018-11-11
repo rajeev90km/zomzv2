@@ -131,6 +131,7 @@ public class ZomzController : MonoBehaviour {
     {
         gameData.CurrentLevelData.CanUseZomzMode = true;
         gameData.CurrentLevelData.CanScreenGlitch = false;
+        gameData.CurrentLevelData.IsInjured = false;
 
         _zomzManaObj.SetActive(true);
         _step1Obj.SetActive(true);
