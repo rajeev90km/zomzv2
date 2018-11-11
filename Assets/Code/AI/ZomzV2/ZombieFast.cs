@@ -72,12 +72,13 @@ public class ZombieFast : ZombieBase
                 Vector3 endPos = transform.position + transform.forward * _chargeDistance;
 
                 _chargeFXObj = Instantiate(_chargeFX);
-                _chargeFXObj.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+                
+                _chargeFXObj.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
 
                 while (time < 1)
                 {
                     transform.position = Vector3.Lerp(startPos, endPos, time);
-                    _chargeFXObj.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+                    _chargeFXObj.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
                     time = time / _timeToCharge + Time.deltaTime;
                     yield return null;
                 }
@@ -129,15 +130,19 @@ public class ZombieFast : ZombieBase
                 Vector3 endPos = transform.position + transform.forward * _chargeDistance;
 
                 _chargeFXObj = Instantiate(_chargeFX);
-                _chargeFXObj.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+                _chargeFXObj.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+
+                _isCharging = true;
 
                 while (time < 1)
                 {
                     transform.position = Vector3.Lerp(startPos, endPos, time);
-                    _chargeFXObj.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+                    _chargeFXObj.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
                     time = time / _timeToCharge + Time.deltaTime;
                     yield return null;
                 }
+
+                _isCharging = false;
 
                 Destroy(_chargeFXObj, 1f);
 
@@ -211,9 +216,14 @@ public class ZombieFast : ZombieBase
             if (pOther.gameObject.CompareTag("Player") || pOther.gameObject.CompareTag("Human"))
             {
                 Being otherBeing = pOther.gameObject.GetComponent<Being>();
+                Debug.Log(otherBeing.name);
 
-                if(otherBeing && _isCharging)
+                Debug.Log(_isCharging);
+
+                if (otherBeing && _isCharging)
+                {
                     StartCoroutine(otherBeing.Hurt(CharacterStats.AttackStrength));
+                }
             }
         }
         else
@@ -228,9 +238,23 @@ public class ZombieFast : ZombieBase
         }
 	}
 
-	#region ZomzMode
+    private void OnTriggerEnter(Collider pOther)
+    {
+        if (IsBeingControlled)
+        {
+            if (pOther.gameObject.CompareTag("FloodlightTrigger"))
+            {
+                FloodlightTrigger ft = pOther.GetComponent<FloodlightTrigger>();
 
-	public override void StartZomzMode()
+                if (ft && _isCharging)
+                    StartCoroutine(ft.PowerFloodLight());
+            }
+        }
+    }
+
+    #region ZomzMode
+
+    public override void StartZomzMode()
 	{
         base.StartZomzMode();
 

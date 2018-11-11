@@ -24,6 +24,7 @@ TagManager:
   - PlayerStart
   - InitCameraPans
   - ZomzStart
+  - FloodlightTrigger
   layers:
   - Default
   - TransparentFX
