@@ -18264,7 +18264,10 @@ Transform:
   - {fileID: 2103153385}
   - {fileID: 1444957685}
   - {fileID: 543458595}
+<<<<<<< HEAD
   - {fileID: 1279746332}
+=======
+>>>>>>> parent of 15bc712... Changed the location of some things
   m_Father: {fileID: 203177672}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23324,7 +23327,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.13
+      value: -15.06
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalPosition.y
@@ -23332,23 +23335,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -8.89
+=======
+      value: -5.46
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 1
+=======
+      value: 0.68890035
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0
+=======
+      value: 0.72485614
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_RootOrder
@@ -23356,7 +23371,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
       value: 180
+=======
+      value: 87.086006
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e034ef8a032d2e94e93bc7de1998c192, type: 2}
       propertyPath: m_LocalScale.x
@@ -23951,8 +23970,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 996265430}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.30159453, y: 0.15805985, z: 0.050752763, w: -0.93887275}
   m_LocalPosition: {x: 4.216465, y: -7.3813844, z: -4.531589}
+=======
+  m_LocalRotation: {x: -0.27856094, y: 0.01037403, z: 0.002998641, w: 0.9603579}
+  m_LocalPosition: {x: 30.109236, y: -15.256746, z: -34.97791}
+>>>>>>> parent of 15bc712... Changed the location of some things
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24033,7 +24057,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 12.500001
+=======
+      value: -15.69
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -24041,23 +24069,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -10.060001
+=======
+      value: -7.4
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.6982182
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.715885
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_RootOrder
@@ -24065,7 +24097,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 88.568
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3b64e42331dd0804888b7ec527985f6c, type: 2}
       propertyPath: m_LocalScale.x
@@ -24179,7 +24211,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 13.01
+=======
+      value: -15.18
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -24187,23 +24223,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -6.1500006
+=======
+      value: -3.49
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 1
+=======
+      value: -0
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0
+=======
+      value: 1
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_RootOrder
@@ -24229,10 +24277,13 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 400002, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 15bc712... Changed the location of some things
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd6658612b5b6b9488f15ccf75c035b9, type: 2}
   m_IsPrefabParent: 0
@@ -45593,7 +45644,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -14.57
+=======
+      value: 12.7
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -45601,7 +45656,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -4.99
+=======
+      value: -3.47
+>>>>>>> parent of 15bc712... Changed the location of some things
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -45609,7 +45668,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalRotation.z
@@ -45617,7 +45676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_RootOrder
@@ -45637,7 +45696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4876653236727686, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301842062945380, guid: c1ac8aa2cebc943c5a14cdeb8a5cc89a, type: 2}
       propertyPath: m_IsActive
