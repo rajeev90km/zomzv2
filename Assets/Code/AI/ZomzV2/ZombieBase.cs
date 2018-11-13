@@ -168,8 +168,6 @@ public class ZombieBase : Being
 
     private LevelControllerBase currentLevelController;
 
-    Camera mainCamera;
-
     protected virtual void Awake () 
     {
         humanLayerMask = (1 << LayerMask.NameToLayer("Human"));
@@ -199,9 +197,7 @@ public class ZombieBase : Being
 
         _zomzControl = GameObject.FindWithTag("Player").GetComponent<ZomzController>();
 
-        mainCamera = Camera.main;
-
-    }
+	}
 
     protected virtual IEnumerator Start()
     {
@@ -238,20 +234,19 @@ public class ZombieBase : Being
     {
         if (_isAlive && !_isBeingControlled)
         {
-            if (_navMeshAgent.enabled)
-            {
-                if (_navMeshAgent.isActiveAndEnabled && _wayPoints.Count > 0)
-                {
-                    _navMeshAgent.speed = _characterStats.WalkSpeed;
-                    _navMeshAgent.destination = _wayPoints[_nextWayPoint].position;
-                    _navMeshAgent.isStopped = false;
 
-                    if (_navMeshAgent.remainingDistance <= 1f || !_navMeshAgent.hasPath)
-                    {
-                        GetNextWayPoint();
-                    }
+            if (_navMeshAgent.isActiveAndEnabled && _wayPoints.Count > 0)
+            {
+                _navMeshAgent.speed = _characterStats.WalkSpeed;
+                _navMeshAgent.destination = _wayPoints[_nextWayPoint].position;
+                _navMeshAgent.isStopped = false;
+
+                if (_navMeshAgent.remainingDistance <= 1f || !_navMeshAgent.hasPath)
+                {
+                    GetNextWayPoint();
                 }
             }
+
         }
     }
 
@@ -523,8 +518,7 @@ public class ZombieBase : Being
 
                 _isHurting = true;
                 _animator.SetTrigger("hurt");
-                if(_navMeshAgent.enabled)
-                    _navMeshAgent.isStopped = true;
+                _navMeshAgent.isStopped = true;
 
                 AkSoundEngine.PostEvent("Reg_Hurt", gameObject);
 
@@ -583,7 +577,6 @@ public class ZombieBase : Being
     public virtual void EndZomzMode()
     {
         _modelRenderer.material = _defaultMaterial;
-        ResetDirectionVectors();
     }
 
     public virtual void OnZomzModeAffected()
@@ -596,36 +589,21 @@ public class ZombieBase : Being
         _isBeingControlled = true;
         _modelRenderer.material = _zomzModeMaterial;
         ResetDirectionVectors();
-        _navMeshAgent.enabled = false;
     }
 
     public virtual void OnZomzModeUnRegister()
     {
         _isBeingControlled = false;
         _modelRenderer.material = _defaultMaterial;
-        _navMeshAgent.enabled = true;
-
-        if (!_navMeshAgent.isOnNavMesh)
-        {
-            _navMeshAgent.Warp(new Vector3(transform.position.x,3,transform.position.z));
-        }
-
-        gameObject.SetActive(false);
-        gameObject.SetActive(true);
-
-
     }
 
     public void ResetDirectionVectors()
     {
-        if (mainCamera)
-        {
-            forward = mainCamera.transform.forward;
-            forward.y = 0;
-            forward = Vector3.Normalize(forward);
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
 
-            right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
-        }
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
     }
 
     public GameObject GetClosestObject()
@@ -683,11 +661,9 @@ public class ZombieBase : Being
 
         if (!currentLevelController.EntrySequenceInProgress && !currentLevelController.IsConversationInProgress)
         {
-            //Zomz Mode Registered - MOVEMENT
+            //Zomz Mode Registered - MOVEMENt
             if (_isBeingControlled && !_isAttacking && !_isHurting)
             {
-                ResetDirectionVectors();
-
                 bool running = Input.GetKey(KeyCode.LeftShift);
                 float targetSpeed = ((running) ? _characterStats.RunSpeed : _characterStats.WalkSpeed);
                 _currentSpeed = Mathf.SmoothDamp(_currentSpeed, targetSpeed, ref _speedSmoothVelocity, _speedSmoothTime);
